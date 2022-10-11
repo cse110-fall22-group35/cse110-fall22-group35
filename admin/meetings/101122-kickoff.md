@@ -32,7 +32,7 @@ Item | Who | Notes |
 | no | Contract | Team | 10/16 |
 
 ## Other Notes & Information
-meeting scheduled for thursday at 9:00 am.
+meeting scheduled for thursday at 9:00 am to finish contract and work on team page and branding.
 
 #### Meeting Finished:
 10:00 am
