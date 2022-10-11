@@ -29,10 +29,10 @@ Item | Who | Notes |
 | Done? | Item | Responsible | Due Date |
 | ---- | ---- | ---- | ---- |
 | yes | repository | Sarah | Today |
-| yes | Contract | Team | Today |
+| no | Contract | Team | 10/16 |
 
 ## Other Notes & Information
-N/A
+meeting scheduled for thursday at 9:00 am to finish contract and work on team page and branding.
 
 #### Meeting Finished:
 10:00 am
