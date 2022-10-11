@@ -29,7 +29,7 @@ Item | Who | Notes |
 | Done? | Item | Responsible | Due Date |
 | ---- | ---- | ---- | ---- |
 | yes | repository | Sarah | Today |
-| yes | Contract | Team | Today |
+| no | Contract | Team | 10/16 |
 
 ## Other Notes & Information
 meeting scheduled for thursday at 9:00 am.
