@@ -11,6 +11,7 @@ People who attended:
 - Sarah Thomson
 - Chia-Han Chen
 - Nicholas Tran
+- Sam Ji
 ## Agenda Items
 
 Item | Description
