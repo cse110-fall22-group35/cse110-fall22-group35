@@ -32,7 +32,7 @@ Item | Who | Notes |
 | yes | Contract | Team | Today |
 
 ## Other Notes & Information
-N/A
+meeting scheduled for thursday at 9:00 am.
 
 #### Meeting Finished:
 10:00 am
