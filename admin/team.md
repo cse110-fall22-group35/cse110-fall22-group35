@@ -52,7 +52,8 @@
 
 **Summary:**
 
-**Contact Info:**
+**Contact Info:**  
+Please contact me through email. [Click Here](chc016@ucsd.edu)
 
 **Personal GitHub Repo:**
 
