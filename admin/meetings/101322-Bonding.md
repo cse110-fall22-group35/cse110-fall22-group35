@@ -16,7 +16,7 @@ People who attended:
 
 Item | Description
 ---- | ----
-Team Bonding Event | • Bonding
+Team Bonding Event | • Bonding <br> • Skribbl.io
 
 ## Discussion Items
 Item | Who | Notes |
