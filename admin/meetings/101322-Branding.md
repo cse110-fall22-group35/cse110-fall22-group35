@@ -1,8 +1,8 @@
 # Meeting Minutes
 ## Meeting Information
-**Meeting Date/Time:** 10/13/22, 9:00 am 
-**Meeting Purpose:** Team Branding
-**Meeting Location:** Zoom
+**Meeting Date/Time:** 10/13/22, 9:00 am  
+**Meeting Purpose:** Team Branding  
+**Meeting Location:** Zoom  
 **Note Taker:** Nathan Enrici
 
 ## Attendees
