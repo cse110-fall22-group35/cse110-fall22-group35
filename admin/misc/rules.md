@@ -34,4 +34,5 @@ TBD
 ## Expectations of Professor and TA’s
 > If a team member fails to live up to this agreement, the situation may be reported to the staff, but the team will still be responsible for submitting a completed assignment. Staff will be available to meet with teams to resolve issues.
 
+## Reference
 Google Doc Version: [Click here](https://docs.google.com/document/d/1iYxOyPoopHoAeEFMpbMH0u2MPdNPgqWqGOEqK0EE1PQ/edit#)
