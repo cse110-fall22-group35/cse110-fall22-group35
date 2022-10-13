@@ -30,7 +30,8 @@ N/A
 N/A
 
 ## Other Notes & Information
-Every single member of our team had a great time!
+Every single member of our team had a great time!  
+![Bonding Event Screenshot](/admin/meetings/bonding_event.jpg)
 
 ## Time Finished
 10:45
