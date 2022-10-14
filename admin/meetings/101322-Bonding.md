@@ -1,8 +1,8 @@
 # Meeting Minutes
 ## Meeting Information
 **Meeting Date/Time:** 10/13/22, 9:45 am  
-**Meeting Purpose:** Team bonding event
-**Meeting Location:** Zoom
+**Meeting Purpose:** Team bonding event  
+**Meeting Location:** Zoom  
 **Note Taker:** Nathan Enrici
 
 ## Attendees
