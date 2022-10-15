@@ -21,11 +21,14 @@
 **Picture: (Optional)**
 
 **Summary:**
+I am a 4th year ICAM major and CS minor from Warren college
 
 **Contact Info:**
+stthomso@ucsd.edu
+(619)-512-7025
 
 **Personal GitHub Repo:**
-
+https://github.com/sarahtthomson
 
 ### Zhizhen Yu - Team Lead
 **Picture: (Optional)**
