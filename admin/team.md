@@ -1,7 +1,7 @@
 # CSE 110 Fall 22 Team 35
 ## The Code Compilers
 
-![Logo] (/branding/reallygoodlogo.png)
+![Logo] (/Branding/reallygoodlogo.PNG)
 
 ## Team Values:
 
@@ -35,14 +35,11 @@ https://github.com/sarahtthomson
 **Picture: (Optional)**
 
 **Summary:**
-I am a second year Computer Engineering major and is happy to work with everyone. ;)
 
 **Contact Info:**
-zhy008@ucsd.edu 
-Discord: Eggy stars (AY)#7756
 
 **Personal GitHub Repo:**
-https://github.com/averi-u
+
 
 ### Bochen Ji, (prefer Sam Ji) - Dev
 **Picture: (Optional)**
