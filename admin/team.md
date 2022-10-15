@@ -57,13 +57,13 @@ https://github.com/sarahtthomson
 ### Chia-Han Chen - Dev
 **Picture: (Optional)**
 
-**Summary:**
+**Summary:**  
 I am a 4th year CS major student from ERC.
 
 **Contact Info:**  
 Please contact me through email. [Click Here](chc016@ucsd.edu)
 
-**Personal GitHub Repo:**
+**Personal GitHub Repo:**  
 https://github.com/ChiaHan1
 
 ### Qiyun Li - Designer
