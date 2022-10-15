@@ -1,7 +1,7 @@
 # CSE 110 Fall 22 Team 35
 ## The Code Compilers
 
-![Logo] (/Branding/reallygoodlogo.PNG)
+![Logo](/Branding/reallygoodlogo.PNG)
 
 ## Team Values:
 
