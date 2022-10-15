@@ -13,7 +13,7 @@ Team member info:
 | Chia-Han Chen | [chc016@ucsd.edu](chc016@ucsd.edu) | (206)-953-5317 | |
 | Sam(Bochen) Ji | [boji@ucsd.edu](boji@ucsd.edu) | (858)-349-1521 | |
 | Nathan Enrici | [nenrici@ucsd.edu](nenrici@ucsd.edu) | (925)-278-0305 | |
-| Zhixen Yu | [zhy008@ucsd.edu](zhy008@ucsd.edu) | | |
+| Zhizhen Yu | [zhy008@ucsd.edu](zhy008@ucsd.edu) | | |
 | Quiyun Li | [qil016@ucsd.edu](qil016@ucsd.edu) | | |
 | Runyu Tian | [rutian@ucsd.edu](rutian@ucsd.edu) | | |
 | Nicholas Tran | [nlt002@ucsd.edu](nlt002@ucsd.edu) | | |
@@ -35,7 +35,7 @@ We will schedule **2, hour long meetings with our team and 1 with the TA per wee
 | NAME | ROLE 
 | ---- | ---- |
 | Sarah Thomson | Team Lead |
-| Zhixhen Yu | Team Lead |
+| Zhizhen Yu | Team Lead |
 | Qiyun Li | Designer |
 | Runyu Tian | Planner |
 | Nicholas Tran | Dev |
@@ -57,6 +57,6 @@ Google Doc Version: [Click here](https://docs.google.com/document/d/1iYxOyPoopHo
 ## Name
 *
 ## Signature
-*
+*  Zhizhen Yu
 ## Date
-*
+*  Zhizhen Yu (10/15/2022)
