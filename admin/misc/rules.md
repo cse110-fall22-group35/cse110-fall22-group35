@@ -18,7 +18,7 @@ Team member info:
 | Runyu Tian | [rutian@ucsd.edu](rutian@ucsd.edu) | | |
 | Nicholas Tran | [nlt002@ucsd.edu](nlt002@ucsd.edu) | | |
 | Yuzang Li | [yul054@ucsd.edu](yul054@ucsd.edu) | | |
-| Alexander Yang | [amy001@ucsd.edu](amy001@ucsd.edu) | | |
+| Alexander Yang | [amy001@ucsd.edu](amy001@ucsd.edu) | | | (248)-648-0177
 
 ## Primary Means of Communication and Expectations
 All members will be expected to **read all slack messages** from all team members. This includes, **answering questions, participating in conversations, and answering polls**.
