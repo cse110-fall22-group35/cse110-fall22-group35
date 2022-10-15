@@ -58,12 +58,13 @@ https://github.com/sarahtthomson
 **Picture: (Optional)**
 
 **Summary:**
+I am a 4th year CS major student from ERC.
 
 **Contact Info:**  
 Please contact me through email. [Click Here](chc016@ucsd.edu)
 
 **Personal GitHub Repo:**
-
+https://github.com/ChiaHan1
 
 ### Qiyun Li - Designer
 **Picture: (Optional)**
