@@ -12,11 +12,14 @@ Attendance, Psychological Safety, Communication, Dependability
 **Picture: (Optional)**
 
 **Summary:**
+I am a 4th year Computer Engineering major from Sixth College
 
 **Contact Info:**
+nlt002@ucsd.edu
+(714)-26-3170
 
 **Personal GitHub Repo:**
-
+https://github.com/trnick
 
 ### Sarah Thomson - Team Lead
 **Picture: (Optional)**
