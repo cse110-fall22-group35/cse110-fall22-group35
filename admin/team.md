@@ -105,8 +105,13 @@ Please contact me through email. [Click Here](chc016@ucsd.edu)
 **Picture: (Optional)**
 
 **Summary:**
+4th Year ECE CE major
+Warren College
 
 **Contact Info:**
+Email: amy001@ucsd.edu
+(248)-648-0177
 
 **Personal GitHub Repo:**
+https://github.com/BeakedDwarf/CSE110-F22-amy001
 
