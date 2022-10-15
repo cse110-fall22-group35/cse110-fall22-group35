@@ -34,11 +34,14 @@ https://github.com/sarahtthomson
 **Picture: (Optional)**
 
 **Summary:**
+I am a second year Computer Engineering major and is happy to work with everyone. ;)
 
 **Contact Info:**
+zhy008@ucsd.edu 
+Discord: Eggy stars (AY)#7756
 
 **Personal GitHub Repo:**
-
+https://github.com/averi-u
 
 ### Bochen Ji, (prefer Sam Ji) - Dev
 **Picture: (Optional)**
