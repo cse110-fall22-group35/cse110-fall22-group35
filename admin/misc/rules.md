@@ -32,16 +32,17 @@ We will schedule **2, hour long meetings with our team and 1 with the TA per wee
 - Attend meeting or let the team know if you cannot
 
 ## Specific Team Member Responsibilities
-|Sarah Thomson|Team Lead| |
-|Zhixhen Yu|Team Lead| |
-|Qiyun Li|Designer| |
-|Runyu Tian|Planner| |
-|Nicholas Tran|Dev| |
-|Sam Ji|Dev| |
-|Chia-Han Chen|Dev| |
-|Nathan Enrici|Dev| |
-|Yuzang Li|Dev| |
-|Alexander Yang|Dev| |
+| NAME | ROLE |
+| Sarah Thomson | Team Lead |
+| Zhixhen Yu | Team Lead |
+| Qiyun Li | Designer |
+| Runyu Tian | Planner |
+| Nicholas Tran | Dev |
+| Sam Ji | Dev |
+| Chia-Han Chen| Dev |
+| Nathan Enrici | Dev |
+| Yuzang Li | Dev |
+| Alexander Yang | Dev |
 
 ## Conflict Resolution
 **Have a whole team conversation** and discuss what is going on. **Elaborate on what the problem is** to see if we can come to a natural solution. If a whole group conversation does not work then there will be a **private conversation with the team leads**. If it cannot be resolved with the team leads it **will be taken to our TA and then Professor**.
