@@ -32,7 +32,8 @@ We will schedule **2, hour long meetings with our team and 1 with the TA per wee
 - Attend meeting or let the team know if you cannot
 
 ## Specific Team Member Responsibilities
-| NAME | ROLE |
+| NAME | ROLE 
+| ---- | ---- |
 | Sarah Thomson | Team Lead |
 | Zhixhen Yu | Team Lead |
 | Qiyun Li | Designer |
