@@ -85,10 +85,15 @@ Please contact me through email. [Click Here](chc016@ucsd.edu)
 **Picture: (Optional)**
 
 **Summary:**
+3rd year CS major
+Revelle College
 
 **Contact Info:**
+nenrici@ucsd.edu
+(925)-267-0305
 
 **Personal GitHub Repo:**
+https://github.com/nathanenrici/
 
 
 ### Yuzeng Li - Dev
