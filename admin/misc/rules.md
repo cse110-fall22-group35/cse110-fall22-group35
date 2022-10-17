@@ -55,8 +55,8 @@ We will schedule **2, hour long meetings with our team and 1 with the TA per wee
 Google Doc Version: [Click here](https://docs.google.com/document/d/1iYxOyPoopHoAeEFMpbMH0u2MPdNPgqWqGOEqK0EE1PQ/edit#)
 
 ## Name
-*
+* Qiyun Li
 ## Signature
-*  Zhizhen Yu
+*  Qiyun Li
 ## Date
-*  Zhizhen Yu (10/15/2022)
+*  Qiyun Li (10/15/2022)
