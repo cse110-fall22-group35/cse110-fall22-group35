@@ -70,11 +70,12 @@ https://github.com/ChiaHan1
 **Picture: (Optional)**
 
 **Summary:**
-
+a 3th year Math CS student in ERC
 **Contact Info:**
-
+qil016@ucsd.edu
+8582038289
 **Personal GitHub Repo:**
-
+https://github.com/Qiyun506/MySpace
 
 ### Runyu Tian - Planner
 **Picture: (Optional)**
