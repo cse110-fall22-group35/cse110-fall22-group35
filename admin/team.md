@@ -126,3 +126,16 @@ Email: amy001@ucsd.edu
 **Personal GitHub Repo:**
 https://github.com/BeakedDwarf/CSE110-F22-amy001
 
+### Bochen(Sam) Ji - Dev
+**Picture: (Optional)**
+
+**Summary:**
+4th year Math & CS major,  and Economics major 
+Warren College
+
+**Contact Info:**
+boji@ucsd.edu
+(858)-349-1521
+
+**Personal GitHub Repo:**
+https://github.com/SaamJi
