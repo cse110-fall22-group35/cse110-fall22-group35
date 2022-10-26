@@ -30,23 +30,38 @@ too much work.
 - don't care about style in the beginning
   - prioritize functionality over looks
 
-## User Persona
+## User Persona - Book Lover
 
 ### Name:
+Elizabeth
 
 ### Photo:
+![girl reading](./book.jfif)
 
 ### Personal Moto:
+There is no friend as loyal as a book
 
 ### Bio:
+Grew up in a small town and always could be found with their head in a book. 
+Has their own personal library at home and is constantly trying to find their next great read.
 
 ### Demographics:
+- Degree in literature
+- 25 years old
+- lives in a small town
+- volunteers at the library
+- goes to book conventions
 
 ### Personality Traits:
+- homebody
+- intreverted
 
 ### Motivations:
+- want to find their next good read
+- have a conversation about books
+- find people that like the same things
 
 ### Goals and Frustrations:
-
-### Preffered Brands and Influences:
-
+- not tech savy
+- review books
+- get good recomendations
