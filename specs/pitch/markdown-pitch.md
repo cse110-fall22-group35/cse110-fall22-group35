@@ -29,3 +29,24 @@ too much work.
   - prioritize the ability to review books before we touch this
 - don't care about style in the beginning
   - prioritize functionality over looks
+
+## User Persona
+
+### Name:
+
+### Photo:
+
+### Personal Moto:
+
+### Bio:
+
+### Demographics:
+
+### Personality Traits:
+
+### Motivations:
+
+### Goals and Frustrations:
+
+### Preffered Brands and Influences:
+
