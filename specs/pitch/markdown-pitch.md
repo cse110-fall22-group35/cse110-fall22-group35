@@ -65,3 +65,35 @@ Has their own personal library at home and is constantly trying to find their ne
 - not tech savy
 - review books
 - get good recomendations
+## User Persona
+
+### Name: Learning Lenny
+
+### Photo:
+
+### Personal Motto:
+E pluribus unum
+
+### Bio:
+Lenny is a student looking forwards to college or a career. He is currently at school, which is where he has done most of his reading over the last few years. He wants to make any assignments that require reading more fun by finding books that he enjoys. He is also interested in exploring potential careers by reading books about them. He is worried about the potential for these to go wrong and wants to know others have used these successfully.
+
+### Demographics:
+- Student
+- Young adult
+
+### Personality Traits: 
+- Studious
+- Motivated
+- Somewhat tech-savvy
+- hard-working
+
+
+### Motivations:
+- Motivated to read primarily by the necessity of schoolwork.
+- Remembers books that they have enjoyed in the past and wants to find similar books.
+- Also wants to find books to improve, learn about potential interests.
+
+### Goals and Frustrations:
+- Wants to find books that are interesting to read for school projects.
+- Wants to advance their education and career.
+- Frustrated with the difficulty of finding good books with the giant selection available.
