@@ -70,7 +70,7 @@ Has their own personal library at home and is constantly trying to find their ne
 ### Name: Learning Lenny
 
 ### Photo:
-
+![student](./studying.jfif)
 ### Personal Motto:
 E pluribus unum
 
