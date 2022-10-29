@@ -31,7 +31,7 @@ too much work.
 
 - Do not start with recommender system
   - prioritize the ability to review books before we touch this
-- don't care about style in the beginning
+- Don't care about style in the beginning
   - prioritize functionality over looks
 
 ## User Persona - Book Lover
