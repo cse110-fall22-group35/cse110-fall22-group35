@@ -130,7 +130,7 @@ As a student in college, I want to find some good books to help me study, so tha
 
 ## Wire Frames
 
-![system_diagram](./../interface/wireframes/wireframe.jpg)
+![system_diagram](./wireframes.jpg)
 
 ## Road Map
 
