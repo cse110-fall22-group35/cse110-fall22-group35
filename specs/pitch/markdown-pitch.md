@@ -5,7 +5,7 @@ Giving people a way to review books and find new books to read
 ## Time Constraints
 
 We have 4 or 5 weeks to get the project done with about 8 people. Due to this
-we stingent on what features we are going to implement because we may not get everything
+we stringent on what features we are going to implement because we may not get everything
 done. The main goal with this time constraint is starting with the most important things and
 slowly working towards the smaller details as to not overwhelm us at the very beginning with
 too much work.
@@ -44,7 +44,7 @@ Elizabeth
 
 ![girl reading](./book.jfif)
 
-### Personal Moto:
+### Personal Motto:
 
 There is no friend as loyal as a book
 
@@ -79,7 +79,7 @@ Has their own personal library at home and is constantly trying to find their ne
 - get good recomendations
 
 ### User Stories
-As a book lover, I want to find some good and interestnig books, so that I can have some joy in my free time. 
+As a book lover, I want to find some good and interesting books, so that I can have some joy in my free time. 
 
 ## User Persona
 
@@ -123,6 +123,8 @@ Lenny is a student looking forwards to college or a career. He is currently at s
 
 ### User Stories
 As a student in college, I want to find some good books to help me study, so that I can do better in classes. 
+
+As an older person who loves to read, I would love to have a very easy website to use so that I can find new books to read.
 
 ## System Diagram (Draft)
 
