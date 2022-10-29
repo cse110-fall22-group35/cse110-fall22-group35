@@ -18,7 +18,7 @@ too much work.
 - sorting and recommending books
 - time period to do it
 - making the css
-  - having desing meetings as a group so eveyone agrees what it will look like
+  - having design meetings as a group so eveyone agrees what it will look like
 - convoluted code
   - comment your code
 - navigation around the website
@@ -64,7 +64,7 @@ Has their own personal library at home and is constantly trying to find their ne
 ### Personality Traits:
 
 - homebody
-- intreverted
+- introverted
 
 ### Motivations:
 
