@@ -78,6 +78,9 @@ Has their own personal library at home and is constantly trying to find their ne
 - review books
 - get good recomendations
 
+### User Stories
+As a book lover, I want to find some good and interestnig books, so that I can have some joy in my free time. 
+
 ## User Persona
 
 ### Name: Learning Lenny
@@ -117,6 +120,9 @@ Lenny is a student looking forwards to college or a career. He is currently at s
 - Wants to find books that are interesting to read for school projects.
 - Wants to advance their education and career.
 - Frustrated with the difficulty of finding good books with the giant selection available.
+
+### User Stories
+As a student in college, I want to find some good books to help me study, so that I can do better in classes. 
 
 ## System Diagram (Draft)
 
