@@ -127,3 +127,11 @@ As a student in college, I want to find some good books to help me study, so tha
 ## System Diagram (Draft)
 
 ![system_diagram](./system_diagram_draft.png)
+
+## Wire Frames
+
+![system_diagram](./../interface/wireframes/wireframe.jpg)
+
+## Road Map
+
+![system_diagram](./roadmap.jpg)
