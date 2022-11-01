@@ -1,4 +1,4 @@
-## Statement of Purpose
+b## Statement of Purpose
 
 Giving people a way to review books and find new books to read
 
@@ -20,12 +20,22 @@ too much work.
 - making the css
   - having design meetings as a group so eveyone agrees what it will look like
 - convoluted code
-  - comment your code
+  - up-to-date documentation
+  - code consistency in terms of variable names (e.g. camelStyle or snake_style), comments (e.g. use complete sentences), etc.
 - navigation around the website
   - clear communication and planning
-  - make a hierarchy of pages and start with the more important
+  - make a hierarchy of pages and start with the most important
+  - CI: Continuous integration
+  - Example:
+    - 1st iteration (structure): homepage(html & css) -> individual books page(introduces database) -> add books page(database)
+    - 2nd iteration (function): homepage(add links to individual books page, javascript) -> homepage(add search/filter feature)
+    - 3rd iteartion (style): homepage(add style, css) -> individual books page(add style, css) -> add books page(add style, css)
+    - nth iteration ...
 - getting stuck on the small details
   - look at the big picture and slowly work on the smaller ones given time
+  - Example:
+    - structure (html, database) first, style/feature (css, search/filter) second;
+    - local first, cloud second;
 
 ## No-Gos
 
@@ -76,10 +86,11 @@ Has their own personal library at home and is constantly trying to find their ne
 
 - not tech savy
 - review books
-- get good recomendations
+- get good recommendations
 
 ### User Stories
-As a book lover, I want to find some good and interesting books, so that I can have some joy in my free time. 
+
+As a book lover, I want to find some good and interesting books, so that I can have some joy in my free time.
 
 ## User Persona
 
@@ -122,7 +133,8 @@ Lenny is a student looking forwards to college or a career. He is currently at s
 - Frustrated with the difficulty of finding good books with the giant selection available.
 
 ### User Stories
-As a student in college, I want to find some good books to help me study, so that I can do better in classes. 
+
+As a student in college, I want to find some good books to help me study, so that I can do better in classes.
 
 As an older person who loves to read, I would love to have a very easy website to use so that I can find new books to read.
 
