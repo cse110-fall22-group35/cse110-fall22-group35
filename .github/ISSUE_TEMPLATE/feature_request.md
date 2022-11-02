@@ -19,5 +19,8 @@ A clear and concise description of what you want to happen.
 **Describe alternatives you've considered**
 A clear and concise description of any alternative solutions or features you've considered.
 
+**People working on it**
+please write first and last name of those working on this issue
+
 **Additional context**
 Add any other context or screenshots about the feature request here.
