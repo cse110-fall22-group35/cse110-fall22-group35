@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+body {
+    background-color: #333;
+}
+
+
+header{
+    background-image:url("https://th.bing.com/th/id/R.3107d382af14c1c9984441d7ebfd099b?rik=4QNKKYsfDsE2%2bA&riu=http%3a%2f%2fwww.blkmaterial.com%2fuploadfiles%2f107.151.154.110%2fwebid1222%2fsource%2f201911%2f7773515749978077.jpg&ehk=ilCMZ170kERtrd0SN5XClyXjXqELHt4mW43IBmijjJE%3d&risl=&pid=ImgRaw&r=0");
+}
+
+img, h1{
+    display: inline;
+}
+
+#profile{
+    float: right;
+    margin: 10px 10px 0 0;
+    color:#FFF;
+    text-align:center;
+}
+a:hover{
+    filter: drop-shadow(-3px 3px 3px black);
+}
+
+.logo{
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    color:#FFF;
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+}
+
+.navlink{
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+li{
+    display: inline-block;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+nav{
+    border-bottom: 2px solid #000;
+    border-top:  2px solid #000;
+    background-color: #FFF;
+}
+
+
+#profile-picture{
+    height:500px;
+    width: 250px;
+    float:left;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 17px;
+}
+profile-information{
+    display:block;
+    padding-top: 50px;
+    height:500px;
+}
+profile-information p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: larger;
+    font-family:Arial, Helvetica, sans-serif; 
+    color:#FFF;
+}
+#edit-profile{
+    float:right;
+    padding: 10px 10px 10px 10px;
+    border: 2px solid #000;
+    background-color: #EEE;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+recent-books p{
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+}
