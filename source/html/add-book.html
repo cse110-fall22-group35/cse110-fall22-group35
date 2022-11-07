@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add a Book</title>
+    <link rel="stylesheet" type="text/css" href="../css/styleadd-book.css">
+    <link rel="icon" href="../images/temp_logo.jpg">
+  </head>
+  <body>
+    <header>
+        <a href="./home.html" class="logo">
+            <img  src="../images/temp_logo.jpg" width="75" height="75">
+            
+        </a>
+        <a href="./home.html" class="logo">
+          <h1>Books</h1>
+        </a>
+        <a href="./profile.html" id="profile">
+            <img src="../images/temp_logo.jpg" width="40" height="40">
+            <p>profile</p>
+        </a>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <label>Search:</label>
+                <input type="text" id="search" size="30">
+            </li>
+            <a href="./home.html" class="navlink"><li>Home</li></a>
+            <a href="./recommendations.html" class="navlink"><li>Recommendations</li></a>
+            <a href="./add-book.html" class="navlink"><li>Add a book</li></a>
+        </ul>
+    </nav>
+    <h1>Add a Book</h1>
+    <form>
+      <label for="bookName">Title:</label><br>
+      <input type="text" id="bookName"><br>
+      <label for="author">Author:</label><br>
+      <input type="text" id="author"><br>
+      <label for="cover">Link to book Cover:</label><br>
+      <input type="url" id="cover"><br>
+      <label for="buy">Link to buy:</label><br>
+      <input type="url" id="buy"><br>
+      <label for="synopsis">Synopsis:</label><br>
+      <textarea id="synopsis" rows="8" cols="50"></textarea><br>
+      <button type="submit">Add Book</button>
+    </form>
+  </body>
+</html>

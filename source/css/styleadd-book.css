@@ -55,3 +55,25 @@ nav{
     border-top:  2px solid #000;
     background-color: #FFF;
 }
+
+h1{
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    color:#FFF;
+}
+
+form{
+    padding-top: 25px;
+    padding-left: 50px;
+    color:#FFF;
+}
+
+form input{
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+button{
+    margin-top: 10px;
+    padding: 5px;
+}
