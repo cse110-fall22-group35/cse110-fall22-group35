@@ -1,1 +1,59 @@
-Profile page
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="../css/profile.css">
+    <link rel="icon" href="../images/temp_logo.jpg">
+  </head>
+  <body>
+    <header>
+        <a href="./home.html" class="logo">
+            <img  src="../images/temp_logo.jpg" width="75" height="75">
+            <h1>Books</h1>
+        </a>
+        <a href="./profile.html" id="profile">
+            <img src="../images/profile.png" width="40" height="40">
+            <p>profile</p>
+        </a>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <label>Search:</label>
+                <input type="text" id="search" size="30">
+            </li>
+            <a href="./home.html" class="navlink"><li>Home</li></a>
+            <a href="./recommendations.html" class="navlink"><li>Recommendations</li></a>
+            <a href="./add-book.html" class="navlink"><li>Add a book</li></a>
+        </ul>
+    </nav>
+
+    <profile>
+        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
+        <a href="./edit-profile.html" id="edit-profile">Edit Profile</a>
+        <profile-information>
+            <p>Name: </p>
+            <p>Age: </p>
+            <p>Interests: </p>
+            <p>Favorite Book: </p>
+            <p>Favorite Author: </p>
+            
+        </profile-information>
+        <br>
+        <recent-books>
+            <p>Recently viewed books</p>
+            <!--Should be changed to be chosen from database when further developed-->
+            <ul id="recents">
+                <li><book>
+                    placeholder
+                </book></li>
+                <li><book>placeholder</book></li>
+                <li><book>placeholder</book></li>
+                <li><book>placeholder</book></li>
+            </ul>
+        </recent-books>
+
+    </profile>
+    
+  </body>
+</html>
