@@ -1,1 +1,71 @@
-Recommendation page
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add a Book</title>
+    <link rel="stylesheet" type="text/css" href="../css/style-rec.css">
+    <link rel="icon" href="../images/temp_logo.jpg">
+  </head>
+  <body>
+    <header>
+        <a href="./home.html" class="logo">
+            <img  src="../images/temp_logo.jpg" width="75" height="75">
+            
+        </a>
+        <a href="./home.html" class="logo">
+          <h1>Books</h1>
+        </a>
+        <a href="./profile.html" id="profile">
+            <img src="../images/temp_logo.jpg" width="40" height="40">
+            <p>profile</p>
+        </a>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <label>Search:</label>
+                <input type="text" id="search" size="30">
+            </li>
+            <a href="./home.html" class="navlink"><li>Home</li></a>
+            <a href="./recommendations.html" class="navlink"><li>Recommendations</li></a>
+            <a href="./add-book.html" class="navlink"><li>Add a book</li></a>
+        </ul>
+    </nav>
+    <h1>Select Preferred Items</h1>
+    
+    <br>
+    <h2>Genre:</h2>
+
+    <input type="text" id="genrebar" onkeyup="myFunction()" placeholder="Search for genres..">
+
+    <ul id="genre">
+      <li><a href="#">Adventure</a></li>
+      <li><a href="#">Children</a></li>
+      <li><a href="#">Contemporary</a></li>
+      <li><a href="#">Romance</a></li>
+      <li><a href="#">Fantasy</a></li>
+      <li><a href="#">Horror</a></li>
+      <li><a href="#">Thriller</a></li>
+      <li><a href="#">Science Fiction</a></li>
+    </ul>
+
+    <br>
+    <h2> Minimum Rating:</h2>
+
+    <ul id="genre">
+        <li><a href="#">5</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">1</a></li>
+      </ul>
+
+    <br>
+    <form>
+        <h2> Age:</h2>
+        <input type="text" id="age"><br>
+      </form>
+
+      <br> <br>
+      <button type="submit">Search</button>
+  </body>
+</html>
