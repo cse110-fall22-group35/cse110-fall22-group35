@@ -23,9 +23,6 @@ img, h1{
     color:#FFF;
     text-align:center;
 }
-a:hover{
-    filter: drop-shadow(-3px 3px 3px black);
-}
 
 .logo{
     display: inline-block;
@@ -92,4 +89,24 @@ recent-books p{
     font-size: 40px;
     color: #fff;
     text-align: center;
+}
+
+#recents{
+    display: flex;
+    border: 2px solid #000;
+    border-radius: 16px;
+    flex-direction: row;
+    height:200px;
+    justify-content:center;
+    align-items:center;
+}
+#recents li{
+    flex: 1 0 200px;
+    height: 180px;
+    background: #555;
+    margin: 10px;
+    color: #fff;
+    display: flex;
+    justify-content:center;
+    align-items:center;
 }
