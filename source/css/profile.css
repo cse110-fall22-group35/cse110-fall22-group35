@@ -5,34 +5,45 @@
   }
 
 body {
-    background-color: #333;
+    background-image:url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
+    background-size: 100% 100%;
 }
 
-
+h1{
+    color:rgb(237, 237, 237);
+    font-size:50px;
+    letter-spacing: 2px;
+}
 header{
-    background-image:url("https://th.bing.com/th/id/R.3107d382af14c1c9984441d7ebfd099b?rik=4QNKKYsfDsE2%2bA&riu=http%3a%2f%2fwww.blkmaterial.com%2fuploadfiles%2f107.151.154.110%2fwebid1222%2fsource%2f201911%2f7773515749978077.jpg&ehk=ilCMZ170kERtrd0SN5XClyXjXqELHt4mW43IBmijjJE%3d&risl=&pid=ImgRaw&r=0");
+    margin-bottom: 5px;
 }
-
 img, h1{
-    display: inline;
+    display: inline-block;
+    color:rgb(237, 237, 237);
 }
-
+#search{
+    Background-color:rgba(128, 64, 0, 0.3);
+}
 #profile{
     float: right;
     margin: 10px 10px 0 0;
-    color:#FFF;
+    color:rgb(237, 237, 237);
     text-align:center;
 }
 
 .logo{
     display: inline-block;
     margin: 10px 0 0 10px;
-    color:#FFF;
+    color:rgb(237, 237, 237);
 }
 
 a{
     text-decoration: none;
-    color:#000;
+    color:rgb(237, 237, 237);
+}
+
+a:hover{
+    filter: drop-shadow(-1px 1px 1px #000);
 }
 
 .navlink{
@@ -52,7 +63,8 @@ li{
 nav{
     border-bottom: 2px solid #000;
     border-top:  2px solid #000;
-    background-color: #FFF;
+    Background-color:rgba(128, 64, 0, 0.3);
+    color:rgb(237, 237, 237);
 }
 
 
@@ -73,27 +85,27 @@ profile-information p{
     margin-top: 15px;
     margin-bottom: 15px;
     font-size: larger;
-    font-family:Arial, Helvetica, sans-serif; 
-    color:#FFF;
+    color:rgb(237, 237, 237);
 }
 #edit-profile{
     float:right;
     padding: 10px 10px 10px 10px;
     border: 2px solid #000;
-    background-color: #EEE;
+    border-radius: 3px;
+    Background-color:rgba(128, 64, 0, 0.3);
     margin-right: 10px;
     margin-top: 15px;
 }
 
 recent-books p{
     font-size: 40px;
-    color: #fff;
+    color:rgb(237, 237, 237);
     text-align: center;
 }
 
 #recents{
     display: flex;
-    border: 2px solid #000;
+
     border-radius: 16px;
     flex-direction: row;
     height:200px;
@@ -101,11 +113,12 @@ recent-books p{
     align-items:center;
 }
 #recents li{
-    flex: 1 0 200px;
+    border: 2px solid #000;
+    flex: 1 0 20%;
     height: 180px;
     background: #555;
     margin: 10px;
-    color: #fff;
+    color:rgb(237, 237, 237);
     display: flex;
     justify-content:center;
     align-items:center;
