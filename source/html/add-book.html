@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <title>Add a Book</title>
-    <link rel="stylesheet" type="text/css" href="../css/styleadd-book.css">
     <link rel="icon" href="../images/temp_logo.jpg">
+    
+    <!-- Main Stylesheets & Scripts -->
+    <link rel="stylesheet" type="text/css" href="../css/styleadd-book.css">
+    <script src="../scripts/add-book.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -14,7 +17,7 @@
         <a href="./home.html" class="logo">
           <h1>Books</h1>
         </a>
-        <a href="./profile.html" id="profile">
+        <a href="./profile.html" id="user-profile">
             <img src="../images/temp_logo.jpg" width="40" height="40">
             <p>profile</p>
         </a>
@@ -31,17 +34,25 @@
         </ul>
     </nav>
     <h1>Add a Book</h1>
-    <form>
-      <label for="bookName">Title:</label><br>
-      <input type="text" id="bookName"><br>
-      <label for="author">Author:</label><br>
-      <input type="text" id="author"><br>
-      <label for="cover">Link to book Cover:</label><br>
-      <input type="url" id="cover"><br>
-      <label for="buy">Link to buy:</label><br>
-      <input type="url" id="buy"><br>
-      <label for="synopsis">Synopsis:</label><br>
-      <textarea id="synopsis" rows="8" cols="50"></textarea><br>
+    <form id="new-book">
+      <label for="imgSrc">Link to cover:
+        <input type="url" id="imgSrc" name="imgSrc" required><br><br>
+      </label>
+      <label for="imgAlt">Alternative:
+        <input type="text" id="imgAlt" name="imgAlt" required><br><br>
+      </label>
+      <label for="profile">Profile:
+        <input type="text" id="profile" name="profile" required><br><br>
+      </label>
+      <label for="titleTxt">Title:
+        <input type="text" id="titleTxt" name="titleTxt" required><br><br>
+      </label>
+      <label for="author">Author:
+        <input type="text" id="author" name="author" required><br><br>
+      </label>
+      <label for="bookType">Book Type:
+        <input type="text" id="bookType" name="bookType" required><br><br>
+      </label>
       <button type="submit">Add Book</button>
     </form>
   </body>

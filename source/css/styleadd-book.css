@@ -17,7 +17,7 @@ img{
     display: inline;
 }
 
-#profile{
+#user-profile{
     float: right;
     margin: 10px 10px 0 0;
     color:#FFF;
@@ -76,4 +76,14 @@ form input{
 button{
     margin-top: 10px;
     padding: 5px;
+}
+
+main {
+  column-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  max-width: 660px;
+  row-gap: 10px;
+  width: 100%;
 }

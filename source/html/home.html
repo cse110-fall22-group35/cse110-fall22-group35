@@ -2,8 +2,14 @@
 <html lang="en">
   <head>
     <title>Add a Book</title>
-    <link rel="stylesheet" type="text/css" href="../css/style_home.css">
     <link rel="icon" href="../images/temp_logo.jpg">
+    
+    <!-- Book Card Custom Element -->
+    <script src="../scripts/BookCard.js" type="module"></script>
+    
+    <!-- Home Stylesheets & Scripts -->
+    <link rel="stylesheet" type="text/css" href="../css/style_home.css">
+    <script src="../scripts/home.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -61,151 +67,27 @@
         
     </div>
     <div id = "home" style="height:inherit; width: 75%;float:left;">
-        <section id = "books" class=" section -p1">
+        <div id = "books" class=" section -p1">
             <h2>books for you</h2>
-            <div class="pro-container">
-                <div class="pro">
+            <section class="book-container">
+                <!-- Add Books Here -->
+                
+                <!-- Example Book -->
+                <article class="book">
                     <a href="./profile.html" id="profile">
                         <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
                         <p>profile</p>
                     </a>
                     <div class="book_info">
                         <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
+                            <h4>Author</h4>
+                            <h5>book type</h3>
+                            <div class= "star"></div>
                     </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </article>
+            </section>
+           
+        </div>
     </div>
   </body>
    
