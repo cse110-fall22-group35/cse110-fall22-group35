@@ -1,36 +1,35 @@
 window.addEventListener('DOMContentLoaded', init);
 
-function init() {
-    let profile = getProfile();
-    if (profile){
-      addToForm(profile);
-    }
-    initFormHandler();
+function init () {
+  const profile = getProfile();
+  if (profile) {
+    addToForm(profile);
+  }
+  initFormHandler();
 }
 
-function getProfile(){
+function getProfile () {
   return JSON.parse(localStorage.getItem('profile'));
 }
 
-function addToForm(profile){
-  for (var key in profile){
-    document.querySelector("#" + key).value = profile[key];
+function addToForm (profile) {
+  for (const key in profile) {
+    document.querySelector('#' + key).value = profile[key];
   }
 }
 
-function initFormHandler() {
-    const f = document.querySelector("#edit");
+function initFormHandler () {
+  const f = document.querySelector('#edit');
 
-    f.addEventListener("submit", addProfileInformation);
-    function addProfileInformation(e){
-      e.preventDefault();
-      const fdata = new FormData(f);
-      let profileInformation = {};
-      for(let [name, value] of fdata) {
-        profileInformation[name] = value;
-      }
-      localStorage.setItem('profile', JSON.stringify(profileInformation));
-      window.location.href = "./profile.html";
+  f.addEventListener('submit', addProfileInformation);
+  function addProfileInformation (e) {
+    e.preventDefault();
+    const fdata = new FormData(f);
+    const profileInformation = {};
+    for (const [name, value] of fdata) {
+      profileInformation[name] = value;
     }
+    localStorage.setItem('profile', JSON.stringify(profileInformation));
+    window.location.href = './profile.html';
+  }
 }
-  
