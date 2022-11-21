@@ -2,37 +2,53 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-  }
+}
 
 body {
-    background-image:url("https://th.bing.com/th/id/R.3107d382af14c1c9984441d7ebfd099b?rik=4QNKKYsfDsE2%2bA&riu=http%3a%2f%2fwww.blkmaterial.com%2fuploadfiles%2f107.151.154.110%2fwebid1222%2fsource%2f201911%2f7773515749978077.jpg&ehk=ilCMZ170kERtrd0SN5XClyXjXqELHt4mW43IBmijjJE%3d&risl=&pid=ImgRaw&r=0");
+    background-image:url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
+    background-size: 100% 100%;
 }
 
 /*Below are styles for header and navbar*/
-header{
-    background-image:url("https://th.bing.com/th/id/R.3107d382af14c1c9984441d7ebfd099b?rik=4QNKKYsfDsE2%2bA&riu=http%3a%2f%2fwww.blkmaterial.com%2fuploadfiles%2f107.151.154.110%2fwebid1222%2fsource%2f201911%2f7773515749978077.jpg&ehk=ilCMZ170kERtrd0SN5XClyXjXqELHt4mW43IBmijjJE%3d&risl=&pid=ImgRaw&r=0");
+h1{
+    color:rgb(237, 237, 237);
+    font-size:50px;
+    letter-spacing: 2px;
 }
 
-img{
-    display: inline;
+header{
+    margin-bottom: 5px;
+}
+
+img, h1{
+    display: inline-block;
+    color:rgb(237, 237, 237);
+}
+
+#search{
+    Background-color:rgba(128, 64, 0, 0.3);
 }
 
 #profile{
     float: right;
     margin: 10px 10px 0 0;
-    color:#FFF;
+    color:rgb(237, 237, 237);
     text-align:center;
 }
 
 .logo{
     display: inline-block;
     margin: 10px 0 0 10px;
-    color:#FFF;
+    color:rgb(237, 237, 237);
 }
 
 a{
     text-decoration: none;
-    color:#000;
+    color:rgb(237, 237, 237);
+}
+
+a:hover{
+    filter: drop-shadow(-1px 1px 1px #000);
 }
 
 .navlink{
@@ -50,15 +66,31 @@ li{
     padding-bottom: 20px;
 }
 
+#menu{
+    border-bottom: 2px solid #000;
+    border-top:  2px solid #000;
+    Background-color:rgba(128, 64, 0, 0.3);
+    color:rgb(237, 237, 237);
+    height: max-content;
+    width:300px;
+    padding: 20px;
+    float:left;
+    text-align: left;
+    margin: 10px;
+}
+
 nav{
     border-bottom: 2px solid #000;
     border-top:  2px solid #000;
-    background-color: #FFF;
+    Background-color:rgba(128, 64, 0, 0.3);
+    color:rgb(237, 237, 237);
 }
-
 
 #home {
     text-align: center;
+    height:inherit;
+    width: 75%;
+    float:left;
 }
 
 /*Below are styles for book container*/
@@ -67,6 +99,7 @@ nav{
     justify-content: space-between;
     padding-top: 20px;
     flex-wrap: wrap;
+    margin: 20px;
 }
 
 /* Below are styles for individual books */
@@ -92,6 +125,13 @@ article img{
     width: 100%;
     border-radius: 20px;
 }
+
+#books h2 {
+    color:rgb(237, 237, 237);
+    font-size:50px;
+    letter-spacing: 2px;
+}
+
 article .book_info{
     text-align: start;
     padding: 10px 0;

@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-  }
+}
 
 body {
     background-image:url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
@@ -14,16 +14,20 @@ h1{
     font-size:50px;
     letter-spacing: 2px;
 }
+
 header{
     margin-bottom: 5px;
 }
+
 img, h1{
     display: inline-block;
     color:rgb(237, 237, 237);
 }
+
 #search{
     Background-color:rgba(128, 64, 0, 0.3);
 }
+
 #profile{
     float: right;
     margin: 10px 10px 0 0;
@@ -52,6 +56,7 @@ a:hover{
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
 li{
     display: inline-block;
     padding-left: 12px;
@@ -66,7 +71,6 @@ nav{
     Background-color:rgba(128, 64, 0, 0.3);
     color:rgb(237, 237, 237);
 }
-
 
 #imgSrc{
     height:500px;
