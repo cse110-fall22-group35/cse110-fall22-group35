@@ -1,17 +1,13 @@
-function searchFilter() {
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('myInput');
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName('li');
+  const genre = document.getElementById('genre');
+  let genreValue;
+  genre.addEventListener('click', (event) => {
+    genreValue = genre.innerText;
+  });
 
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
+  const rating = document.getElementById('ratings');
+  let ratingStar;
+  genre.addEventListener('click', (event) => {
+    ratingStar = rating.innerText;
+  });
+
+  const age = document.querySelector('age').value;

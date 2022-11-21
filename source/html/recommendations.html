@@ -39,20 +39,42 @@
     <input type="text" id="genrebar" onkeyup="searchFilter()" placeholder="Search for genres..">
 
     <ul id="genre">
-      <li><a href="#">Adventure</a></li>
-      <li><a href="#">Children</a></li>
-      <li><a href="#">Contemporary</a></li>
-      <li><a href="#">Romance</a></li>
-      <li><a href="#">Fantasy</a></li>
-      <li><a href="#">Horror</a></li>
-      <li><a href="#">Thriller</a></li>
-      <li><a href="#">Science Fiction</a></li>
+      <li><a href="#">ADVENTURE</a></li>
+      <li><a href="#">CHILDREN</a></li>
+      <li><a href="#">CONTEMPORARY</a></li>
+      <li><a href="#">ROMANCE</a></li>
+      <li><a href="#">FANTASY</a></li>
+      <li><a href="#">HORROR</a></li>
+      <li><a href="#">THRILLER</a></li>
+      <li><a href="#">SCIENCE FICTION</a></li>
     </ul>
+    <br>
+    <br>
+    <script>
+        function searchFilter() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('genrebar');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("genre");
+            li = ul.getElementsByTagName('li');
 
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+                } else {
+                li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    <br>
     <br>
     <h2> Minimum Rating:</h2>
 
-    <ul id="genre">
+    <ul id="ratings">
         <li><a href="#">5</a></li>
         <li><a href="#">4</a></li>
         <li><a href="#">3</a></li>
@@ -68,5 +90,26 @@
 
       <br> <br>
       <button type="submit">Search</button>
+
+
+      <div id = "home" style="height:inherit; width: 75%;float:left;">
+        <section id = "books" class=" section -p1">
+            <div class="pro-container">
+                <div class="pro">
+                    <a href="./profile.html" id="profile">
+                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
+                        <p>profile</p>
+                    </a>
+                    <div class="book_info">
+                        <span><b><h3>Title<h3></b></span>
+                        <h4>Author</h4>
+                        <h5>book type</h3>
+                        <div class= "star">
+                            
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
   </body>
 </html>
