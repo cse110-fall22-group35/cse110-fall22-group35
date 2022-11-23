@@ -12,30 +12,49 @@ body {
 
 /* Below are styles for navbar */
 
+h1{
+  color:rgb(237, 237, 237);
+  font-size:50px;
+  letter-spacing: 2px;
+}
+
 header {
-  background-image: url("https://th.bing.com/th/id/R.3107d382af14c1c9984441d7ebfd099b?rik=4QNKKYsfDsE2%2bA&riu=http%3a%2f%2fwww.blkmaterial.com%2fuploadfiles%2f107.151.154.110%2fwebid1222%2fsource%2f201911%2f7773515749978077.jpg&ehk=ilCMZ170kERtrd0SN5XClyXjXqELHt4mW43IBmijjJE%3d&risl=&pid=ImgRaw&r=0");
+  margin-bottom: 5px;
 }
 
 img {
   display: inline;
 }
 
-#profile {
+img, h1{
+  display: inline-block;
+  color:rgb(237, 237, 237);
+}
+
+#search{
+  Background-color:rgba(128, 64, 0, 0.3);
+}
+
+#user-profile{
   float: right;
   margin: 10px 10px 0 0;
-  color: #fff;
-  text-align: center;
+  color:rgb(237, 237, 237);
+  text-align:center;
 }
 
-.logo {
+.logo{
   display: inline-block;
   margin: 10px 0 0 10px;
-  color: #fff;
+  color:rgb(237, 237, 237);
 }
 
-a {
+a{
   text-decoration: none;
-  color: #000;
+  color:rgb(237, 237, 237);
+}
+
+a:hover{
+  filter: drop-shadow(-1px 1px 1px #000);
 }
 
 .navlink {
@@ -53,10 +72,11 @@ li {
   padding-bottom: 20px;
 }
 
-nav {
+nav{
   border-bottom: 2px solid #000;
-  border-top: 2px solid #000;
-  background-color: #fff;
+  border-top:  2px solid #000;
+  Background-color:rgba(128, 64, 0, 0.3);
+  color:rgb(237, 237, 237);
 }
 
 /* Below are styles for reocmmendations page */
