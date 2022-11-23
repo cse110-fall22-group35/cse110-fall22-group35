@@ -38,7 +38,7 @@ jobs:
       - name: Install stylelint
         run: npm install --save-dev stylelint stylelint-config-standard
       - name: Run stylelint
-        run: npx stylelint "./source/css/*.css"
+        run: npx stylelint --fix "./source/css/*.css"
         continue-on-error: true
         
       - name: Install HTMLHint
