@@ -114,3 +114,19 @@ nav{
     padding-top: 20px;
     flex-wrap: wrap;
 }
+.container-fluid > h3 {
+
+    padding-right: 15px;
+    padding-left: 15px;
+    /* margin-right: auto;
+    margin-left: 300px; */
+    text-align: center;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 3;
+    justify-content: center;
+    margin-right: -15px;
+    margin-left: -15px;
+}
