@@ -1,9 +1,4 @@
 <!-- Sources: code-projects.org -->
-<?php
-session_start();
-if(!isset($_SESSION['user']))
-       header("location: index.php?Message=Login To Continue");
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,21 +32,11 @@ if(!isset($_SESSION['user']))
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php"><img alt="Brand" src="images/logo.jpg" style="width: 118px;margin-top: -7px;margin-left: -10px;"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-              <?php
-                  if(isset($_SESSION['user']))
-                    {
-                      echo'
-                    <li><a href="cart.php" class="btn btn-md"><span class="glyphicon glyphicon-shopping-cart">Cart</span></a></li>
-                    <li><a href="destroy.php" class="btn btn-md"> <span class="glyphicon glyphicon-log-out">LogOut</span></a></li>
-                         ';
-                    }
-               ?>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -60,11 +45,6 @@ if(!isset($_SESSION['user']))
 
     <div id="top" >
         <div id="searchbox" class="container-fluid" style="width:112%;margin-left:-6%;margin-right:-6%;">
-            <div>
-                <form role="search" action="Result.php" method="post">
-                    <input type="text" class="form-control" name="keyword" placeholder="Search for a Book , Author Or Category" style="width:80%;margin:20px 10% 20px 10%;">
-                </form>
-            </div>
         </div>
 
     <?php
