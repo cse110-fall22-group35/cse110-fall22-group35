@@ -44,7 +44,7 @@ jobs:
       - name: Install HTMLHint
         run: npm install htmlhint --save-dev
       - name: Run HTMLHint
-        run: ./node_modules/.bin/htmlhint ./html/*.html
+        run: ./node_modules/.bin/htmlhint ./source/html/*.html
         continue-on-error: true
         
       - name: Install JSDocs
