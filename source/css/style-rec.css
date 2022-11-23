@@ -12,9 +12,9 @@ body {
 
 /* Below are styles for navbar */
 
-h1{
-  color:rgb(237, 237, 237);
-  font-size:50px;
+h1 {
+  color: rgb(237 237 237);
+  font-size: 50px;
   letter-spacing: 2px;
 }
 
@@ -26,34 +26,35 @@ img {
   display: inline;
 }
 
-img, h1{
+img,
+h1 {
   display: inline-block;
-  color:rgb(237, 237, 237);
+  color: rgb(237 237 237);
 }
 
-#search{
-  Background-color:rgba(128, 64, 0, 0.3);
+#search {
+  background-color: rgb(128 64 0 / 30%);
 }
 
-#user-profile{
+#user-profile {
   float: right;
   margin: 10px 10px 0 0;
-  color:rgb(237, 237, 237);
-  text-align:center;
+  color: rgb(237 237 237);
+  text-align: center;
 }
 
-.logo{
+.logo {
   display: inline-block;
   margin: 10px 0 0 10px;
-  color:rgb(237, 237, 237);
+  color: rgb(237 237 237);
 }
 
-a{
+a {
   text-decoration: none;
-  color:rgb(237, 237, 237);
+  color: rgb(237 237 237);
 }
 
-a:hover{
+a:hover {
   filter: drop-shadow(-1px 1px 1px #000);
 }
 
@@ -72,11 +73,11 @@ li {
   padding-bottom: 20px;
 }
 
-nav{
+nav {
   border-bottom: 2px solid #000;
-  border-top:  2px solid #000;
-  Background-color:rgba(128, 64, 0, 0.3);
-  color:rgb(237, 237, 237);
+  border-top: 2px solid #000;
+  background-color: rgb(128 64 0 / 30%);
+  color: rgb(237 237 237);
 }
 
 /* Below are styles for reocmmendations page */
