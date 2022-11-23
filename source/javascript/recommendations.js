@@ -17,5 +17,5 @@ const age = document.querySelector('age').value;
 const button = document.querySelector('button');
 
 button.addEventListener('click', (event) => {
-  
+
 });
