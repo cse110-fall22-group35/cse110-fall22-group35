@@ -104,102 +104,102 @@ nav {
   display: flex;
 }
 
-<<<<<<< HEAD
-#left-column{
-    width: 30%;
-    position: relative;
-}
-
-#left-column>img{
-    height: 100%;
-    position: absolute;
-}
-
-#left-column>img:active{
-    opacity: 1;
-}
-
-#placeholder{
-    color: white;
-    text-align: center;
-    background-color: gray;
-    border-radius: 0.2cm;
-    padding-top: 4cm;
-    padding-bottom: 4cm;
-}
-
-#right-column{
-    width: 70%;
-    margin-left: 20px;
-=======
-#left-column {
-  width: 35%;
+<<<<<<< head #left-column {
+  width: 30%;
   position: relative;
 }
 
+#left-column > img {
+  height: 100%;
+  position: absolute;
+}
+
+#left-column > img:active {
+  opacity: 1;
+}
+
+#placeholder {
+  color: white;
+  text-align: center;
+  background-color: gray;
+  border-radius: 0.2cm;
+  padding-top: 4cm;
+  padding-bottom: 4cm;
+}
+
 #right-column {
-  width: 65%;
->>>>>>> e75118ec591cc3888594e5fde1f766a7da49b0b6
-}
+  width: 70%;
+  margin-left: 20px;
 
-#right-column > h4 {
-  color: rgb(237 237 237);
-  font-size: 30px;
-}
+  ======= #left-column {
+    width: 35%;
+    position: relative;
+  }
 
-#right-column > h4:active {
-  color: black;
-}
+  #right-column {
+    width: 65%;
+  >>>>>>> e75118ec591cc3888594e5fde1f766a7da49b0b6
+  }
 
-/* Below are styles for summary */
-#summary {
-  margin-top: 20px;
-  border: 2px;
-  padding: 20px;
-}
+  #right-column > h4 {
+    color: rgb(237 237 237);
+    font-size: 30px;
+  }
 
-#summary > h3 {
-  color: rgb(237 237 237);
-  font-size: 30px;
-  padding: 0.5em;
-  border-style: double;
-  border-color: black;
-  border-radius: 0.2cm;
-}
-
-<<<<<<< HEAD
-#summary>p{
-    color:rgb(237, 237, 237);
-    padding: .5em;
-    font-size: 20px;
-}
-
-#summary>p:active {
+  #right-column > h4:active {
     color: black;
-=======
-#summary > article {
-  color: rgb(237 237 237);
-  padding: 0.5em;
-  font-size: 20px;
-}
+  }
 
-#summary > article:active {
-  color: black;
->>>>>>> e75118ec591cc3888594e5fde1f766a7da49b0b6
-}
+  /* Below are styles for summary */
+  #summary {
+    margin-top: 20px;
+    border: 2px;
+    padding: 20px;
+  }
 
-/* Below are styles for comments */
-#comment {
-  margin-top: 20px;
-  border: 2px;
-  padding: 20px;
-}
+  #summary > h3 {
+    color: rgb(237 237 237);
+    font-size: 30px;
+    padding: 0.5em;
+    border-style: double;
+    border-color: black;
+    border-radius: 0.2cm;
+  }
 
-#comment > h3 {
-  color: rgb(237 237 237);
-  font-size: 30px;
-  padding: 0.5em;
-  border-style: double;
-  border-color: black;
-  border-radius: 0.2cm;
+  <<<<<<< head #summary > p {
+    color: rgb(237 237 237);
+    padding: 0.5em;
+    font-size: 20px;
+  }
+
+  #summary > p:active {
+    color: black;
+
+    ======= #summary > article {
+      color: rgb(237 237 237);
+      padding: 0.5em;
+      font-size: 20px;
+    }
+
+    #summary > article:active {
+      color: black;
+    >>>>>>> e75118ec591cc3888594e5fde1f766a7da49b0b6
+    }
+
+    /* Below are styles for comments */
+    #comment {
+      margin-top: 20px;
+      border: 2px;
+      padding: 20px;
+    }
+
+    #comment > h3 {
+      color: rgb(237 237 237);
+      font-size: 30px;
+      padding: 0.5em;
+      border-style: double;
+      border-color: black;
+      border-radius: 0.2cm;
+    }
+  }
 }
