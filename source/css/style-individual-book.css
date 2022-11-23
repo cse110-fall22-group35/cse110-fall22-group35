@@ -1,108 +1,110 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background-image:url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/*Below are styles for header and navbar*/
-h1{
-    color:rgb(237, 237, 237);
-    font-size:50px;
-    letter-spacing: 2px;
+/* Below are styles for header and navbar */
+h1 {
+  color: rgb(237 237 237);
+  font-size: 50px;
+  letter-spacing: 2px;
 }
 
-header{
-    margin-bottom: 5px;
+header {
+  margin-bottom: 5px;
 }
 
-img, h1{
-    display: inline-block;
-    color:rgb(237, 237, 237);
+img,
+h1 {
+  display: inline-block;
+  color: rgb(237 237 237);
 }
 
-#search{
-    Background-color:rgba(128, 64, 0, 0.3);
+#search {
+  background-color: rgb(128 64 0 / 30%);
 }
 
-#profile{
-    float: right;
-    margin: 10px 10px 0 0;
-    color:rgb(237, 237, 237);
-    text-align:center;
+#profile {
+  float: right;
+  margin: 10px 10px 0 0;
+  color: rgb(237 237 237);
+  text-align: center;
 }
 
-.logo{
-    display: inline-block;
-    margin: 10px 0 0 10px;
-    color:rgb(237, 237, 237);
+.logo {
+  display: inline-block;
+  margin: 10px 0 0 10px;
+  color: rgb(237 237 237);
 }
 
-a{
-    text-decoration: none;
-    color:rgb(237, 237, 237);
+a {
+  text-decoration: none;
+  color: rgb(237 237 237);
 }
 
-a:hover{
-    filter: drop-shadow(-1px 1px 1px #000);
+a:hover {
+  filter: drop-shadow(-1px 1px 1px #000);
 }
 
-.navlink{
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.navlink {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-li{
-    display: inline-block;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+li {
+  display: inline-block;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-#menu{
-    border-bottom: 2px solid #000;
-    border-top:  2px solid #000;
-    Background-color:rgba(128, 64, 0, 0.3);
-    color:rgb(237, 237, 237);
-    height: max-content;
-    width:300px;
-    padding: 20px;
-    float:left;
-    text-align: left;
-    margin: 10px;
+#menu {
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+  background-color: rgb(128 64 0 / 30%);
+  color: rgb(237 237 237);
+  height: max-content;
+  width: 300px;
+  padding: 20px;
+  float: left;
+  text-align: left;
+  margin: 10px;
 }
 
-nav{
-    border-bottom: 2px solid #000;
-    border-top:  2px solid #000;
-    Background-color:rgba(128, 64, 0, 0.3);
-    color:rgb(237, 237, 237);
+nav {
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+  background-color: rgb(128 64 0 / 30%);
+  color: rgb(237 237 237);
 }
 
-/*Below are styles for book title*/
-#title{
-    color:rgb(237, 237, 237);
-    font-size: 40px;
-    border: 2px;
-    padding: 20px;
+/* Below are styles for book title */
+#title {
+  color: rgb(237 237 237);
+  font-size: 40px;
+  border: 2px;
+  padding: 20px;
 }
 
-/*Below are styles for book info*/
-.book-info{
-    border: 2px;
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
+/* Below are styles for book info */
+.book-info {
+  border: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
 }
 
+<<<<<<< HEAD
 #left-column{
     width: 30%;
     position: relative;
@@ -129,34 +131,43 @@ nav{
 #right-column{
     width: 70%;
     margin-left: 20px;
+=======
+#left-column {
+  width: 35%;
+  position: relative;
 }
 
-#right-column>h4{
-    color:rgb(237, 237, 237);
-    font-size: 30px;
+#right-column {
+  width: 65%;
+>>>>>>> e75118ec591cc3888594e5fde1f766a7da49b0b6
 }
 
-#right-column>h4:active {
-    color: black;
+#right-column > h4 {
+  color: rgb(237 237 237);
+  font-size: 30px;
 }
 
-/*Below are styles for summary*/
-#summary{
-    margin-top: 20px;
-    border: 2px;
-    padding: 20px;
+#right-column > h4:active {
+  color: black;
 }
 
-#summary>h3{
-    color:rgb(237, 237, 237);
-    font-size: 30px;
-    border-style: groove;
-    padding: .5em;
-    border-style: double;
-    border-color: black;
-    border-radius: 0.2cm;
+/* Below are styles for summary */
+#summary {
+  margin-top: 20px;
+  border: 2px;
+  padding: 20px;
 }
 
+#summary > h3 {
+  color: rgb(237 237 237);
+  font-size: 30px;
+  padding: 0.5em;
+  border-style: double;
+  border-color: black;
+  border-radius: 0.2cm;
+}
+
+<<<<<<< HEAD
 #summary>p{
     color:rgb(237, 237, 237);
     padding: .5em;
@@ -165,21 +176,30 @@ nav{
 
 #summary>p:active {
     color: black;
+=======
+#summary > article {
+  color: rgb(237 237 237);
+  padding: 0.5em;
+  font-size: 20px;
 }
 
-/*Below are styles for comments*/
-#comment{
-    margin-top: 20px;
-    border: 2px;
-    padding: 20px;
+#summary > article:active {
+  color: black;
+>>>>>>> e75118ec591cc3888594e5fde1f766a7da49b0b6
 }
 
-#comment>h3{
-    color:rgb(237, 237, 237);
-    font-size: 30px;
-    border-style: groove;
-    padding: .5em;
-    border-style: double;
-    border-color: black;
-    border-radius: 0.2cm;
+/* Below are styles for comments */
+#comment {
+  margin-top: 20px;
+  border: 2px;
+  padding: 20px;
+}
+
+#comment > h3 {
+  color: rgb(237 237 237);
+  font-size: 30px;
+  padding: 0.5em;
+  border-style: double;
+  border-color: black;
+  border-radius: 0.2cm;
 }
