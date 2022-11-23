@@ -4,6 +4,8 @@ genre.addEventListener('click', (event) => {
   genreValue = genre.innerText;
 });
 
+console.log(genre);
+
 const rating = document.getElementById('ratings');
 let ratingStar;
 genre.addEventListener('click', (event) => {
@@ -11,3 +13,9 @@ genre.addEventListener('click', (event) => {
 });
 
 const age = document.querySelector('age').value;
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', (event) => {
+  
+});
