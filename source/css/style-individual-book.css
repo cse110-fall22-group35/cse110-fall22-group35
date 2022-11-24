@@ -104,7 +104,6 @@ nav {
   display: flex;
 }
 
-<<<<<<< HEAD
 #left-column{
     width: 30%;
     position: relative;
@@ -131,15 +130,6 @@ nav {
 #right-column{
     width: 70%;
     margin-left: 20px;
-=======
-#left-column {
-  width: 35%;
-  position: relative;
-}
-
-#right-column {
-  width: 65%;
->>>>>>> e75118ec591cc3888594e5fde1f766a7da49b0b6
 }
 
 #right-column > h4 {
@@ -167,7 +157,6 @@ nav {
   border-radius: 0.2cm;
 }
 
-<<<<<<< HEAD
 #summary>p{
     color:rgb(237, 237, 237);
     padding: .5em;
@@ -176,16 +165,6 @@ nav {
 
 #summary>p:active {
     color: black;
-=======
-#summary > article {
-  color: rgb(237 237 237);
-  padding: 0.5em;
-  font-size: 20px;
-}
-
-#summary > article:active {
-  color: black;
->>>>>>> e75118ec591cc3888594e5fde1f766a7da49b0b6
 }
 
 /* Below are styles for comments */
