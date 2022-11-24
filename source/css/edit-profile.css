@@ -1,95 +1,86 @@
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
 
 body {
-  background-image: url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-image:url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
+    background-size: 100% 100%;
 }
 
-h1 {
-  color: rgb(237 237 237);
-  font-size: 50px;
-  letter-spacing: 2px;
+h1{
+    color:rgb(237, 237, 237);
+    font-size:50px;
+    letter-spacing: 2px;
+}
+header{
+    margin-bottom: 5px;
+}
+img, h1{
+    display: inline-block;
+    color:rgb(237, 237, 237);
+}
+#search{
+    Background-color:rgba(128, 64, 0, 0.3);
+}
+#profile{
+    float: right;
+    margin: 10px 10px 0 0;
+    color:rgb(237, 237, 237);
+    text-align:center;
 }
 
-header {
-  margin-bottom: 5px;
+.logo{
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    color:rgb(237, 237, 237);
 }
 
-img,
-h1 {
-  display: inline-block;
-  color: rgb(237 237 237);
+a{
+    text-decoration: none;
+    color:rgb(237, 237, 237);
 }
 
-#search {
-  background-color: rgb(128 64 0 / 30%);
+a:hover{
+    filter: drop-shadow(-1px 1px 1px #000);
 }
 
-#profile {
-  float: right;
-  margin: 10px 10px 0 0;
-  color: rgb(237 237 237);
-  text-align: center;
+.navlink{
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+li{
+    display: inline-block;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.logo {
-  display: inline-block;
-  margin: 10px 0 0 10px;
-  color: rgb(237 237 237);
+nav{
+    border-bottom: 2px solid #000;
+    border-top:  2px solid #000;
+    Background-color:rgba(128, 64, 0, 0.3);
+    color:rgb(237, 237, 237);
 }
 
-a {
-  text-decoration: none;
-  color: rgb(237 237 237);
-}
 
-a:hover {
-  filter: drop-shadow(-1px 1px 1px #000);
+#edit{
+    display:block;
+    color:rgb(237, 237, 237);
 }
-
-.navlink {
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+label{
+    display:block;
+    padding-top: 15px;
 }
-
-li {
-  display: inline-block;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+input{
+    Background-color:rgba(128, 64, 0, 0.3);
+    color:rgb(237, 237, 237);
 }
-
-nav {
-  border-bottom: 2px solid #000;
-  border-top: 2px solid #000;
-  background-color: rgb(128 64 0 / 30%);
-  color: rgb(237 237 237);
-}
-
-#edit {
-  display: block;
-  color: rgb(237 237 237);
-}
-
-label {
-  display: block;
-  padding-top: 15px;
-}
-
-input {
-  background-color: rgb(128 64 0 / 30%);
-  color: rgb(237 237 237);
-}
-
-textarea {
-  background-color: rgb(128 64 0 / 30%);
-  color: rgb(237 237 237);
+textarea{
+    Background-color:rgba(128, 64, 0, 0.3);
+    color:rgb(237, 237, 237);
 }

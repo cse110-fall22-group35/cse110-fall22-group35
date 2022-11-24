@@ -33,7 +33,7 @@ class BookCard extends HTMLElement {
   }
 
   article{
-      height: 10%;
+      height: 20%;
       width: 13%;
       min-width: 250px;
       min-height: 460px;
@@ -97,6 +97,7 @@ class BookCard extends HTMLElement {
    *                        {
    *                          "imgSrc": "string",
    *                          "imgAlt": "string",
+   *                          "profile": "string",
    *                          "titleTxt": "string",
    *                          "author": "string",
    *                          "bookType": "string"
@@ -120,7 +121,7 @@ class BookCard extends HTMLElement {
     <div class="book_info">
       <span><b><h3>${data.titleTxt}<h3></b></span>
       <h4>${data.author}</h4>
-      <h5>${data.bookType}</h5>
+      <h5>${data.bookType}</h3>
       <div class= "star"></div>
     </div>`;
   }

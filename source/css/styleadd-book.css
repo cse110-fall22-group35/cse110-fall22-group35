@@ -1,108 +1,81 @@
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
 
 body {
-  background-image: url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-color: #333;
 }
 
-h1 {
-  color: rgb(237 237 237);
-  font-size: 50px;
-  letter-spacing: 2px;
+
+header{
+    background-image:url("https://th.bing.com/th/id/R.3107d382af14c1c9984441d7ebfd099b?rik=4QNKKYsfDsE2%2bA&riu=http%3a%2f%2fwww.blkmaterial.com%2fuploadfiles%2f107.151.154.110%2fwebid1222%2fsource%2f201911%2f7773515749978077.jpg&ehk=ilCMZ170kERtrd0SN5XClyXjXqELHt4mW43IBmijjJE%3d&risl=&pid=ImgRaw&r=0");
 }
 
-header {
-  margin-bottom: 5px;
+img{
+    display: inline;
 }
 
-img {
-  display: inline;
+#user-profile{
+    float: right;
+    margin: 10px 10px 0 0;
+    color:#FFF;
+    text-align:center;
 }
 
-img,
-h1 {
-  display: inline-block;
-  color: rgb(237 237 237);
+.logo{
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    color:#FFF;
 }
 
-#search {
-  background-color: rgb(128 64 0 / 30%);
+a{
+    text-decoration: none;
+    color:#000;
 }
 
-#user-profile {
-  float: right;
-  margin: 10px 10px 0 0;
-  color: rgb(237 237 237);
-  text-align: center;
+.navlink{
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.logo {
-  display: inline-block;
-  margin: 10px 0 0 10px;
-  color: rgb(237 237 237);
+li{
+    display: inline-block;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(237 237 237);
+nav{
+    border-bottom: 2px solid #000;
+    border-top:  2px solid #000;
+    background-color: #FFF;
 }
 
-a:hover {
-  filter: drop-shadow(-1px 1px 1px #000);
+h1{
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    color:#FFF;
 }
 
-.navlink {
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+form{
+    padding-top: 25px;
+    padding-left: 50px;
+    color:#FFF;
 }
 
-li {
-  display: inline-block;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+form input{
+    margin-bottom: 10px;
+    width: 300px;
 }
 
-nav {
-  border-bottom: 2px solid #000;
-  border-top: 2px solid #000;
-  background-color: rgb(128 64 0 / 30%);
-  color: rgb(237 237 237);
-}
-
-h1 {
-  display: inline-block;
-  margin: 10px 0 0 10px;
-  color: #fff;
-}
-
-form {
-  padding-top: 25px;
-  padding-left: 50px;
-  color: #fff;
-}
-
-form input {
-  margin-bottom: 10px;
-  width: 300px;
-}
-
-#summary {
-  width: 500px;
-  height: 100px;
-}
-
-button {
-  margin-top: 10px;
-  padding: 5px;
+button{
+    margin-top: 10px;
+    padding: 5px;
 }
 
 main {
@@ -114,3 +87,30 @@ main {
   row-gap: 10px;
   width: 100%;
 }
+/* Below are styles for individual books */
+article{
+    height: min-content;
+    width: 100%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: 0.2 ease;
+    background-color: antiquewhite;
+}
+
+article:hover{
+    box-shadow: 50px 50px 30px rgba(0,0,0,0.1)
+}
+article .book_info{
+    text-align: center;
+    padding: 3px 0;
+}
+article .book_info h4{
+    padding-top: 7px;
+    color: #088120;
+    font-size: 15px;
+    font-weight: 700;
+} 

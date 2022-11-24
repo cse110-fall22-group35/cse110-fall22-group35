@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Recommendations</title>
-    <!-- Book Card Custom Element -->
-    <script src="../scripts/BookCard.js" type="module"></script>
-    <!-- CSS -->
+    <title>Add a Book</title>
     <link rel="stylesheet" type="text/css" href="../css/style-rec.css">
-    <!-- Script -->
-    <script src="../scripts/rec-book.js" type="module"></script>
     <link rel="icon" href="../images/temp_logo.jpg">
   </head>
   <body>
@@ -17,10 +12,10 @@
             
         </a>
         <a href="./home.html" class="logo">
-          <h1>Novelty</h1>
+          <h1>Books</h1>
         </a>
         <a href="./profile.html" id="profile">
-            <img src="../images/profile.png" width="40" height="40">
+            <img src="../images/temp_logo.jpg" width="40" height="40">
             <p>profile</p>
         </a>
     </header>
@@ -39,50 +34,24 @@
     
     <br>
     <h2>Genre:</h2>
-    <!-- Filter Search Bar -->
-    <input type="text" id="genrebar" onkeyup="searchFilter()" placeholder="Search for genres..">
 
-    <!-- List of genres -->
+    <input type="text" id="genrebar" onkeyup="myFunction()" placeholder="Search for genres..">
+
     <ul id="genre">
-      <li><a href="#">ADVENTURE</a></li>
-      <li><a href="#">CHILDREN</a></li>
-      <li><a href="#">CONTEMPORARY</a></li>
-      <li><a href="#">ROMANCE</a></li>
-      <li><a href="#">FANTASY</a></li>
-      <li><a href="#">HORROR</a></li>
-      <li><a href="#">THRILLER</a></li>
-      <li><a href="#">SCIENCE FICTION</a></li>
+      <li><a href="#">Adventure</a></li>
+      <li><a href="#">Children</a></li>
+      <li><a href="#">Contemporary</a></li>
+      <li><a href="#">Romance</a></li>
+      <li><a href="#">Fantasy</a></li>
+      <li><a href="#">Horror</a></li>
+      <li><a href="#">Thriller</a></li>
+      <li><a href="#">Science Fiction</a></li>
     </ul>
-    <br>
-    <br>
 
-    <!-- Filter Search Bar Script -->
-    <script>
-        function searchFilter() {
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById('genrebar');
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("genre");
-            li = ul.getElementsByTagName('li');
-
-            for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("a")[0];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                li[i].style.display = "";
-                } else {
-                li[i].style.display = "none";
-                }
-            }
-        }
-    </script>
     <br>
-    <br>
-    <br>
-    <!-- Ratings -->
     <h2> Minimum Rating:</h2>
-    <!-- Choose between stars -->
-    <ul id="ratings">
+
+    <ul id="genre">
         <li><a href="#">5</a></li>
         <li><a href="#">4</a></li>
         <li><a href="#">3</a></li>
@@ -91,36 +60,12 @@
       </ul>
 
     <br>
-    <!-- Input Age -->
     <form>
         <h2> Age:</h2>
         <input type="text" id="age"><br>
-    </form>
+      </form>
 
-    <br> <br>
-    <button type="submit">Search</button>
-
-    <!-- List of book containers -->
-    <div id = "home">        
-        <div id = "books" class=" book section ">
-            <h2>Recommended Books</h2>
-            <section class="book-container">
-
-                <article class="book">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://th.bing.com/th/id/R.b90941ec00b5f91357afe8cde75d894d?rik=plbWRhBi1MgQjA&pid=ImgRaw&r=0" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                            <h4>Author</h4>
-                            <h5>Genre</h3>
-                            <h5>Summary</h5>
-                            <div class= "star"></div>
-                    </div>
-                </article>
-            </section>
-            
-        </div>
-    </body>
+      <br> <br>
+      <button type="submit">Search</button>
+  </body>
 </html>
