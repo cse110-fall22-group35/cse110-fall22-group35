@@ -109,30 +109,6 @@ nav {
     position: relative;
 }
 
-#left-column>img{
-    height: 100%;
-    position: absolute;
-}
-
-#left-column {
-  width: 30%;
-  position: relative;
-}
-
-#left-column > img {
-  height: 100%;
-  position: absolute;
-}
-
-#left-column > img:active {
-  opacity: 1;
-}
-
-#right-column{
-    width: 70%;
-    margin-left: 20px;
-}
-
 #placeholder {
   color: white;
   text-align: center;
@@ -142,52 +118,48 @@ nav {
   padding-bottom: 4cm;
 }
 
-#right-column {
+#left-column>img{
+    height: 100%;
+    position: absolute;
+}
+
+#left-column > img:active {
+  opacity: 1;
+}
+
+#right-column{
   width: 70%;
   margin-left: 20px;
 }
-#left-column {
-    width: 35%;
-    position: relative;
+
+#right-column > h4 {
+  color: rgb(237 237 237);
+  font-size: 30px;
 }
 
-  #right-column {
-    width: 65%;
-  }
+#summary {
+  margin-top: 20px;
+  border: 2px;
+  padding: 20px;
+}
 
-  #right-column > h4 {
-    color: rgb(237 237 237);
-    font-size: 30px;
-  }
-
-  #right-column > h4:active {
-    color: black;
-  }
-
-  /* Below are styles for summary */
-  #summary {
-    margin-top: 20px;
-    border: 2px;
-    padding: 20px;
-  }
-
-  #summary > h3 {
-    color: rgb(237 237 237);
-    font-size: 30px;
-    padding: 0.5em;
-    border-style: double;
-    border-color: black;
-    border-radius: 0.2cm;
-  }
+#summary > h3 {
+  color: rgb(237 237 237);
+  font-size: 30px;
+  padding: 0.5em;
+  border-style: double;
+  border-color: black;
+  border-radius: 0.2cm;
+}
 
 #summary > p {
-    color: rgb(237 237 237);
-    padding: 0.5em;
-    font-size: 20px;
+  color: rgb(237 237 237);
+  padding: 0.5em;
+  font-size: 20px;
 }
 
-  #summary > p:active {
-    color: black;
+#summary > p:active {
+  color: black;
 }
 
 /* Below are styles for comments */
