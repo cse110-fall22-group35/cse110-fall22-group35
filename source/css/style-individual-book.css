@@ -104,9 +104,9 @@ nav {
   display: flex;
 }
 
-#left-column{
-    width: 30%;
-    position: relative;
+#left-column {
+  width: 30%;
+  position: relative;
 }
 
 #placeholder {
@@ -118,16 +118,16 @@ nav {
   padding-bottom: 4cm;
 }
 
-#left-column>img{
-    height: 100%;
-    position: absolute;
+#left-column > img {
+  height: 100%;
+  position: absolute;
 }
 
 #left-column > img:active {
   opacity: 1;
 }
 
-#right-column{
+#right-column {
   width: 70%;
   margin-left: 20px;
 }
