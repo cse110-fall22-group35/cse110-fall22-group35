@@ -36,7 +36,9 @@
             <a href="./add-book.html" class="navlink"><li>Add a book</li></a>
         </ul>
     </nav>
+
     <h1 id = "title">Book Title</h1>
+
     <div class = "book-info">
         <div id = "left-column">
             <img src = "" alt = "">
@@ -44,6 +46,7 @@
                 PLACEHOLDER
             </p>
         </div>
+
         <div id = "right-column">
             <h4 id="tit;e">
                 Title:
@@ -65,9 +68,67 @@
             Where summary goes
         </p>
     </div>
-    <div id = "comment">
+
+    <div id = "form">
         <h3>
-            Comment
+            Add New Comment
         </h3>
+        <form>
+            <fieldset>
+                <legend> Profile </legend>
+                <label for = "name">
+                    Name: 
+                    <input type = "text" name = "name" autocomplete="name" required>
+                    <br> <br>
+                </label>
+
+                <label for = "date">
+                    Date:
+                    <input type = "date" min = "1900-01-01" max = "2099-12-31" required>
+                    <br> <br>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend> Rating </legend>
+                <label for="rating-0">
+                    0 <input type="radio" id="rating-0" value="0" name="rating">
+                </label>
+                <label for="rating-1">
+                    1 <input type="radio" id="rating-1" value="1" name="rating">
+                </label>
+                <label for="rating-2">
+                    2 <input type="radio" id="rating-2" value="2" name="rating">
+                </label>
+                <label for="rating-3">
+                    3 <input type="radio" id="rating-3" value="3" name="rating">
+                </label>
+                <label for="rating-4">
+                    4 <input type="radio" id="rating-4" value="4" name="rating">
+                </label>
+                <label for="rating-5">
+                    5 <input type="radio" id="rating-5" value="5" name="rating">
+                </label>
+                <br> <br>
+
+                <label for = "comment">
+                    Comment:
+                    <textarea name = "comment" cols = "38" rows = "5" required></textarea>
+                    <br> <br>
+                </label>
+            </fieldset>
+
+            <button type = "submit">Add Comment</button>
+            
+        </form>
+    </div>
+
+    <div id = "comments">
+        <h3>
+            Comments
+        </h3>
+        <p>
+            Where comments go
+        </p>
     </div>
   </body>

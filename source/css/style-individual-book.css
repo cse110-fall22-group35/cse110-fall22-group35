@@ -137,6 +137,7 @@ nav {
   font-size: 30px;
 }
 
+/* Below are styles for summary */
 #summary {
   margin-top: 20px;
   border: 2px;
@@ -150,30 +151,92 @@ nav {
   border-style: double;
   border-color: black;
   border-radius: 0.2cm;
+  border-color: rgb(237 237 237);
 }
 
 #summary > p {
   color: rgb(237 237 237);
-  padding: 0.5em;
   font-size: 20px;
+  padding: 0.5em;
 }
 
 #summary > p:active {
   color: black;
 }
 
-/* Below are styles for comments */
-#comment {
+/* Below are styles for form */
+#form {
   margin-top: 20px;
   border: 2px;
   padding: 20px;
 }
 
-#comment > h3 {
+#form > h3 {
   color: rgb(237 237 237);
   font-size: 30px;
   padding: 0.5em;
   border-style: double;
   border-color: black;
   border-radius: 0.2cm;
+  border-color: rgb(237 237 237);
+}
+
+fieldset {
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+legend {
+  color: rgb(237 237 237);
+  font-size: 20px;
+}
+
+label[for^="rating"] {
+  color: rgb(237 237 237);
+  padding-right: 10px;
+}
+
+label:not([for^="rating"]) {
+  color: rgb(237 237 237);
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  background-color: rgb(128 64 0 / 30%);
+  color: rgb(237 237 237);
+}
+
+textarea {
+  background-color: rgb(128 64 0 / 30%);
+  color: rgb(237 237 237);
+}
+
+button {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+/* Below are styles for comments */
+#comments {
+  margin-top: 20px;
+  border: 2px;
+  padding: 20px;
+}
+
+#comments > h3 {
+  color: rgb(237 237 237);
+  font-size: 30px;
+  padding: 0.5em;
+  border-style: double;
+  border-color: black;
+  border-radius: 0.2cm;
+  border-color: rgb(237 237 237);
+}
+
+#comments > p {
+  color: rgb(237 237 237);
+  font-size: 20px;
+  padding: 0.5em;
 }
