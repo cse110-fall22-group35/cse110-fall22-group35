@@ -32,7 +32,7 @@ jobs:
         run: |
           npm install semistandard
       - name: Run semistandard
-        run: npx semistandard --fix "./source/javascript/*.js"
+        run: npx semistandard --fix "./source/scripts/*.js"
         continue-on-error: true
         
       - name: Install stylelint
@@ -51,7 +51,7 @@ jobs:
         run: npm install -g jsdoc
       - name: Generate Docs
         run: |
-          jsdoc --verbose ./source/javascript/*.js
+          jsdoc --verbose ./source/scripts/*.js
           mv ./out/*.html ./docs
         
       - name: Commit files
