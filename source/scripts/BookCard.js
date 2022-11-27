@@ -1,4 +1,7 @@
-// BookCard.js
+/**
+ * Class for a bookcard
+ * @extends HTMLElement
+ */
 
 class BookCard extends HTMLElement {
   // Called once when document.createElement('book-card') is called, or
@@ -13,7 +16,6 @@ class BookCard extends HTMLElement {
     // Create a style element - This will hold all of the styles for the Web Component
     const style = document.createElement('style');
     // Insert all of the styles from cardTemplate.html into the <style> element you just made
-    // TODO - Change style as needed
     style.innerHTML = ` 
   * {
     box-sizing: border-box;
@@ -80,7 +82,7 @@ class BookCard extends HTMLElement {
       font-weight: 700;
   }
   `;
-    // A5. Append the <style> and <article> elements to the Shadow DOM
+    // Append the <style> and <article> elements to the Shadow DOM
     shadowEl1.append(style);
     shadowEl1.append(article);
   }
@@ -106,14 +108,13 @@ class BookCard extends HTMLElement {
     // If nothing was passed in, return
     if (!data) return;
 
-    // A6. Select the <article> we added to the Shadow DOM in the constructor
+    // Select the <article> we added to the Shadow DOM in the constructor
     const article = this.shadowRoot.querySelector('article');
-    // A7. Set the contents of the <article> with the <article> template given in
-    //           cardTemplate.html and the data passed in (You should only have one <article>,
-    //           do not nest an <article> inside another <article>). You should use Template
-    //           literals (tempalte strings) and element.innerHTML for this.
+    
+    let url = "../html/individual-book.html?q=" + `${data.titleTxt}`;
+    
     article.innerHTML = `
-    <a href="./profile.html" id="profile">
+    <a href="${url}" id="profile">
       <img src="${data.imgSrc}" id="profile-picture" alt="${data.imgAlt}">
       <p>${data.profile}</p>
     </a>
@@ -125,6 +126,6 @@ class BookCard extends HTMLElement {
     </div>`;
   }
 }
-// A8. Define the Class as a customElement so that you can create
-//           'book-card' elements
+// Define the Class as a customElement so that you can create
+// 'book-card' elements
 customElements.define('book-card', BookCard);
