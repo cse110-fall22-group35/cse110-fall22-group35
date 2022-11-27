@@ -4,7 +4,27 @@
 window.addEventListener("DOMContentLoaded", init);
 
 // Starts the program, all function calls trace back here
+var genre = "";
+var ratings = "";
+var author = "";
 function init() {
+  var items = document.querySelectorAll("#genre li");
+  for(var i = 0; i < items.length; i++)
+  {
+      items[i].onclick = function(){
+          document.getElementById("genrebar").value = this.innerText;
+          genre = this.innerText;
+      };
+  }
+  var rate = document.querySelectorAll("#ratings li");
+  for(var i = 0; i < rate.length; i++)
+  {
+      rate[i].onclick = function(){
+        document.getElementById("placeholder").innerText = this.innerText;
+        ratings = this.innerText;
+      };
+  }
+  author = document.getElementById('author').value.toUpperCase();
   // Get the books from localStorage
   let books = getBooksFromStorage();
   // Add each book to the <main> element
@@ -41,7 +61,9 @@ function getBooksFromStorage() {
  */
 function addBooksToDocument(books) {
   if (!books) return;
-  // A10. TODO - Get a reference to the <main> element
+  // A10. TODO - Get a reference to the <main> element        
+
+
   let sectionEl = document.querySelector("section");
   // console.log(mainEl);
   // A11. TODO - Loop through each of the books in the passed in array,
@@ -55,8 +77,11 @@ function addBooksToDocument(books) {
     // console.log("checking type of item: ");
     // console.log(typeof item);
     let element = document.createElement("book-card");
-    element.data = item;
-    sectionEl.append(element);
+    
+    if (item.bookType.toUpperCase() == genre || item.author.toUpperCase() == author) {
+      element.data = item;
+      sectionEl.append(element);
+    }
   }
 }
 
