@@ -68,10 +68,6 @@ function initFormHandler () {
       bookObject[`${pair[0]}`] = `${pair[1]}`;
     }
 
-    bookObject.comments = [];
-    bookObject.ratings = [];
-    bookObject.number_of_ratings = 0;
-
     // B9. TODO - Get the books array from localStorage, add this new book to it, and
     //            then save the books array back to localStorage
     const newbooks = getBooksFromStorage();
