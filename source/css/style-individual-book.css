@@ -89,7 +89,7 @@ nav {
 }
 
 /* Below are styles for book title */
-#title {
+#top-title {
   color: rgb(237 237 237);
   font-size: 40px;
   border: 2px;
@@ -109,22 +109,9 @@ nav {
   position: relative;
 }
 
-#placeholder {
-  color: white;
-  text-align: center;
-  background-color: gray;
-  border-radius: 0.2cm;
-  padding-top: 4cm;
-  padding-bottom: 4cm;
-}
-
 #left-column > img {
   height: 100%;
-  position: absolute;
-}
-
-#left-column > img:active {
-  opacity: 1;
+  position: relative;
 }
 
 #right-column {
@@ -138,28 +125,12 @@ nav {
 }
 
 /* Below are styles for summary */
-#summary {
-  margin-top: 20px;
-  border: 2px;
-  padding: 20px;
-}
-
-#summary > h3 {
-  color: rgb(237 237 237);
-  font-size: 30px;
-  padding: 0.5em;
-  border-style: double;
-  border-radius: 0.2cm;
-  border-color: rgb(237 237 237);
-}
-
-#summary > p {
+#right-column > p {
   color: rgb(237 237 237);
   font-size: 20px;
-  padding: 0.5em;
 }
 
-#summary > p:active {
+#right-column > p:active {
   color: black;
 }
 
@@ -196,7 +167,7 @@ label[for^="rating"] {
 
 label:not([for^="rating"]) {
   color: rgb(237 237 237);
-  display: block;
+  display: inline-block;
   margin-bottom: 5px;
 }
 

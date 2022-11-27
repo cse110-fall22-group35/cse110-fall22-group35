@@ -6,6 +6,7 @@
     
     <!-- Book Card Custom Element -->
     <script src="../scripts/BookCard.js" type="module"></script>
+    <script src="../scripts/individual-book.js" type="module"></script>
     
     <!-- Individual Book Page Stylesheets & Scripts -->
     <link rel="stylesheet" type="text/css" href="../css/style-individual-book.css">
@@ -37,36 +38,38 @@
         </ul>
     </nav>
 
-    <h1 id = "title">Book Title</h1>
+    <h1 id = "top-title">Book Title</h1>
 
     <div class = "book-info">
         <div id = "left-column">
-            <img src = "" alt = "">
-            <p id = "placeholder">
-                PLACEHOLDER
-            </p>
+            <img id = "cover" src = "" alt = "">
         </div>
 
         <div id = "right-column">
-            <h4 id="tit;e">
+            <h4 id="title">
                 Title:
             </h4>
+
+            <hr>
+
             <h4 id="author">
                 Author:
             </h4>
+
+            <hr>
+
             <h4 id="genre">
                 Genre: 
             </h4>
+
+            <hr>
+
+            <h4>
+                Summary:
+            </h4>
+            <p id = "summary">
+            </p>
         </div>
-    </div>
-    
-    <div id = "summary">
-        <h3>
-            Summary
-        </h3>
-        <p>
-            Where summary goes
-        </p>
     </div>
 
     <div id = "form">
@@ -79,12 +82,6 @@
                 <label for = "name">
                     Name: 
                     <input type = "text" name = "name" autocomplete="name" required>
-                    <br> <br>
-                </label>
-
-                <label for = "date">
-                    Date:
-                    <input type = "date" min = "1900-01-01" max = "2099-12-31" required>
                     <br> <br>
                 </label>
             </fieldset>
