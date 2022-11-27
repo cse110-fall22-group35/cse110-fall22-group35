@@ -39,7 +39,7 @@
     }
     </style>
     `;
-    // A5. TODO - Append the <style> and <article> elements to the Shadow DOM
+    // Append the <style> and <article> elements to the Shadow DOM
     shadow_dom.appendChild (article);
     shadow_dom.appendChild (style);
   }
@@ -48,8 +48,7 @@
    * Called when the .data property is set on this element.
    *
    * For Example:
-   * let recipeCard = document.createElement('recipe-card'); // Calls constructor()
-   * recipeCard.data = { foo: 'bar' } // Calls set data({ foo: 'bar' })
+   * let CommentCard = document.createElement('recipe-card'); // Calls constructor()
    *
    * @param {Object} data - The data to pass into the <recipe-card>, must be of the
    *                        following format:
@@ -63,12 +62,12 @@
     // If nothing was passed in, return
     if (!data) return;
 
-    // A6. TODO - Select the <article> we added to the Shadow DOM in the constructor
+    // Select the <article> we added to the Shadow DOM in the constructor
     const shadow_dom_article = this.shadowRoot.querySelector ("article");
-    // A7. TODO - Set the contents of the <article> with the <article> template given in
-    //           cardTemplate.html and the data passed in (You should only have one <article>,
-    //           do not nest an <article> inside another <article>). You should use Template
-    //           literals (tempalte strings) and element.innerHTML for this.
+    // Set the contents of the <article> with the <article> template given in
+    // cardTemplate.html and the data passed in (You should only have one <article>,
+    // do not nest an <article> inside another <article>). You should use Template
+    // literals (tempalte strings) and element.innerHTML for this.
     const {
       name,
       comment,
@@ -91,6 +90,6 @@
   }
 }
 
-// A8. TODO - Define the Class as a customElement so that you can create
-//           'recipe-card' elements
+// Define the Class as a customElement so that you can create
+// 'comment-card' elements
 customElements.define('comment-card', CommentCard);
