@@ -110,9 +110,9 @@ class BookCard extends HTMLElement {
 
     // Select the <article> we added to the Shadow DOM in the constructor
     const article = this.shadowRoot.querySelector('article');
-    
-    let url = "../html/individual-book.html?q=" + `${data.titleTxt}`;
-    
+
+    const url = '../html/individual-book.html?q=' + `${data.titleTxt}`;
+
     article.innerHTML = `
     <a href="${url}" id="profile">
       <img src="${data.imgSrc}" id="profile-picture" alt="${data.imgAlt}">
