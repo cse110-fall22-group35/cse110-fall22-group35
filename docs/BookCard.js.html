@@ -1,18 +1,46 @@
-// BookCard.js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: BookCard.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: BookCard.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// BookCard.js
 
 class BookCard extends HTMLElement {
   // Called once when document.createElement('book-card') is called, or
-  // the element is written into the DOM directly as <book-card>
+  // the element is written into the DOM directly as &lt;book-card>
   constructor () {
     super(); // Inheret everything from HTMLElement
 
     // Attach the shadow DOM to this Web Component (leave the mode open)
     const shadowEl1 = this.attachShadow({ mode: 'open' });
-    // Create an <article> element - This will hold our markup once our data is set
+    // Create an &lt;article> element - This will hold our markup once our data is set
     const article = document.createElement('article');
     // Create a style element - This will hold all of the styles for the Web Component
     const style = document.createElement('style');
-    // Insert all of the styles from cardTemplate.html into the <style> element you just made
+    // Insert all of the styles from cardTemplate.html into the &lt;style> element you just made
     // TODO - Change style as needed
     style.innerHTML = ` 
   * {
@@ -80,7 +108,7 @@ class BookCard extends HTMLElement {
       font-weight: 700;
   }
   `;
-    // A5. Append the <style> and <article> elements to the Shadow DOM
+    // A5. Append the &lt;style> and &lt;article> elements to the Shadow DOM
     shadowEl1.append(style);
     shadowEl1.append(article);
   }
@@ -92,7 +120,7 @@ class BookCard extends HTMLElement {
    * let bookCard = document.createElement('book-card'); // Calls constructor()
    * bookCard.data = { foo: 'bar' } // Calls set data({ foo: 'bar' })
    *
-   * @param {Object} data - The data to pass into the <book-card>, must be of the
+   * @param {Object} data - The data to pass into the &lt;book-card>, must be of the
    *                        following format:
    *                        {
    *                          "imgSrc": "string",
@@ -106,25 +134,48 @@ class BookCard extends HTMLElement {
     // If nothing was passed in, return
     if (!data) return;
 
-    // A6. Select the <article> we added to the Shadow DOM in the constructor
+    // A6. Select the &lt;article> we added to the Shadow DOM in the constructor
     const article = this.shadowRoot.querySelector('article');
-    // A7. Set the contents of the <article> with the <article> template given in
-    //           cardTemplate.html and the data passed in (You should only have one <article>,
-    //           do not nest an <article> inside another <article>). You should use Template
+    // A7. Set the contents of the &lt;article> with the &lt;article> template given in
+    //           cardTemplate.html and the data passed in (You should only have one &lt;article>,
+    //           do not nest an &lt;article> inside another &lt;article>). You should use Template
     //           literals (tempalte strings) and element.innerHTML for this.
     article.innerHTML = `
-    <a href="./profile.html" id="profile">
-      <img src="${data.imgSrc}" id="profile-picture" alt="${data.imgAlt}">
-      <p>${data.profile}</p>
-    </a>
-    <div class="book_info">
-      <span><b><h3>${data.titleTxt}<h3></b></span>
-      <h4>${data.author}</h4>
-      <h5>${data.bookType}</h5>
-      <div class= "star"></div>
-    </div>`;
+    &lt;a href="./profile.html" id="profile">
+      &lt;img src="${data.imgSrc}" id="profile-picture" alt="${data.imgAlt}">
+      &lt;p>${data.profile}&lt;/p>
+    &lt;/a>
+    &lt;div class="book_info">
+      &lt;span>&lt;b>&lt;h3>${data.titleTxt}&lt;h3>&lt;/b>&lt;/span>
+      &lt;h4>${data.author}&lt;/h4>
+      &lt;h5>${data.bookType}&lt;/h5>
+      &lt;div class= "star">&lt;/div>
+    &lt;/div>`;
   }
 }
 // A8. Define the Class as a customElement so that you can create
 //           'book-card' elements
 customElements.define('book-card', BookCard);
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addBooksToDocument">addBooksToDocument</a></li><li><a href="global.html#getBooksFromStorage">getBooksFromStorage</a></li><li><a href="global.html#initFormHandler">initFormHandler</a></li><li><a href="global.html#saveBooksToStorage">saveBooksToStorage</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Sun Nov 27 2022 21:54:30 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
