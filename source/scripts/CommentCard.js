@@ -34,13 +34,17 @@ class CommentCard extends HTMLElement {
       font-size: 30px;
     }
 
-    span {
+    #date {
       color: rgb(237 237 237);
     }
 
     img {
       display: inline;
       width: 150px;
+    }
+
+    span {
+      color: rgb(237 237 237);
     }
 
     #comment {
@@ -81,13 +85,18 @@ class CommentCard extends HTMLElement {
     const {
       name,
       comment,
-      rating
+      rating,
+      date
     } = data;
 
     shadow_dom_article.innerHTML =
     `
     <p id="name">
       ${name}
+    </p>
+    <hr>
+    <p id="date">
+      ${date}
     </p>
     <div id="rating">
       <img src="../images/${rating}-star.svg" alt="${rating} stars">
