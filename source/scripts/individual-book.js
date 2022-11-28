@@ -1,6 +1,37 @@
 const index = window.location.href.indexOf('=');
 const book_title = decodeURI(window.location.href.substring(index + 1));
 
+window.addEventListener('DOMContentLoaded', init);
+// Starts the program, all function calls trace back here
+function init () {
+    update_info();
+    addCommentsToDocument ();
+    const formEl = document.querySelector("form");
+    /**
+     * Upon submitting the form to add a comment, it simply grabs all of the information
+     * needed from the form and adds it to the list of comments for that book.
+     */
+    function formElSubmit (event) {
+        event.preventDefault();
+        
+        const formData = new FormData(formEl);
+        const reviewObject = {};
+        for (const pair of formData.entries()) {
+          reviewObject[`${pair[0]}`] = `${pair[1]}`;
+        }
+        let currentDate = new Date();
+        let cDay = currentDate.getDate()
+        let cMonth = currentDate.getMonth() + 1
+        let cYear = currentDate.getFullYear()
+        let date = cMonth + "/" + cDay + "/" + cYear;
+        reviewObject["date"] = date;
+        const newreviews = getReviewsFromStorage();
+        newreviews.push(reviewObject);
+        saveReviewsToStorage(newreviews);
+    }
+    formEl.addEventListener('submit', formElSubmit);
+}
+
 /**
  * Reads 'books' from localStorage and returns an array of
  * all of the books found (parsed, not in string form). If
@@ -48,4 +79,54 @@ function update_info () {
   document.querySelector('#summary').innerHTML = current_book.summary;
 }
 
-update_info();
+/**
+ * Reads the reviews from localStorage and returns an array of
+ * all of the reviews for this book found (parsed, not in string form). If
+ * nothing is found in localStorage this book, an empty array
+ * is returned.
+ * @returns {Array<Object>} An array of reviews found in localStorage
+ */
+function getReviewsFromStorage () {
+  //fails to access if it does not exist, just returns an empty array
+  if (!localStorage.getItem(book_title)) {
+    return [];
+  }
+
+  const books = JSON.parse(localStorage.getItem(book_title));
+  return books;
+}
+
+/**
+ * Takes in an array of reviews, converts it to a string, and then
+ * saves that string to the book's title in local storage
+ * @param {Array<Object>} reviews An array ofreviews
+ */
+function saveReviewsToStorage (reviews) {
+  localStorage.setItem(book_title, JSON.stringify(reviews));
+}
+
+/**
+ * Takes in an array of books and for each book creates a
+ * new <comment-card> element, adds the book data to that card
+ * using element.data = {...}, and then appends that new comment
+ * @param {Array<Object>} books An array of books
+ */
+ function addCommentsToDocument (comment) {
+    if (!comment) return;
+    // Get a reference to the <main> element
+    const sectionEl = document.querySelector('.comment_section');
+    // Loop through each of the books in the passed in array,
+    // create a <book-card> element for each one, and populate
+    // each <book-card> with that book data using element.data = ...
+    // Append each element to <main>
+    // console.log(typeof books);
+    comment.forEach(createCommentCard);
+  
+    function createBookCard (item) {
+      // console.log("checking type of item: ");
+      // console.log(typeof item);
+      const element = document.createElement('comment-card');
+      element.data = item;
+      sectionEl.append(element);
+    }
+  }
