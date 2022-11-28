@@ -10,6 +10,11 @@ body {
   background-repeat: no-repeat;
 }
 
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
 /* Below are styles for header and navbar */
 h1 {
   color: rgb(237 237 237);
