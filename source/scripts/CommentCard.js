@@ -16,21 +16,26 @@ class CommentCard extends HTMLElement {
     // Create a style element - This will hold all of the styles for the Web Component
     const style = document.createElement('style');
     // Insert all of the styles from cardTemplate.html into the <style> element you just made
-    style.textContent =
+    style.innerHTML =
     `
-    <style>
     article{
-      padding: 10px 12px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
       border: 2px;
-      padding: 20px;
+      border-color: rgb(237 237 237);
       border-radius: 25px;
-      cursor: pointer;
-      background-color: antiquewhite;
+      border-style: double;
     }
 
     #name {
-      color: rgb (237 237 237);
+      color: rgb(237 237 237);
       font-size: 30px;
+    }
+
+    span {
+      color: rgb(237 237 237);
     }
 
     img {
@@ -39,12 +44,11 @@ class CommentCard extends HTMLElement {
     }
 
     #comment {
-      color: rgb (237 237 237);
-      font-size: 25px;
+      color: rgb(237 237 237);
+      font-size: 20px;
       border-radius: 0.2cm;
       border-color: rgb(237 237 237);
     }
-    </style>
     `;
     // Append the <style> and <article> elements to the Shadow DOM
     shadow_dom.appendChild(article);
@@ -85,11 +89,11 @@ class CommentCard extends HTMLElement {
     <p id="name">
       ${name}
     </p>
-    <div class="rating">
-      <span>${rating}</span>
+    <div id="rating">
       <img src="../images/${rating}-star.svg" alt="${rating} stars">
+      <span>${rating}</span>
     </div>
-    <p class="comment">
+    <p id="comment">
       ${comment}
     </p>
     `;
