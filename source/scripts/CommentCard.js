@@ -23,12 +23,17 @@ class CommentCard extends HTMLElement {
       margin-top: 20px;
       border: 2px;
       padding: 20px;
-      bor
+      box-sizing: border-box;
     }
 
     #name {
       color: rgb (237 237 237);
       font-size: 30px;
+    }
+
+    img {
+      display: inline;
+      width: 150px;
     }
 
     #comment {
@@ -80,7 +85,7 @@ class CommentCard extends HTMLElement {
     </p>
     <div class="rating">
       <span>${rating}</span>
-      <img src="../images/${rating}-star.png" alt="${rating} stars">
+      <img src="../images/${rating}-star.svg" alt="${rating} stars">
     </div>
     <p class="comment">
       ${comment}
