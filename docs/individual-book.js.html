@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: individual-book.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: individual-book.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const index = window.location.href.indexOf('=');
+const book_title = decodeURI(window.location.href.substring(index + 1));
+
+window.addEventListener('DOMContentLoaded', init);
+// Starts the program, all function calls trace back here
+function init () {
+  update_info();
+  const reviews = getReviewsFromStorage();
+  console.log(reviews);
+  reviews.forEach(addCommentToDocument);
+  const formEl = document.querySelector('form');
+
+  /**
+     * Upon submitting the form to add a comment, it simply grabs all of the information
+     * needed from the form and adds it to the list of comments for that book.
+     */
+  function formElSubmit (event) {
+    event.preventDefault();
+
+    const formData = new FormData(formEl);
+    const reviewObject = {};
+    for (const pair of formData.entries()) {
+      reviewObject[`${pair[0]}`] = `${pair[1]}`;
+    }
+    const currentDate = new Date();
+    const cDay = currentDate.getDate();
+    const cMonth = currentDate.getMonth() + 1;
+    const cYear = currentDate.getFullYear();
+    const date = cMonth + '/' + cDay + '/' + cYear;
+    reviewObject.date = date;
+    const newreviews = getReviewsFromStorage();
+    newreviews.push(reviewObject);
+    saveReviewsToStorage(newreviews);
+    addCommentToDocument(reviewObject);
+  }
+  formEl.addEventListener('submit', formElSubmit);
+}
+
+/**
+ * Reads 'books' from localStorage and returns an array of
+ * all of the books found (parsed, not in string form). If
+ * nothing is found in localStorage for 'books', an empty array
+ * is returned.
+ * @returns {Array&lt;Object>} An array of books found in localStorage
+ */
+function getBooksFromStorage () {
+  // Complete the functionality as described in this function
+  // header. It is possible in only a single line, but should
+  // be no more than a few lines.
+  if (!localStorage.getItem('books')) {
+    return [];
+  }
+
+  const books = JSON.parse(localStorage.getItem('books'));
+  return books;
+}
+
+/**
+ * Finds the book object the page needs to represent
+ * @return the book object for the page
+ */
+function searchBook () {
+  const books = getBooksFromStorage();
+  for (let i = 0; i &lt; books.length; i++) {
+    if (books[i].titleTxt == book_title) {
+      return books[i];
+    }
+  }
+}
+
+/**
+* Adds the book's information to the page.
+*/
+function update_info () {
+  const current_book = searchBook();
+  console.log(current_book);
+  document.querySelector('#top-title').innerHTML = current_book.titleTxt;
+  document.querySelector('#cover').src = current_book.imgSrc;
+  document.querySelector('#cover').alt = current_book.imgAlt;
+  document.querySelector('#title').innerHTML = current_book.titleTxt;
+  document.querySelector('#author').innerHTML = 'Author: ' + current_book.author;
+  document.querySelector('#genre').innerHTML = 'Genre: ' + current_book.bookType;
+  document.querySelector('#summary').innerHTML = current_book.summary;
+}
+
+/**
+ * Reads the reviews from localStorage and returns an array of
+ * all of the reviews for this book found (parsed, not in string form). If
+ * nothing is found in localStorage this book, an empty array
+ * is returned.
+ * @returns {Array&lt;Object>} An array of reviews found in localStorage
+ */
+function getReviewsFromStorage () {
+  // fails to access if it does not exist, just returns an empty array
+  if (!localStorage.getItem(book_title)) {
+    return [];
+  }
+
+  const books = JSON.parse(localStorage.getItem(book_title));
+  return books;
+}
+
+/**
+ * Takes in an array of reviews, converts it to a string, and then
+ * saves that string to the book's title in local storage
+ * @param {Array&lt;Object>} reviews An array ofreviews
+ */
+function saveReviewsToStorage (reviews) {
+  localStorage.setItem(book_title, JSON.stringify(reviews));
+}
+
+/**
+ * Takes in an array of books and for each book creates a
+ * new &lt;comment-card> element, adds the book data to that card
+ * using element.data = {...}, and then appends that new comment
+ * @param {Array&lt;Object>} books An array of books
+ */
+function addCommentToDocument (comment) {
+  if (!comment) return;
+  // Get a reference to the &lt;main> element
+  const sectionEl = document.querySelector('.comment_section');
+  const element = document.createElement('comment-card');
+  element.data = comment;
+  sectionEl.append(element);
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BookCard.html">BookCard</a></li><li><a href="CommentCard.html">CommentCard</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addBooksToDocument">addBooksToDocument</a></li><li><a href="global.html#addCommentToDocument">addCommentToDocument</a></li><li><a href="global.html#getBooksFromStorage">getBooksFromStorage</a></li><li><a href="global.html#getReviewsFromStorage">getReviewsFromStorage</a></li><li><a href="global.html#initFormHandler">initFormHandler</a></li><li><a href="global.html#saveBooksToStorage">saveBooksToStorage</a></li><li><a href="global.html#saveReviewsToStorage">saveReviewsToStorage</a></li><li><a href="global.html#searchBook">searchBook</a></li><li><a href="global.html#update_info">update_info</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Mon Nov 28 2022 07:41:02 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
