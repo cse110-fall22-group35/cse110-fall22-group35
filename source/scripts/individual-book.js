@@ -10,7 +10,6 @@ function init () {
   reviews.forEach(addCommentToDocument);
   const formEl = document.querySelector('form');
 
-
   /**
      * Upon submitting the form to add a comment, it simply grabs all of the information
      * needed from the form and adds it to the list of comments for that book.

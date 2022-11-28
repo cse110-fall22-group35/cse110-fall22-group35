@@ -107,7 +107,6 @@ class BookCard extends HTMLElement {
   set data (data) {
     // If nothing was passed in, return
     if (!data) return;
-    
 
     // Select the <article> we added to the Shadow DOM in the constructor
     const article = this.shadowRoot.querySelector('article');
