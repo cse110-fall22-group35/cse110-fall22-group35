@@ -8,6 +8,8 @@ function init () {
   // Add the event listeners to the form elements
   // stores data from form to local storage
   initFormHandler();
+  const books = getBooksFromStorage();
+  addBooksToDocumentList(books);
 }
 
 /**
@@ -75,6 +77,7 @@ function initFormHandler () {
     // console.log(newbooks);
     newbooks.push(bookObject);
     saveBooksToStorage(newbooks);
+    location.reload();
   }
   // B3. TODO - Add an event listener for the 'submit' event, which fires when the
   //            submit button is clicked
@@ -95,4 +98,33 @@ function initFormHandler () {
   // // console.log(clearLocalBtn);
   // // B11. TODO - Add a click event listener to clear local storage button
   // clearLocalBtn.addEventListener("click", clearStorage);
+}
+
+// Qiyun Added to show added book list
+/**
+ * Takes in an array of books and for each book creates a
+ * new <book-list> element, adds the book data to that card
+ * using element.data = {...}, and then appends that new book
+ * to <main>
+ * @param {Array<Object>} books An array of books
+ */
+function addBooksToDocumentList (books) {
+  if (!books) return;
+  // A10. TODO - Get a reference to the <main> element
+  const sectionEl = document.querySelector('section');
+  // console.log(mainEl);
+  // A11. TODO - Loop through each of the books in the passed in array,
+  //            create a <book-card> element for each one, and populate
+  //            each <book-card> with that book data using element.data = ...
+  //            Append each element to <main>
+  // console.log(typeof books);
+  books.forEach(createBookList);
+
+  function createBookList (item) {
+    // console.log("checking type of item: ");
+    // console.log(typeof item);
+    const element = document.createElement('book-list');
+    element.data = item;
+    sectionEl.append(element);
+  }
 }

@@ -26,10 +26,6 @@ header {
   margin-bottom: 5px;
 }
 
-img {
-  display: inline;
-}
-
 img,
 h1 {
   display: inline-block;
@@ -40,7 +36,7 @@ h1 {
   background-color: rgb(128 64 0 / 30%);
 }
 
-#user-profile {
+#profile {
   float: right;
   margin: 10px 10px 0 0;
   color: rgb(237 237 237);
@@ -77,63 +73,48 @@ li {
   padding-bottom: 20px;
 }
 
-nav {
-  border-bottom: 2px solid #000;
-  border-top: 2px solid #000;
-  background-color: rgb(128 64 0 / 30%);
-  color: rgb(237 237 237);
-}
-
-h1 {
+#tips1 {
   display: inline-block;
-  margin: 10px 0 0 10px;
-  color: #fff;
-}
-
-form > h3 {
-  color: rgb(237 237 237);
-  font-size: 30px;
-  padding: 0.5em;
-  border-style: double;
-  border-radius: 0.2cm;
-  border-color: rgb(237 237 237);
-}
-
-form {
-  margin: 15px;
-}
-
-input {
-  background-color: rgb(128 64 0 / 30%);
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: rgb(237 237 237);
 }
 
-textarea {
-  background-color: rgb(128 64 0 / 30%);
+#tips2 {
+  display: inline-block;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: rgb(237 237 237);
 }
 
-form input {
-  margin-bottom: 10px;
-  width: 300px;
+#tips3 {
+  /* display: inline-block; */
+
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgb(237 237 237);
 }
 
-#summary {
-  width: 500px;
-  height: 100px;
+#tips4 {
+  display: inline-block;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgb(237 237 237);
 }
 
-button {
-  margin-top: 10px;
-  padding: 5px;
-}
-
-main {
-  column-gap: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  height: auto;
-  max-width: 660px;
-  row-gap: 10px;
-  width: 100%;
+#tips5 {
+  /* display: inline-block; */
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgb(237 237 237);
 }
