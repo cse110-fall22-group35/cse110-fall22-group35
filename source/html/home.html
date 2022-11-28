@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Add a Book</title>
-    <link rel="stylesheet" type="text/css" href="../css/style_home.css">
+    <title>Home</title>
     <link rel="icon" href="../images/temp_logo.jpg">
+    
+    <!-- Book Card Custom Element -->
+    <script src="../scripts/BookCard.js" type="module"></script>
+    
+    <!-- Home Stylesheets & Scripts -->
+    <link rel="stylesheet" type="text/css" href="../css/style_home.css">
+    <script src="../scripts/home.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -12,10 +18,10 @@
             
         </a>
         <a href="./home.html" class="logo">
-          <h1>Books</h1>
+          <h1>Novelty</h1>
         </a>
         <a href="./profile.html" id="profile">
-            <img src="../images/temp_logo.jpg" width="40" height="40">
+            <img src="../images/profile.png" width="40" height="40">
             <p>profile</p>
         </a>
     </header>
@@ -30,7 +36,7 @@
             <a href="./add-book.html" class="navlink"><li>Add a book</li></a>
         </ul>
     </nav>
-    <div id = "menu" style="background-color:#FFD700;height: max-content;width:25%;float:left;">
+    <div id = "menu">
         <div id="Filter">
             <h2><b>Filter</b><br><h2>
                 <h4>what kind of book do you like?</h4>
@@ -42,7 +48,7 @@
                         <option value="poems"></option>
                         <option value="biograph"></option>
                     </datalist>
-                <button type="button">confrim</button>
+                <button type="button">confirm</button>
         </div>
 
         <div id = "sort">
@@ -60,106 +66,37 @@
         </div>
     
     </div>
-    <div id = "home" style="height:inherit; width: 75%;float:left;">
-        <section id = "books" class=" section -p1">
-            <h2>books for you</h2>
-            <div class="pro-container">
-                <div class="pro">
+    <div id = "home">        
+        <div id = "books" class=" section -p1">
+            <h2>Your Books</h2>
+            <section class="book-container">
+                <!-- Add Books Here -->
+                
+                <!-- Example Book -->
+                <article class="book">
                     <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
+                        <img src="https://th.bing.com/th/id/R.b90941ec00b5f91357afe8cde75d894d?rik=plbWRhBi1MgQjA&pid=ImgRaw&r=0" id="profile-picture" alt="profile picture">
                         <p>profile</p>
                     </a>
                     <div class="book_info">
                         <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
+                            <h4>Author</h4>
+                            <h5>Genre</h3>
+                            <h5>Summary</h5>
+                            <div class= "star"></div>
                     </div>
                 </div>
                 <div class="pro">
                     <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
+                        <img src="https://th.bing.com/th/id/R.b90941ec00b5f91357afe8cde75d894d?rik=plbWRhBi1MgQjA&pid=ImgRaw&r=0" id="profile-picture" alt="profile picture">
                         <p>profile</p>
                     </a>
                     <div class="book_info">
                         <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                        <h4>Author</h4>
-                        <h5>book type</h3>
-                        <div class= "star">
-                            
-                        </div>
+                            <h4>Author</h4>
+                            <h5>Genre</h3>
+                            <h5>Summary</h5>
+                            <div class= "star"></div>
                     </div>
                 </div>
                 <div class="pro">

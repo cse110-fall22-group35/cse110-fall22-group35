@@ -74,62 +74,22 @@ nav {
   color: rgb(237 237 237);
 }
 
-#imgSrc {
-  height: 500px;
-  width: 250px;
-  float: left;
-  margin-left: 10px;
-  margin-right: 20px;
-  margin-top: 17px;
-}
-
-profile-information {
+#edit {
   display: block;
-  padding-top: 50px;
-  min-height: 500px;
-  margin-left: 280px;
-}
-
-profile-information p {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-size: larger;
   color: rgb(237 237 237);
 }
 
-#edit-profile {
-  float: right;
-  padding: 10px;
-  border: 2px solid #000;
-  border-radius: 3px;
+label {
+  display: block;
+  padding-top: 15px;
+}
+
+input {
   background-color: rgb(128 64 0 / 30%);
-  margin-right: 10px;
-  margin-top: 15px;
-}
-
-recent-books p {
-  font-size: 40px;
   color: rgb(237 237 237);
-  text-align: center;
 }
 
-#recents {
-  display: flex;
-  border-radius: 16px;
-  flex-direction: row;
-  height: 200px;
-  justify-content: center;
-  align-items: center;
-}
-
-#recents li {
-  border: 2px solid #000;
-  flex: 1 0 20%;
-  height: 180px;
-  background: #555;
-  margin: 10px;
+textarea {
+  background-color: rgb(128 64 0 / 30%);
   color: rgb(237 237 237);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
