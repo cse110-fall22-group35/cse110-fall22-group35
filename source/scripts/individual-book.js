@@ -5,8 +5,12 @@ window.addEventListener('DOMContentLoaded', init);
 // Starts the program, all function calls trace back here
 function init () {
   update_info();
-  addCommentsToDocument();
+  const reviews = getReviewsFromStorage();
+  console.log(reviews);
+  reviews.forEach(addCommentToDocument);
   const formEl = document.querySelector('form');
+
+
   /**
      * Upon submitting the form to add a comment, it simply grabs all of the information
      * needed from the form and adds it to the list of comments for that book.
@@ -28,6 +32,7 @@ function init () {
     const newreviews = getReviewsFromStorage();
     newreviews.push(reviewObject);
     saveReviewsToStorage(newreviews);
+    addCommentToDocument(reviewObject);
   }
   formEl.addEventListener('submit', formElSubmit);
 }
@@ -111,22 +116,11 @@ function saveReviewsToStorage (reviews) {
  * using element.data = {...}, and then appends that new comment
  * @param {Array<Object>} books An array of books
  */
-function addCommentsToDocument (comment) {
+function addCommentToDocument (comment) {
   if (!comment) return;
   // Get a reference to the <main> element
   const sectionEl = document.querySelector('.comment_section');
-  // Loop through each of the books in the passed in array,
-  // create a <book-card> element for each one, and populate
-  // each <book-card> with that book data using element.data = ...
-  // Append each element to <main>
-  // console.log(typeof books);
-  comment.forEach(createCommentCard);
-
-  function createBookCard (item) {
-    // console.log("checking type of item: ");
-    // console.log(typeof item);
-    const element = document.createElement('comment-card');
-    element.data = item;
-    sectionEl.append(element);
-  }
+  const element = document.createElement('comment-card');
+  element.data = comment;
+  sectionEl.append(element);
 }

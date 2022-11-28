@@ -61,7 +61,6 @@ class CommentCard extends HTMLElement {
   set data (data) {
     // If nothing was passed in, return
     if (!data) return;
-
     // Select the <article> we added to the Shadow DOM in the constructor
     const shadow_dom_article = this.shadowRoot.querySelector('article');
     // Set the contents of the <article> with the <article> template given in
@@ -81,7 +80,7 @@ class CommentCard extends HTMLElement {
     </p>
     <div class="rating">
       <span>${rating}</span>
-      <img src="./assets/images/icons/${rating}-star.svg" alt="${rating} stars">
+      <img src="../images/${rating}-star.png" alt="${rating} stars">
     </div>
     <p class="comment">
       ${comment}
