@@ -19,11 +19,13 @@ class CommentCard extends HTMLElement {
     style.textContent =
     `
     <style>
-    * {
-      margin-top: 20px;
+    article{
+      padding: 10px 12px;
       border: 2px;
       padding: 20px;
-      box-sizing: border-box;
+      border-radius: 25px;
+      cursor: pointer;
+      background-color: antiquewhite;
     }
 
     #name {
