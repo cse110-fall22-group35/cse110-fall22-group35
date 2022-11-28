@@ -3,6 +3,9 @@
   <head>
     <title>Add a Book</title>
     <link rel="icon" href="../images/temp_logo.jpg">
+    // the scripts of added book list
+     <!-- Book List Custom Element -->
+    <script src="../scripts/BookList.js" type="module"></script>
     
     <!-- Main Stylesheets & Scripts -->
     <link rel="stylesheet" type="text/css" href="../css/styleadd-book.css">
@@ -55,5 +58,28 @@
       </label>
       <button type="submit">Add Book</button>
     </form>
+    //the list to show the added books
+    <div id = 'added' style = "background-color:#FFD700; height:100vh; width: 25%;float:right;">
+      <div id = "books" class=" section -p1">
+        <h2>Added books</h2>
+        <section class="book-container">
+            <!-- Add Books Here -->
+            
+            <!-- Example Book -->
+            <article class="bookList">
+                
+                <div class="book_info">
+                  <a href="./profile.html" id="profile">
+                    <span><b><h3>Title<h3></b></span>
+                  </a>
+                        <h5>Author</h5>
+                        <h5>book type</h5>
+                </div>
+            </article>
+        </section>
+       
+    </div>
+      
+    </div>
   </body>
 </html>
