@@ -38,7 +38,8 @@ Small css changes so site looks consistent.
 ![Sarah](../sprintreview2/sarah.png)
 
 Nathan Enrici
-
+Worked on the pipeline.
+Worked with Chia-Han to add functionality to individual-book.html.
 ![Nathan](../sprintreview2/nathan.png)
 
 Alexander Yang
