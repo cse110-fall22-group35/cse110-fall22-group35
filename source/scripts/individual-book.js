@@ -4,32 +4,32 @@ const book_title = decodeURI(window.location.href.substring(index + 1));
 window.addEventListener('DOMContentLoaded', init);
 // Starts the program, all function calls trace back here
 function init () {
-    update_info();
-    addCommentsToDocument ();
-    const formEl = document.querySelector("form");
-    /**
+  update_info();
+  addCommentsToDocument();
+  const formEl = document.querySelector('form');
+  /**
      * Upon submitting the form to add a comment, it simply grabs all of the information
      * needed from the form and adds it to the list of comments for that book.
      */
-    function formElSubmit (event) {
-        event.preventDefault();
-        
-        const formData = new FormData(formEl);
-        const reviewObject = {};
-        for (const pair of formData.entries()) {
-          reviewObject[`${pair[0]}`] = `${pair[1]}`;
-        }
-        let currentDate = new Date();
-        let cDay = currentDate.getDate()
-        let cMonth = currentDate.getMonth() + 1
-        let cYear = currentDate.getFullYear()
-        let date = cMonth + "/" + cDay + "/" + cYear;
-        reviewObject["date"] = date;
-        const newreviews = getReviewsFromStorage();
-        newreviews.push(reviewObject);
-        saveReviewsToStorage(newreviews);
+  function formElSubmit (event) {
+    event.preventDefault();
+
+    const formData = new FormData(formEl);
+    const reviewObject = {};
+    for (const pair of formData.entries()) {
+      reviewObject[`${pair[0]}`] = `${pair[1]}`;
     }
-    formEl.addEventListener('submit', formElSubmit);
+    const currentDate = new Date();
+    const cDay = currentDate.getDate();
+    const cMonth = currentDate.getMonth() + 1;
+    const cYear = currentDate.getFullYear();
+    const date = cMonth + '/' + cDay + '/' + cYear;
+    reviewObject.date = date;
+    const newreviews = getReviewsFromStorage();
+    newreviews.push(reviewObject);
+    saveReviewsToStorage(newreviews);
+  }
+  formEl.addEventListener('submit', formElSubmit);
 }
 
 /**
@@ -87,7 +87,7 @@ function update_info () {
  * @returns {Array<Object>} An array of reviews found in localStorage
  */
 function getReviewsFromStorage () {
-  //fails to access if it does not exist, just returns an empty array
+  // fails to access if it does not exist, just returns an empty array
   if (!localStorage.getItem(book_title)) {
     return [];
   }
@@ -111,22 +111,22 @@ function saveReviewsToStorage (reviews) {
  * using element.data = {...}, and then appends that new comment
  * @param {Array<Object>} books An array of books
  */
- function addCommentsToDocument (comment) {
-    if (!comment) return;
-    // Get a reference to the <main> element
-    const sectionEl = document.querySelector('.comment_section');
-    // Loop through each of the books in the passed in array,
-    // create a <book-card> element for each one, and populate
-    // each <book-card> with that book data using element.data = ...
-    // Append each element to <main>
-    // console.log(typeof books);
-    comment.forEach(createCommentCard);
-  
-    function createBookCard (item) {
-      // console.log("checking type of item: ");
-      // console.log(typeof item);
-      const element = document.createElement('comment-card');
-      element.data = item;
-      sectionEl.append(element);
-    }
+function addCommentsToDocument (comment) {
+  if (!comment) return;
+  // Get a reference to the <main> element
+  const sectionEl = document.querySelector('.comment_section');
+  // Loop through each of the books in the passed in array,
+  // create a <book-card> element for each one, and populate
+  // each <book-card> with that book data using element.data = ...
+  // Append each element to <main>
+  // console.log(typeof books);
+  comment.forEach(createCommentCard);
+
+  function createBookCard (item) {
+    // console.log("checking type of item: ");
+    // console.log(typeof item);
+    const element = document.createElement('comment-card');
+    element.data = item;
+    sectionEl.append(element);
   }
+}

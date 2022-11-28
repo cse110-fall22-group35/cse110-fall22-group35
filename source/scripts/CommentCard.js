@@ -40,8 +40,8 @@ class CommentCard extends HTMLElement {
     </style>
     `;
     // Append the <style> and <article> elements to the Shadow DOM
-    shadow_dom.appendChild (article);
-    shadow_dom.appendChild (style);
+    shadow_dom.appendChild(article);
+    shadow_dom.appendChild(style);
   }
 
   /**
@@ -63,7 +63,7 @@ class CommentCard extends HTMLElement {
     if (!data) return;
 
     // Select the <article> we added to the Shadow DOM in the constructor
-    const shadow_dom_article = this.shadowRoot.querySelector ("article");
+    const shadow_dom_article = this.shadowRoot.querySelector('article');
     // Set the contents of the <article> with the <article> template given in
     // cardTemplate.html and the data passed in (You should only have one <article>,
     // do not nest an <article> inside another <article>). You should use Template
