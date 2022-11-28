@@ -166,7 +166,7 @@ article .book_info h4 {
     padding-left: 15px;
     /* margin-right: auto;
     margin-left: 300px; */
-    text-align: center;
+    text-align: left;
 }
 .row {
     display: flex;

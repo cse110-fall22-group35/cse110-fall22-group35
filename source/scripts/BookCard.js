@@ -119,9 +119,13 @@ class BookCard extends HTMLElement {
       <p>${data.profile}</p>
     </a>
     <div class="book_info">
-      <span><b><h3>${data.titleTxt}<h3></b></span>
-      <h4>${data.author}</h4>
-      <h5>${data.bookType}</h5>
+      <span><b><h3>Title: ${data.Title}<h3></b></span>
+      <h4>Author: ${data.Author}</h4>
+      <h5>Gnere: ${data.Category}</h5>
+      <h5>Price (in dollars): ${data.Price}</h5>
+      <h5>Publisher: ${data.Publisher}</h5>
+      <h5>Language: ${data.Language}</h5>
+      <h5>Edition: ${data.Edition}</h5>
       <div class= "star"></div>
     </div>`;
   }
