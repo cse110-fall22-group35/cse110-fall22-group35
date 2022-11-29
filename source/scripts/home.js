@@ -1,5 +1,5 @@
 // home.js
-import {booksdb} from '../scripts/bookstorage.js';
+import { booksdb } from '../scripts/bookstorage.js';
 
 // Run the init() function when the page has loaded
 window.addEventListener('DOMContentLoaded', init);
@@ -75,27 +75,24 @@ function saveBooksToStorage (books) {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
-
-
 // Initialise. If the database doesn't exist, it is created
-var lib = new localStorageDB("library_ignore_first", localStorage);
+const lib = new localStorageDB('library_ignore_first', localStorage);
 
 // Check if the database was just created. Useful for initial database setup
 
-  // create the "books" table
-lib.createTable("books", ["code", "title", "author", "year", "copies"]);
+// create the "books" table
+lib.createTable('books', ['code', 'title', 'author', 'year', 'copies']);
 
 // insert some data
-lib.insert("books", {code: "B001", title: "Phantoms in the brain", author: "Ramachandran", year: 1999, copies: 10});
-lib.insert("books", {code: "B002", title: "The tell-tale brain", author: "Ramachandran", year: 2011, copies: 10});
-lib.insert("books", {code: "B003", title: "Freakonomics", author: "Levitt and Dubner", year: 2005, copies: 10});
-lib.insert("books", {code: "B004", title: "Predictably irrational", author: "Ariely", year: 2008, copies: 10});
-lib.insert("books", {code: "B005", title: "Tesla: Man out of time", author: "Cheney", year: 2001, copies: 10});
-lib.insert("books", {code: "B006", title: "Salmon fishing in the Yemen", author: "Torday", year: 2007, copies: 10});
-lib.insert("books", {code: "B007", title: "The user illusion", author: "Norretranders", year: 1999, copies: 10});
-lib.insert("books", {code: "B008", title: "Hubble: Window of the universe", author: "Sparrow", year: 2010, copies: 10});
+lib.insert('books', { code: 'B001', title: 'Phantoms in the brain', author: 'Ramachandran', year: 1999, copies: 10 });
+lib.insert('books', { code: 'B002', title: 'The tell-tale brain', author: 'Ramachandran', year: 2011, copies: 10 });
+lib.insert('books', { code: 'B003', title: 'Freakonomics', author: 'Levitt and Dubner', year: 2005, copies: 10 });
+lib.insert('books', { code: 'B004', title: 'Predictably irrational', author: 'Ariely', year: 2008, copies: 10 });
+lib.insert('books', { code: 'B005', title: 'Tesla: Man out of time', author: 'Cheney', year: 2001, copies: 10 });
+lib.insert('books', { code: 'B006', title: 'Salmon fishing in the Yemen', author: 'Torday', year: 2007, copies: 10 });
+lib.insert('books', { code: 'B007', title: 'The user illusion', author: 'Norretranders', year: 1999, copies: 10 });
+lib.insert('books', { code: 'B008', title: 'Hubble: Window of the universe', author: 'Sparrow', year: 2010, copies: 10 });
 
 // commit the database to localStorage
 // all create/drop/insert/update/delete operations should be committed
 lib.commit();
-

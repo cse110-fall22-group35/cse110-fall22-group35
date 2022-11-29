@@ -63,7 +63,7 @@ function addBooksToDocument (books) {
   const sectionEl = document.querySelector('section');
 
   // Event listener to search for filtered books
-  document.getElementById("myBtn").addEventListener("click", function() {
+  document.getElementById('myBtn').addEventListener('click', function () {
     // Loop through each of the books in the passed in array...
     books.forEach(createBookCard);
     // Function to create a book card for filtered items
