@@ -13,35 +13,28 @@ function init () {
   // Changes values of certain genres that do not fit in the given cards
   for (var i = 0; i < items.length; i++) {
     items[i].onclick = function () {
-      if (this.innerText == "CHILDREN") {
-        document.getElementById('genrebar').value = "CHILDREN AND TEENS";
-        genre = "CHILDREN AND TEENS";
-      }
-      else if (this.innerText == "LITERATURE") {
-        document.getElementById('genrebar').value = "LITERATURE AND FICTION";
-        genre = "LITERATURE AND FICTION";
-      }
-      else if (this.innerText == "BIOGRAPHIES") {
-        document.getElementById('genrebar').value = "BIOGRAPHIES AND AUTO BIOGRAPHIES";
-        genre = "BIOGRAPHIES AND AUTO BIOGRAPHIES";
-      }
-      else if (this.innerText == "ACADEMIC") {
-        document.getElementById('genrebar').value = "ACADEMIC AND PROFESSIONAL";
-        genre = "ACADEMIC AND PROFESSIONAL";
-      }
-      else if (this.innerText == "REGIONAL") {
-        document.getElementById('genrebar').value = "REGIONAL BOOKS";
-        genre = "REGIONAL BOOKS";
-      }
-      else if (this.innerText == "BUSINESS") {
-        document.getElementById('genrebar').value = "BUSINESS AND MANAGEMENT";
-        genre = "BUSINESS AND MANAGEMENT";
-      }
-      else if (this.innerText == "HEALTH") {
-        document.getElementById('genrebar').value = "HEALTH AND COOKING";
-        genre = "HEALTH AND BOOKING";
-      }
-      else {
+      if (this.innerText == 'CHILDREN') {
+        document.getElementById('genrebar').value = 'CHILDREN AND TEENS';
+        genre = 'CHILDREN AND TEENS';
+      } else if (this.innerText == 'LITERATURE') {
+        document.getElementById('genrebar').value = 'LITERATURE AND FICTION';
+        genre = 'LITERATURE AND FICTION';
+      } else if (this.innerText == 'BIOGRAPHIES') {
+        document.getElementById('genrebar').value = 'BIOGRAPHIES AND AUTO BIOGRAPHIES';
+        genre = 'BIOGRAPHIES AND AUTO BIOGRAPHIES';
+      } else if (this.innerText == 'ACADEMIC') {
+        document.getElementById('genrebar').value = 'ACADEMIC AND PROFESSIONAL';
+        genre = 'ACADEMIC AND PROFESSIONAL';
+      } else if (this.innerText == 'REGIONAL') {
+        document.getElementById('genrebar').value = 'REGIONAL BOOKS';
+        genre = 'REGIONAL BOOKS';
+      } else if (this.innerText == 'BUSINESS') {
+        document.getElementById('genrebar').value = 'BUSINESS AND MANAGEMENT';
+        genre = 'BUSINESS AND MANAGEMENT';
+      } else if (this.innerText == 'HEALTH') {
+        document.getElementById('genrebar').value = 'HEALTH AND COOKING';
+        genre = 'HEALTH AND BOOKING';
+      } else {
         document.getElementById('genrebar').value = this.innerText;
         genre = this.innerText;
       }
@@ -57,7 +50,7 @@ function init () {
   const prices = document.querySelectorAll('#price li');
   for (var i = 0; i < prices.length; i++) {
     prices[i].onclick = function () {
-      document.getElementById('placeholder2').innerText = "$" + this.innerText + ".00";
+      document.getElementById('placeholder2').innerText = '$' + this.innerText + '.00';
       price = this.innerText;
     };
   }
@@ -109,7 +102,7 @@ function addBooksToDocument (books) {
     // Function to create a book card for filtered items
     function createBookCard (item) {
       if (item.Category != null && item.Author != null && genre != '') {
-        if (((item.Category.toUpperCase() == genre) && (item.Price <= price)) ||item.Author.toUpperCase().includes(author)) {
+        if (((item.Category.toUpperCase() == genre) && (item.Price <= price)) || item.Author.toUpperCase().includes(author)) {
           // Create a book-card element
           const element = document.createElement('book-card');
           // Populate <book-card> with book data
