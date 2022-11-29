@@ -1,8 +1,13 @@
 export const booksdb = [{
     "imgSrc": "../images/books/ACA-1.jpg",
-    "imgAlt": "dummy profile picture",
+    // "imgAlt": "dummy profile picture",
     "Author": "Dummy",
-    "Title": "Dummy_Testing_Reference"
+    "Title": "Dummy_Testing_Reference", 
+    "Category": "Text_Entered", 
+    "Price": "Text_Entered", 
+    "Edition": "Text_Entered", 
+    "Publisher": "Text_Entered", 
+    "Language": "Text_Entered"
 },
 // {
 //     "imgSrc": "https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png",
