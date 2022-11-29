@@ -7,7 +7,9 @@ export const booksdb = [{
   Price: 'Text_Entered',
   Edition: 'Text_Entered',
   Publisher: 'Text_Entered',
-  Language: 'Text_Entered'
+  Language: 'Text_Entered', 
+  Description: ''
+  //Description can be used for Summary. 
 },
 // {
 //     "imgSrc": "https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png",
