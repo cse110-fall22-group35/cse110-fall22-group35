@@ -121,7 +121,7 @@ class BookCard extends HTMLElement {
     <div class="book_info">
       <span><b><h3>Title: ${data.Title}<h3></b></span>
       <h4>Author: ${data.Author}</h4>
-      <h5>Gnere: ${data.Category}</h5>
+      <h5>Genre: ${data.Category}</h5>
       <h5>Price (in dollars): ${data.Price}</h5>
       <h5>Publisher: ${data.Publisher}</h5>
       <h5>Language: ${data.Language}</h5>
