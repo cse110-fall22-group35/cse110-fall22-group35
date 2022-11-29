@@ -74,11 +74,11 @@ li {
 }
 
 nav {
-    border-bottom: 2px solid #000;
-    border-top: 2px solid #000;
-    background-color: rgb(128 64 0 / 30%);
-    color: rgb(237 237 237);
-  }
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+  background-color: rgb(128 64 0 / 30%);
+  color: rgb(237 237 237);
+}
 
 #tips1 {
   display: inline-block;
