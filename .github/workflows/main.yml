@@ -31,10 +31,13 @@ jobs:
       - name: Install semistandard
         run: |
           npm install semistandard
-      - name: Run semistandard
+      - name: Run semistandard on scripts
+        run: |
+          npx semistandard --fix "./source/scripts/*.js"
+        continue-on-error: true
+      - name: Run semistandard on javascript
         run: |
           npx semistandard --fix "./source/javascript/*.js"
-          npx semistandard --fix "./source/scripts/*.js"
         continue-on-error: true
         
       - name: Install stylelint
