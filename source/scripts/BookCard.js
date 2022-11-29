@@ -19,8 +19,9 @@ class BookCard extends HTMLElement {
     style.innerHTML = ` 
   * {
     box-sizing: border-box;
-    padding: 0;
+    padding: 50;
     margin: 0;
+    
   }
 
   #profile{
@@ -28,6 +29,7 @@ class BookCard extends HTMLElement {
     margin: 10px 10px 0 0;
     color:#FFF;
     text-align:center;
+  
   }
 
   img{
@@ -35,44 +37,51 @@ class BookCard extends HTMLElement {
   }
 
   article{
-      height: 10%;
-      width: 13%;
+      height: auto;
+      width: 30px;
       min-width: 250px;
       min-height: 460px;
-      padding: 10px 12px;
-      border: 1px solid #cce7d0;
+      padding: 10px 10px;
+      border: 5px solid #cce7d0;
       border-radius: 25px;
       cursor: pointer;
       margin: 15px 0;
       transition: 0.2 ease;
       background-color: antiquewhite;
+      
   }
   article:hover{
       box-shadow: 50px 50px 30px rgba(0,0,0,0.1)
+      
   }
   article img{
-      height: 10%;
+      height: 8%;
       width: 100%;
       border-radius: 20px;
+      
   }
   article .book_info{
       text-align: start;
       padding: 10px 0;
+      
   }
   
   article .book_info span{
       font-size: 12px;
+      
   }
   
   article .book_info h5{
       padding-top: 7px;
       color: #1a1a1a; ;
       font-size: 14px;
+      
   }
   
   article .book_info i{
       color: rgb(243, 181, 25);
       font-size: 12px;
+      
   }
   
   article .book_info h4{
@@ -127,7 +136,8 @@ class BookCard extends HTMLElement {
       <h5>Language: ${data.Language}</h5>
       <h5>Edition: ${data.Edition}</h5>
       <div class= "star"></div>
-    </div>`;
+    </div>
+    `;
   }
 }
 // Define the Class as a customElement so that you can create

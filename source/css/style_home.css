@@ -108,6 +108,7 @@ nav {
   padding-top: 20px;
   flex-wrap: wrap;
   margin: 20px;
+  height:3300px;
 }
 
 /* Below are styles for individual books */
@@ -157,7 +158,8 @@ article .book_info h5 {
 
 article .book_info i {
   color: rgb(243 181 25);
-  font-size: 12px;
+  
+  font-size: 20px;
 }
 
 article .book_info h4 {
