@@ -86,7 +86,7 @@ nav {
   color: rgb(237 237 237);
 }
 
-/* Below are styles for reocmmendations page */
+/* Below are styles for recommendations page */
 
 h1 {
   display: inline-block;
@@ -101,6 +101,7 @@ h2 {
   color: #fff;
 }
 
+/* Genre Bar */
 #genrebar {
   background-image: url("/css/searchicon.png");
   background-position: 10px 12px;
@@ -144,6 +145,13 @@ h2 {
 }
 
 #ratings li a {
+  background-color: #f6f6f6;
+  padding: 10px;
+  font-size: 12px;
+  color: black;
+}
+
+#price li a {
   background-color: #f6f6f6;
   padding: 10px;
   font-size: 12px;

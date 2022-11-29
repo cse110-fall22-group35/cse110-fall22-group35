@@ -40,6 +40,11 @@
     <h1>Select Preferred Items</h1>
     
     <br>
+    <h2>(Please make sure to fill out all non-optional items)</h2>
+    <br>
+    <br>
+
+    <!-- Genre Section... -->
     <h2>Genre:</h2>
     <!-- Filter Search Bar -->
     <input type="text" id="genrebar" onkeyup="searchFilter()" placeholder="Search for genres..">
@@ -47,16 +52,18 @@
     <!-- List of genres -->
     <ul id="genre">
       <li><a href="#">ADVENTURE</a></li>
-      <li><a href="#">CHILDREN AND TEENS</a></li>
-      <li><a href="#">CONTEMPORARY</a></li>
+      <li><a href="#">CHILDREN</a></li>
+      <li><a href="#">BIOGRAPHIES</a></li>
       <li><a href="#">ROMANCE</a></li>
       <li><a href="#">FANTASY</a></li>
       <li><a href="#">HORROR</a></li>
-      <li><a href="#">THRILLER</a></li>
+      <li><a href="#">REGIONAL</a></li>
+      <li><a href="#">HEALTH</a></li>
       <li><a href="#">SCIENCE FICTION</a></li>
       <li><a href="#">ENTANCE EXAM</a></li>
       <li><a href="#">ACADEMIC</a></li>
       <li><a href="#">BUSINESS</a></li>
+      <li><a href="#">LITERATURE</a></li>
     </ul>
     <br>
     <br>
@@ -85,10 +92,12 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
 
     <!-- Ratings -->
     <h2> Minimum Rating:</h2>
-    <h2 id = "placeholder"> 0 </h2>
+    <h2 id = "placeholder1"> 0 </h2>
 
     <!-- Choose between stars -->
     <ul id="ratings">
@@ -100,10 +109,25 @@
       </ul>
 
     <br>
+
+    <!-- Prices -->
+    <h2> Maximum Price (in dollars):</h2>
+    <h2 id = "placeholder2"> $0.00 </h2>
+
+    <!-- Choose maximum prices -->
+    <ul id="price">
+        <li><a href="#">100</a></li>
+        <li><a href="#">300</a></li>
+        <li><a href="#">500</a></li>
+        <li><a href="#">700</a></li>
+        <li><a href="#">1000</a></li>
+      </ul>
+
+    <br>
     
     <!-- Input Author -->
     <form>
-        <h2> Author:</h2>
+        <h2> Author (optional):</h2>
         <input type="text" id="author"><br>
     </form>
 
