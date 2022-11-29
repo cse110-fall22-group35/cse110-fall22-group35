@@ -27,7 +27,14 @@
             <ul>
                 <li>
                     <label>Search:</label>
-                    <input type="text" id="search" size="30">
+                    <div id="searchbox" class="container-fluid" style="width:112%;margin-left:-6%;margin-right:-6%;">
+                        <div>
+                            <form role="search" method="POST" action="individual-book.html">
+                                <input type="text" class="form-control" name="keyword" style="width:600px;margin:20px 10% 20px 10%;" placeholder="Search for a Book Title">
+                            </form>
+                        </div>
+                    </div>
+                    <!--<input type="text" id="search" size="30">-->
                 </li>
 
                 <a href="./home.html" class="navlink"><li>Home</li></a>
@@ -36,6 +43,8 @@
                 <a href="./writing-tips.html" class="navlink"><li>Writing-tips</li></a>
             </ul>
         </nav>
+
+
 
         <div id="tips1">
 
