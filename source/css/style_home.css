@@ -102,8 +102,8 @@ nav {
 }
 
 /* Below are styles for book container */
-*{
-  margin:0;
+* {
+  margin: 0;
   padding: 0;
 }
 
@@ -112,7 +112,6 @@ nav {
   grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
   gap: 20px;
   box-sizing: border-box;
-  height: 200px;
   width: 90%;
   grid-auto-rows: minmax(auto, max-content);
   justify-content: space-between;
