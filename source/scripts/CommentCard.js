@@ -16,19 +16,26 @@ class CommentCard extends HTMLElement {
     // Create a style element - This will hold all of the styles for the Web Component
     const style = document.createElement('style');
     // Insert all of the styles from cardTemplate.html into the <style> element you just made
-    style.textContent =
+    style.innerHTML =
     `
-    <style>
-    * {
-      margin-top: 20px;
+    article{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
       border: 2px;
-      padding: 20px;
-      box-sizing: border-box;
+      border-color: rgb(237 237 237);
+      border-radius: 25px;
+      border-style: double;
     }
 
     #name {
-      color: rgb (237 237 237);
+      color: rgb(237 237 237);
       font-size: 30px;
+    }
+
+    #date {
+      color: rgb(237 237 237);
     }
 
     img {
@@ -36,13 +43,16 @@ class CommentCard extends HTMLElement {
       width: 150px;
     }
 
+    span {
+      color: rgb(237 237 237);
+    }
+
     #comment {
-      color: rgb (237 237 237);
-      font-size: 25px;
+      color: rgb(237 237 237);
+      font-size: 20px;
       border-radius: 0.2cm;
       border-color: rgb(237 237 237);
     }
-    </style>
     `;
     // Append the <style> and <article> elements to the Shadow DOM
     shadow_dom.appendChild(article);
@@ -75,7 +85,8 @@ class CommentCard extends HTMLElement {
     const {
       name,
       comment,
-      rating
+      rating,
+      date
     } = data;
 
     shadow_dom_article.innerHTML =
@@ -83,11 +94,15 @@ class CommentCard extends HTMLElement {
     <p id="name">
       ${name}
     </p>
-    <div class="rating">
-      <span>${rating}</span>
+    <hr>
+    <p id="date">
+      ${date}
+    </p>
+    <div id="rating">
       <img src="../images/${rating}-star.svg" alt="${rating} stars">
+      <span>${rating}</span>
     </div>
-    <p class="comment">
+    <p id="comment">
       ${comment}
     </p>
     `;

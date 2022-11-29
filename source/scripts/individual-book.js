@@ -32,6 +32,7 @@ function init () {
     newreviews.push(reviewObject);
     saveReviewsToStorage(newreviews);
     addCommentToDocument(reviewObject);
+    formEl.reset ();
   }
   formEl.addEventListener('submit', formElSubmit);
 }

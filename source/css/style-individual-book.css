@@ -6,8 +6,8 @@
 
 body {
   background-image: url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: auto;
 }
 
 html,
@@ -207,10 +207,4 @@ button {
   border-style: double;
   border-radius: 0.2cm;
   border-color: rgb(237 237 237);
-}
-
-#comments > p {
-  color: rgb(237 237 237);
-  font-size: 20px;
-  padding: 0.5em;
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style-rec.css">
     <!-- Script -->
     <script src="../scripts/rec-book.js" type="module"></script>
+    <script src="../javascript/recommendations.js" type="module"></script>
     <link rel="icon" href="../images/temp_logo.jpg">
   </head>
   <body>
@@ -45,13 +46,16 @@
     <!-- List of genres -->
     <ul id="genre">
       <li><a href="#">ADVENTURE</a></li>
-      <li><a href="#">CHILDREN</a></li>
+      <li><a href="#">CHILDREN AND TEENS</a></li>
       <li><a href="#">CONTEMPORARY</a></li>
       <li><a href="#">ROMANCE</a></li>
       <li><a href="#">FANTASY</a></li>
       <li><a href="#">HORROR</a></li>
       <li><a href="#">THRILLER</a></li>
       <li><a href="#">SCIENCE FICTION</a></li>
+      <li><a href="#">ENTANCE EXAM</a></li>
+      <li><a href="#">ACADEMIC</a></li>
+      <li><a href="#">BUSINESS</a></li>
     </ul>
     <br>
     <br>
@@ -76,12 +80,15 @@
             }
         }
     </script>
+
     <br>
     <br>
     <br>
+
     <!-- Ratings -->
     <h2> Minimum Rating:</h2>
     <h2 id = "placeholder"> 0 </h2>
+
     <!-- Choose between stars -->
     <ul id="ratings">
         <li><a href="#">5</a></li>
@@ -92,34 +99,25 @@
       </ul>
 
     <br>
+    
     <!-- Input Author -->
     <form>
         <h2> Author:</h2>
         <input type="text" id="author"><br>
     </form>
 
-    <br> <br>
-    <button type="submit">Search</button>
+    <br> 
+    <br>
+
+    <!-- Submit button -->
+    <button id="myBtn" type="submit">Search</button>
 
     <!-- List of book containers -->
     <div id = "home">        
         <div id = "books" class=" book section ">
             <h2>Recommended Books</h2>
+            <!-- Section where filtered books are displayed -->
             <section class="book-container">
-
-                <article class="book">
-                    <a href="./profile.html" id="profile">
-                        <img src="https://th.bing.com/th/id/R.b90941ec00b5f91357afe8cde75d894d?rik=plbWRhBi1MgQjA&pid=ImgRaw&r=0" id="profile-picture" alt="profile picture">
-                        <p>profile</p>
-                    </a>
-                    <div class="book_info">
-                        <span><b><h3>Title<h3></b></span>
-                            <h4>Author</h4>
-                            <h5>Genre</h3>
-                            <h5>Summary</h5>
-                            <div class= "star"></div>
-                    </div>
-                </article>
             </section>
             
         </div>
