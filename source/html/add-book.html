@@ -3,6 +3,9 @@
   <head>
     <title>Add a Book</title>
     <link rel="icon" href="../images/temp_logo.jpg">
+    // the scripts of added book list
+     <!-- Book List Custom Element -->
+    <script src="../scripts/BookList.js" type="module"></script>
     
     <!-- Main Stylesheets & Scripts -->
     <link rel="stylesheet" type="text/css" href="../css/styleadd-book.css">
@@ -17,6 +20,7 @@
         <a href="./home.html" class="logo">
           <h1>Novelty</h1>
         </a>
+        <a href="./profile.html" id="profile">
         <a href="./profile.html" id="user-profile">
             <img src="../images/profile.png" width="40" height="40">
             <p>profile</p>
@@ -33,6 +37,7 @@
             <a href="./add-book.html" class="navlink"><li>Add a book</li></a>
         </ul>
     </nav>
+    <addPart style = "width: 75%;float:left;">
     <h1>Add a Book</h1>
     <form id="new-book">
       <label for="imgSrc">Link to cover:
@@ -55,5 +60,28 @@
       </label>
       <button type="submit">Add Book</button>
     </form>
+    </addPart>
+    <div id = 'added' style = "background-color:#FFD700; height:100vh; width: 25%;float:right;">
+      <div id = "books" class=" section -p1">
+        <h2>Added books</h2>
+        <section class="book-container">
+            <!-- Add Books Here -->
+            
+            <!-- Example Book -->
+            <article class="bookList">
+                
+                <div class="book_info">
+                  <a href="./profile.html" id="profile">
+                    <span><b><h3>Title<h3></b></span>
+                  </a>
+                        <h5>Author</h5>
+                        <h5>book type</h5>
+                </div>
+            </article>
+        </section>
+       
+    </div>
+      
+    </div>
   </body>
 </html>

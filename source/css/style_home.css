@@ -108,6 +108,7 @@ nav {
   padding-top: 20px;
   flex-wrap: wrap;
   margin: 20px;
+  height: 3300px;
 }
 
 /* Below are styles for individual books */
@@ -157,7 +158,7 @@ article .book_info h5 {
 
 article .book_info i {
   color: rgb(243 181 25);
-  font-size: 12px;
+  font-size: 20px;
 }
 
 article .book_info h4 {
@@ -165,4 +166,22 @@ article .book_info h4 {
   color: #088120;
   font-size: 15px;
   font-weight: 700;
+}
+
+.container-fluid > h3 {
+  padding-right: 15px;
+  padding-left: 15px;
+
+  /* margin-right: auto;
+    margin-left: 300px; */
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 3;
+  justify-content: center;
+  margin-right: -15px;
+  margin-left: -15px;
 }

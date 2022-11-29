@@ -59,27 +59,27 @@ function getBooksFromStorage () {
  */
 function addBooksToDocument (books) {
   if (!books) return;
-  // A10. TODO - Get a reference to the <main> element
 
   const sectionEl = document.querySelector('section');
-  // console.log(mainEl);
-  // A11. TODO - Loop through each of the books in the passed in array,
-  //            create a <book-card> element for each one, and populate
-  //            each <book-card> with that book data using element.data = ...
-  //            Append each element to <main>
-  // console.log(typeof books);
-  books.forEach(createBookCard);
 
-  function createBookCard (item) {
-    // console.log("checking type of item: ");
-    // console.log(typeof item);
-    const element = document.createElement('book-card');
-
-    if (item.bookType.toUpperCase() == genre || item.author.toUpperCase() == author) {
-      element.data = item;
-      sectionEl.append(element);
+  // Event listener to search for filtered books
+  document.getElementById("myBtn").addEventListener("click", function() {
+    // Loop through each of the books in the passed in array...
+    books.forEach(createBookCard);
+    // Function to create a book card for filtered items
+    function createBookCard (item) {
+      if (item.Category != null && item.Author != null) {
+        if ((item.Category.toUpperCase() == genre && genre != '') || (item.Author.toUpperCase() == author && author != '')) {
+          // Create a book-card element
+          const element = document.createElement('book-card');
+          // Populate <book-card> with book data
+          element.data = item;
+          // Append each element to <section>
+          sectionEl.append(element);
+        }
+      }
     }
-  }
+  });
 }
 
 /**

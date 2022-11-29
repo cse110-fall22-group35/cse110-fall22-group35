@@ -27,7 +27,7 @@ function init () {
     const cMonth = currentDate.getMonth() + 1;
     const cYear = currentDate.getFullYear();
     const date = cMonth + '/' + cDay + '/' + cYear;
-    reviewObject["date"] = date;
+    reviewObject.date = date;
     const newreviews = getReviewsFromStorage();
     newreviews.push(reviewObject);
     saveReviewsToStorage(newreviews);
