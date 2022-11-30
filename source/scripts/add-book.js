@@ -130,8 +130,6 @@ function addBooksToDocumentList (books) {
   }
 }
 
-function removeBookFromStorage(){
-  console.log("find")
+function removeBookFromStorage () {
+  console.log('find');
 }
-
-

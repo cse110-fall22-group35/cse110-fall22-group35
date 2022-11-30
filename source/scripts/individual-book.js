@@ -30,35 +30,32 @@ function init () {
     const reviewList = getReviewsFromStorage();
 
     // find if the user has commented this book already
-    let index = findExistingUser (reviewList, reviewObject.name);
-    console.log (index);
+    const index = findExistingUser(reviewList, reviewObject.name);
+    console.log(index);
     // if the user has not, add the new comment at the end of the list
     if (index == -1) {
       reviewList.push(reviewObject);
       addCommentToDocument(reviewObject);
       saveReviewsToStorage(reviewList);
-
-    } 
+    }
     // if the user has, add the new comment right after the user's previous comment
     else {
-
-      alert ("Overwriting the old comment by " + reviewObject["name"]);
+      alert('Overwriting the old comment by ' + reviewObject.name);
 
       reviewList[index] = reviewObject;
 
-      let comments = document.querySelectorAll("comment-card");
-      
+      const comments = document.querySelectorAll('comment-card');
+
       const shadow_dom = comments[index].shadowRoot;
 
-      shadow_dom.querySelector("#date").innerHTML = reviewObject["date"];
-      shadow_dom.querySelector('img').src = `../images/${reviewObject["rating"]}-star.svg`;
-      shadow_dom.querySelector('span').innerHTML = reviewObject["rating"];
-      shadow_dom.querySelector("#comment").innerHTML = reviewObject["comment"];
-      
+      shadow_dom.querySelector('#date').innerHTML = reviewObject.date;
+      shadow_dom.querySelector('img').src = `../images/${reviewObject.rating}-star.svg`;
+      shadow_dom.querySelector('span').innerHTML = reviewObject.rating;
+      shadow_dom.querySelector('#comment').innerHTML = reviewObject.comment;
     }
 
     saveReviewsToStorage(reviewList);
-        
+
     formEl.reset();
   }
   formEl.addEventListener('submit', formElSubmit);
