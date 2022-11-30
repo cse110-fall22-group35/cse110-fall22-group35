@@ -36,11 +36,12 @@
                 <div id="searchbox" class="container-fluid" style="width:112%;margin-left:-6%;margin-right:-6%;">
                     <div>
                         <form role="search" method="POST" action="individual-book.html">
-                            <input type="text" class="form-control" name="keyword" style="width:600px;margin:20px 10% 20px 10%;" placeholder="Search for a Book Title">
+                            <input type="text" id='search-input' class="form-control" name="keyword" style="width:200px;margin:20px 10% 20px 10%;" placeholder="Search for a Book Title">
                         </form>
                     </div>
                 </div>
             </li>
+            <button type="button" id="searchBtn">search</button>
             <a href="./home.html" class="navlink"><li>Home</li></a>
             <a href="./recommendations.html" class="navlink"><li>Recommendations</li></a>
             <a href="./add-book.html" class="navlink"><li>Add a book</li></a>
@@ -51,28 +52,28 @@
         <div id="Filter">
             <h2><b>Filter</b><br><h2>
                 <h4>what kind of book do you like?</h4>
-                <input list="voteBox">
-                    <datalist id="voteBox">
-                        <option value="fiction"></option>
-                        <option value="Academic"></option>
-                        <option value="Novel"></option>
-                        <option value="poems"></option>
-                        <option value="biograph"></option>
-                    </datalist>
-                <button type="button">confirm</button>
+                    <select id="filterBar">
+                        <option value="default">Select one...</option> 
+                        <option value="all">All</option>
+                        <option value="fiction">fiction</option>
+                        <option value="academic">academic</option>
+                        <option value="Entrance Exam">Entrance Exam</option>
+                        <option value="business">business</option>
+                        <option value="biograph">biograph</option>
+                    </select>
+                <button type="button" id="filterBtn">filter</button>
         </div>
 
         <div id = "sort">
             <h2><b>sorted by:</b><br></h2>
-                <input list="voteBox2">
-                <datalist id="voteBox2">
-                    <option value="recommendation"></option>
-                    <option value="price low to high"></option>
-                    <option value="price high to low"></option>
-                    <option value="newest"></option>
-                    <option value="popularity"></option>
-                </datalist>
-                <button type="button">confirm</button>
+                
+                <select id="sortBar">
+                    <option value="default">Select one...</option> 
+                    <option value="price low to high">price low to high</option>
+                    <option value="price high to low">price high to low</option>
+                    <option value="rating">rating</option>
+                </select>
+                <button type="button" id="sortBtn">sort</button>
 
         </div>
         <br></br>
