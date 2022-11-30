@@ -75,11 +75,11 @@ function searchBook () {
 function update_info () {
   const current_book = searchBook();
   console.log(current_book);
-  document.querySelector('#top-title').innerHTML = current_book.Title + `, ${current_book.Edition}` + getSuffix(current_book.Edition) + " Edition";
+  document.querySelector('#top-title').innerHTML = current_book.Title + `, ${current_book.Edition}` + getSuffix(current_book.Edition) + ' Edition';
   document.querySelector('title').innerHTML = current_book.Title;
   document.querySelector('#cover').src = current_book.imgSrc;
   document.querySelector('#cover').alt = current_book.imgAlt;
-  //document.querySelector('#title').innerHTML = current_book.Title;
+  // document.querySelector('#title').innerHTML = current_book.Title;
   document.querySelector('#author').innerHTML = 'Author: ' + current_book.Author;
   document.querySelector('#genre').innerHTML = 'Genre: ' + current_book.Category;
   document.querySelector('#price').innerHTML = 'Price: ' + current_book.Price;
@@ -130,26 +130,26 @@ function addCommentToDocument (comment) {
 /**
  * Gets a number and returns the suffix used for it
  * ie given 1 it returns st for 1st
- * 
+ *
  * @param {int} Edition - A number to get the suffix for
  * @returns {string} The suffix for that number
  */
-function getSuffix(Edition){
-  //all numbers in teens are th
-  if (Math.floor((Edition%100) / 10) === 1){
-    return "th";
+function getSuffix (Edition) {
+  // all numbers in teens are th
+  if (Math.floor((Edition % 100) / 10) === 1) {
+    return 'th';
   }
-  //all others ending in 1 are st
-  if (Edition % 10 === 1){
-    return "st";
+  // all others ending in 1 are st
+  if (Edition % 10 === 1) {
+    return 'st';
   }
-  //all others ending in 2 are nd
-  else if (Edition % 10 === 2){
-    return "nd";
+  // all others ending in 2 are nd
+  else if (Edition % 10 === 2) {
+    return 'nd';
   }
-  //all others ending in 3 are rd
-  else if (Edition % 10 === 2){
-    return "rd";
+  // all others ending in 3 are rd
+  else if (Edition % 10 === 2) {
+    return 'rd';
   }
-  return "th";
+  return 'th';
 }
