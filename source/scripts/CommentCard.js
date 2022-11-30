@@ -53,6 +53,17 @@ class CommentCard extends HTMLElement {
       border-radius: 0.2cm;
       border-color: rgb(237 237 237);
     }
+
+    #delete {
+      color: rgb(237 237 237);
+      font-size: 15px;
+      background-color: rgb(0 0 0 / 0%);
+      border: 0px;
+    }
+
+    #del {
+      text-align: right;
+    }
     `;
     // Append the <style> and <article> elements to the Shadow DOM
     shadow_dom.appendChild(article);
@@ -105,6 +116,11 @@ class CommentCard extends HTMLElement {
     <p id="comment">
       ${comment}
     </p>
+    <div id="del">
+      <button id="delete" type="button">
+      Delete Comment
+      </button>
+    </div>
     `;
   }
 }

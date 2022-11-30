@@ -1,14 +1,43 @@
+// Getting book's title
 const index = window.location.href.indexOf('=');
 const book_title = decodeURI(window.location.href.substring(index + 1));
 
 window.addEventListener('DOMContentLoaded', init);
-// Starts the program, all function calls trace back here
+/**
+ * All function calls trace back to here, controls the individual-book page's functionality
+ */
 function init () {
+  // Add books information
   update_info();
-  const reviews = getReviewsFromStorage();
+  // getting and adding reviews to the page
+  let reviews = getReviewsFromStorage();
   reviews.forEach(addCommentToDocument);
-  const formEl = document.querySelector('form');
+  setupDeleteButtons();
 
+  /**
+   * Adds functionality to the delete buttons for every comment on the page
+   */
+  function setupDeleteButtons(){
+    let comments = document.querySelectorAll("comment-card");
+    // iterates through each comment-card, finds its button and adds an event listener
+    for (let iterator = 0; iterator < comments.length; iterator++){
+      let button = comments[iterator].shadowRoot.querySelector("button");
+      button.addEventListener('click', (event) => {
+        // deletes and saves a new array without this element in it
+        let newReviews = [];
+        for (let i = 0; i < reviews.length; i++){
+          if (i != iterator){
+            newReviews.push(reviews[i]);
+          }
+        }
+        saveReviewsToStorage(newReviews);
+        window.location.reload();
+      })
+    }
+  }
+
+  // form for adding a comment
+  const formEl = document.querySelector('form');
   /**
      * Upon submitting the form to add a comment, it simply grabs all of the information
      * needed from the form and adds it to the list of comments for that book.
@@ -16,11 +45,13 @@ function init () {
   function formElSubmit (event) {
     event.preventDefault();
 
+    // grabs data and creates a review from it
     const formData = new FormData(formEl);
     const reviewObject = {};
     for (const pair of formData.entries()) {
       reviewObject[`${pair[0]}`] = `${pair[1]}`;
     }
+    // all related to getting today's date
     const currentDate = new Date();
     const cDay = currentDate.getDate();
     const cMonth = currentDate.getMonth() + 1;
@@ -37,8 +68,10 @@ function init () {
       reviewList.push(reviewObject);
       addCommentToDocument(reviewObject);
       saveReviewsToStorage(reviewList);
+      reviews = reviewList;
+      setupDeleteButtons();
     }
-    // if the user has, add the new comment right after the user's previous comment
+    // if the user has, edits their previews comment
     else {
       alert('Overwriting the old comment by ' + reviewObject.name);
 
@@ -128,17 +161,16 @@ function getReviewsFromStorage () {
 /**
  * Takes in an array of reviews, converts it to a string, and then
  * saves that string to the book's title in local storage
- * @param {Array<Object>} reviews An array ofreviews
+ * @param {Array<Object>} reviews An array of reviews
  */
 function saveReviewsToStorage (reviews) {
   localStorage.setItem(book_title, JSON.stringify(reviews));
 }
 
 /**
- * Takes in an array of books and for each book creates a
- * new <comment-card> element, adds the book data to that card
+ * Takes in a comment and  creates a new <comment-card> element, adds the review data to that card
  * using element.data = {...}, and then appends that new comment
- * @param {Array<Object>} books An array of books
+ * @param {Array<Object>} comment the comment to add
  */
 function addCommentToDocument (comment) {
   if (!comment) return;
@@ -178,8 +210,8 @@ function getSuffix (Edition) {
 
 /**
  * Finds the index of existing user, or -1 if the user has not commented yet this book
- * @param {*} reviewList The list of review in local storage
- * @param {*} name The user of new comment
+ * @param {Array<Object>} reviewList The list of review in local storage
+ * @param {string} name The user of new comment
  * @returns {int} The index of existing user, or -1 if the user has not commented yet
  */
 function findExistingUser (reviewList, name) {
