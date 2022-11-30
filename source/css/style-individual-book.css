@@ -6,8 +6,8 @@
 
 body {
   background-image: url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
-  background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 html,
@@ -116,7 +116,7 @@ nav {
 }
 
 #left-column > img {
-  height: 100%;
+  width: 100%;
   position: relative;
 }
 
@@ -136,9 +136,11 @@ nav {
   font-size: 20px;
 }
 
+/*
 #right-column > p:active {
   color: black;
 }
+*/
 
 /* Below are styles for form */
 #form {
