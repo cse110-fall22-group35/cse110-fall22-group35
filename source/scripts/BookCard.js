@@ -135,6 +135,7 @@ class BookCard extends HTMLElement {
       <h5>Publisher: ${data.Publisher}</h5>
       <h5>Language: ${data.Language}</h5>
       <h5>Edition: ${data.Edition}</h5>
+      <h5>Rating: ${data.Rating} ✩ </h5>
       <div class= "star"></div>
     </div>
     `;

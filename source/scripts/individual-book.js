@@ -63,7 +63,7 @@ function getBooksFromStorage () {
 function searchBook () {
   const books = getBooksFromStorage();
   for (let i = 0; i < books.length; i++) {
-    if (books[i].titleTxt == book_title) {
+    if (books[i].Title == book_title) {
       return books[i];
     }
   }
