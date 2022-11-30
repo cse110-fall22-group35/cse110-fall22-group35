@@ -136,9 +136,11 @@ nav {
   font-size: 20px;
 }
 
+/*
 #right-column > p:active {
   color: black;
 }
+*/
 
 /* Below are styles for form */
 #form {
