@@ -6,7 +6,7 @@
 
 body {
   background-image: url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
-  background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
 }
 
