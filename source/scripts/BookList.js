@@ -77,9 +77,8 @@ article .book_info h4{
                   <a href=${data.profile} id="profile">
                     <span><b><h3>${data.titleTxt}<h3></b></span>
                   </a>
-                        <h5>${data.author}</h5>
-                        <h5>${data.bookType}</h5>
-                </div>`;
+                </div>
+                <button class = "rm_btn" type = "button" onclick='this.parentElement.remove();'>Remove</button>`;
   }
 }
 // A8. Define the Class as a customElement so that you can create

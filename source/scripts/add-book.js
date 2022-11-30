@@ -128,3 +128,9 @@ function addBooksToDocumentList (books) {
     sectionEl.append(element);
   }
 }
+
+function removeBookFromStorage(){
+  console.log("find")
+}
+
+
