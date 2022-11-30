@@ -80,7 +80,7 @@ function update_info () {
   document.querySelector('#cover').alt = current_book.imgAlt;
   document.querySelector('#author').innerHTML = 'Author: ' + current_book.Author;
   document.querySelector('#genre').innerHTML = 'Genre: ' + current_book.Category;
-  document.querySelector('#price').innerHTML = 'Price: ' + current_book.Price;
+  document.querySelector('#price').innerHTML = 'Price: $' + current_book.Price;
   document.querySelector('#summary').innerHTML = current_book.Description;
 }
 
