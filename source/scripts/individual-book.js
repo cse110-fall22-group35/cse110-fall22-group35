@@ -17,22 +17,22 @@ function init () {
   /**
    * Adds functionality to the delete buttons for every comment on the page
    */
-  function setupDeleteButtons(){
-    let comments = document.querySelectorAll("comment-card");
+  function setupDeleteButtons () {
+    const comments = document.querySelectorAll('comment-card');
     // iterates through each comment-card, finds its button and adds an event listener
-    for (let iterator = 0; iterator < comments.length; iterator++){
-      let button = comments[iterator].shadowRoot.querySelector("button");
+    for (let iterator = 0; iterator < comments.length; iterator++) {
+      const button = comments[iterator].shadowRoot.querySelector('button');
       button.addEventListener('click', (event) => {
         // deletes and saves a new array without this element in it
-        let newReviews = [];
-        for (let i = 0; i < reviews.length; i++){
-          if (i != iterator){
+        const newReviews = [];
+        for (let i = 0; i < reviews.length; i++) {
+          if (i != iterator) {
             newReviews.push(reviews[i]);
           }
         }
         saveReviewsToStorage(newReviews);
         window.location.reload();
-      })
+      });
     }
   }
 
