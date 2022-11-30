@@ -76,10 +76,8 @@ function update_info () {
   const current_book = searchBook();
   console.log(current_book);
   document.querySelector('#top-title').innerHTML = current_book.Title + `, ${current_book.Edition}` + getSuffix(current_book.Edition) + ' Edition';
-  document.querySelector('title').innerHTML = current_book.Title;
   document.querySelector('#cover').src = current_book.imgSrc;
   document.querySelector('#cover').alt = current_book.imgAlt;
-  // document.querySelector('#title').innerHTML = current_book.Title;
   document.querySelector('#author').innerHTML = 'Author: ' + current_book.Author;
   document.querySelector('#genre').innerHTML = 'Genre: ' + current_book.Category;
   document.querySelector('#price').innerHTML = 'Price: ' + current_book.Price;
