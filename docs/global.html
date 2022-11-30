@@ -94,6 +94,321 @@
     
 
     
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="bookStorage"><span class="type-signature"></span>bookStorage<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    GLOBAL VARIABLES that enables SORT/FILTER/SEARCH functionalities.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="home.js.html">home.js</a>, <a href="home.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="filterBar"><span class="type-signature">(constant) </span>filterBar<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    FILTER FUNCTIONALITY
+
+Description:
+Allows users to filter by the following genres, then display only books of that genre (c):
+     1. 'All': display all books in storage;
+     2. 'Entrance Exam': display only books with genre 'Entrance Exam';
+     3. 'fiction':  display ......                     'Literature and Fiction';
+     4. 'academic': display ......                     'Academic and Professional';
+     5. 'biograph': display ......                     'Biographies and Auto Biographies';
+     6. 'business': display ......                     'Business and Management';
+
+NOTE:
+1. Modifies @bookToDisplay accordingly in each case. Uses init() to reload and display books.
+2. Filtering executes when user selects a genre from the filter bar, and clicks on 'filter' button.
+
+DEVELOPERS ONLY:
+The list of filters are customazible, to add/drop/change a filter, first modify
+ <select id="filterBar">
+      <option value="default">Select one...</option>
+      <option value="all">All</option>
+      <option value="fiction">fiction</option>
+      <option value="academic">academic</option>
+      <option value="Entrance Exam">Entrance Exam</option>
+      <option value="business">business</option>
+      <option value="biograph">biograph</option>
+    </select> in home.html
+    , then modify cases in switch block.
+
+  TO DO: fix how SORT/SEARCH/FILTER interacts with each other.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="home.js.html">home.js</a>, <a href="home.js.html#line64">line 64</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="searchBtn"><span class="type-signature">(constant) </span>searchBtn<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    SEARCH FUNCTIONALITY
+
+Description:
+Let user enter 'input', then display books whose title contains 'input' as a substring.
+
+NOTE:
+1. Modifies @bookToDisplay accordingly in each case.
+2. Searching executes when user enters 'input' from the search bar, and clicks on 'search' button.
+
+DEVELOPERS ONLY:
+search rules are customizable, currently have 2 options:
+     Option1: Search by Title only (implemented)
+     Option2: Search in all attributes (not yet implemented)
+TO DO: fix how SORT/SEARCH/FILTER interacts with each other.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="home.js.html">home.js</a>, <a href="home.js.html#line200">line 200</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="sortBar"><span class="type-signature">(constant) </span>sortBar<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    SORT FUNCTIONALITY
+
+Description:
+Allows users to sort by the following rules, then display books accordingly:
+     1. 'price low to high':     books with the LOWEST price are displayed first;
+     2. 'price high to low':     ...            HIGHEST price  ...         first;
+     3. 'rating':                ...            HIGHEST rating ...         first;
+
+NOTE:
+1. Modifies @bookToDisplay accordingly in each case. Uses init() to reload and display books.
+2. Sorting executes when user selects a rule from the sort bar, and clicks on 'sort' button.
+
+DEVELOPERS ONLY:
+The list of rules are customazible, to add/drop/change a rule, first modify
+ <select id="sortBar">
+      <option value="default">Select one...</option>
+      <option value="price low to high">price low to high</option>
+      <option value="price high to low">price high to low</option>
+      <option value="rating">rating</option>
+    </select> in home.html
+    , then modify cases in switch block.
+
+  TO DO: fix how SORT/SEARCH/FILTER interacts with each other.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="home.js.html">home.js</a>, <a href="home.js.html#line141">line 141</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -208,7 +523,7 @@ to <main>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="home.js.html">home.js</a>, <a href="home.js.html#line44">line 44</a>
+        <a href="home.js.html">home.js</a>, <a href="home.js.html#line244">line 244</a>
     </li></ul></dd>
     
 
@@ -488,7 +803,7 @@ to <main>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="add-book.js.html">add-book.js</a>, <a href="add-book.js.html#line111">line 111</a>
+        <a href="add-book.js.html">add-book.js</a>, <a href="add-book.js.html#line112">line 112</a>
     </li></ul></dd>
     
 
@@ -718,7 +1033,7 @@ is returned.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="add-book.js.html">add-book.js</a>, <a href="add-book.js.html#line22">line 22</a>
+        <a href="add-book.js.html">add-book.js</a>, <a href="add-book.js.html#line23">line 23</a>
     </li></ul></dd>
     
 
@@ -831,7 +1146,7 @@ is returned.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="home.js.html">home.js</a>, <a href="home.js.html#line25">line 25</a>
+        <a href="home.js.html">home.js</a>, <a href="home.js.html#line225">line 225</a>
     </li></ul></dd>
     
 
@@ -1441,7 +1756,7 @@ ie given 1 it returns st for 1st
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="add-book.js.html">add-book.js</a>, <a href="add-book.js.html#line51">line 51</a>
+        <a href="add-book.js.html">add-book.js</a>, <a href="add-book.js.html#line52">line 52</a>
     </li></ul></dd>
     
 
@@ -1579,7 +1894,7 @@ saves that string to 'books' in localStorage
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="add-book.js.html">add-book.js</a>, <a href="add-book.js.html#line39">line 39</a>
+        <a href="add-book.js.html">add-book.js</a>, <a href="add-book.js.html#line40">line 40</a>
     </li></ul></dd>
     
 
@@ -1717,7 +2032,7 @@ saves that string to 'books' in localStorage
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="home.js.html">home.js</a>, <a href="home.js.html#line70">line 70</a>
+        <a href="home.js.html">home.js</a>, <a href="home.js.html#line271">line 271</a>
     </li></ul></dd>
     
 
@@ -2225,13 +2540,13 @@ saves that string to the book's title in local storage
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BookCard.html">BookCard</a></li><li><a href="CommentCard.html">CommentCard</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addBooksToDocument">addBooksToDocument</a></li><li><a href="global.html#addBooksToDocumentList">addBooksToDocumentList</a></li><li><a href="global.html#addCommentToDocument">addCommentToDocument</a></li><li><a href="global.html#getBooksFromStorage">getBooksFromStorage</a></li><li><a href="global.html#getReviewsFromStorage">getReviewsFromStorage</a></li><li><a href="global.html#getSuffix">getSuffix</a></li><li><a href="global.html#initFormHandler">initFormHandler</a></li><li><a href="global.html#saveBooksToStorage">saveBooksToStorage</a></li><li><a href="global.html#saveReviewsToStorage">saveReviewsToStorage</a></li><li><a href="global.html#searchBook">searchBook</a></li><li><a href="global.html#update_info">update_info</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BookCard.html">BookCard</a></li><li><a href="CommentCard.html">CommentCard</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addBooksToDocument">addBooksToDocument</a></li><li><a href="global.html#addBooksToDocumentList">addBooksToDocumentList</a></li><li><a href="global.html#addCommentToDocument">addCommentToDocument</a></li><li><a href="global.html#bookStorage">bookStorage</a></li><li><a href="global.html#filterBar">filterBar</a></li><li><a href="global.html#getBooksFromStorage">getBooksFromStorage</a></li><li><a href="global.html#getReviewsFromStorage">getReviewsFromStorage</a></li><li><a href="global.html#getSuffix">getSuffix</a></li><li><a href="global.html#initFormHandler">initFormHandler</a></li><li><a href="global.html#saveBooksToStorage">saveBooksToStorage</a></li><li><a href="global.html#saveReviewsToStorage">saveReviewsToStorage</a></li><li><a href="global.html#searchBook">searchBook</a></li><li><a href="global.html#searchBtn">searchBtn</a></li><li><a href="global.html#sortBar">sortBar</a></li><li><a href="global.html#update_info">update_info</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Wed Nov 30 2022 18:13:39 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Wed Nov 30 2022 19:58:09 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>
