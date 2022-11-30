@@ -44,14 +44,14 @@ h1 {
 
 #searchbox {
   width: 225px;
-  margin-left:6%;
-  margin-right:6%;
+  margin-left: 6%;
+  margin-right: 6%;
   display: flex;
 }
 
 #textsearch {
-  width:200px;
-  margin:20px 10% 20px 10%;
+  width: 200px;
+  margin: 20px 10%;
   display: flex;
 }
 
