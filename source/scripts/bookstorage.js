@@ -8,8 +8,8 @@ export const booksdb = [{
   Edition: 'Text_Entered',
   Publisher: 'Text_Entered',
   Language: 'Text_Entered',
-  Description: '', 
-  Rating: '3' 
+  Description: '',
+  Rating: '3'
   // Description can be used for Summary.
 },
 // {
