@@ -1,4 +1,5 @@
 // add-book.js
+// Msg: some reference for insert functions can be found in source/reference/localstoragedb.js. 
 
 // Run the init() function when the page has loaded
 window.addEventListener('DOMContentLoaded', init);
