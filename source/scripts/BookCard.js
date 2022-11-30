@@ -137,9 +137,7 @@ class BookCard extends HTMLElement {
       <div class= "star"></div>
     </div>
     `;
-    
   }
-  
 }
 // Define the Class as a customElement so that you can create
 // 'book-card' elements
