@@ -1,0 +1,27 @@
+  -	Search bar
+    - Functioning and make the homepage search bar look the same as the others
+  -	filter
+    - functioning
+    - do we want to keep
+  -	popular authors
+    -	what is its function
+    - do we want to keep it
+  -	database
+    -	are we all okay with leaving the database as part of the site
+  -	profile
+    -	do we want to keep it
+    -	if so, update the photo icon on each page to the person
+  - do something with the most looked at books, keep or get rid of it
+  - add a book
+    - what fields do we all want to have on it
+  -	do we want to change the background
+    -	doesn’t repeat well
+    -	what to change it to
+  -	added books
+    -	do we want to keep this function
+    - if so, how do we want to format it
+  -	make sure individual book page is populated correctly and all fields work as intended
+  -	recommendation page
+    -	functional
+    - what genres do we want
+  -	should we have a search bar on each page or just the home page
