@@ -216,16 +216,15 @@ searchBtn.addEventListener('click', function () {
 });
 
 // Keyboard press "enter" will click search btn as well
-searchInput.addEventListener("keypress", function(event) {
+searchInput.addEventListener('keypress', function (event) {
   // If the user presses the "Enter" key on the keyboard
-  if (event.key === "Enter") {
+  if (event.key === 'Enter') {
     // Cancel the default action, if needed
     event.preventDefault();
     // Trigger the button element with a click
     searchBtn.click();
   }
 });
-
 
 /**
  * Author FILTER FUNCTIONALITY
