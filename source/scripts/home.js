@@ -216,6 +216,60 @@ searchBtn.addEventListener('click', function () {
 });
 
 /**
+ * Author FILTER FUNCTIONALITY
+ *
+ */
+
+
+const image1 = document.querySelector('#authorimg1');
+const image2 = document.querySelector('#authorimg2');
+const image3 = document.querySelector('#authorimg3');
+const image4 = document.querySelector('#authorimg4');
+const image5 = document.querySelector('#authorimg5');
+const image6 = document.querySelector('#authorimg6');
+const image7 = document.querySelector('#authorimg7');
+const image8 = document.querySelector('#authorimg8');
+
+image1.addEventListener('click', function () {
+  authorUpdate("Durjoy");
+});
+image2.addEventListener('click', function () {
+  authorUpdate("Chetan");
+});
+image3.addEventListener('click', function () {
+  authorUpdate("Brown");
+});
+image4.addEventListener('click', function () {
+  authorUpdate("Singh");
+});
+image5.addEventListener('click', function () {
+  authorUpdate("Archer");
+});
+image6.addEventListener('click', function () {
+  authorUpdate("Salman");
+});
+image7.addEventListener('click', function () {
+  authorUpdate("Rowling");
+});
+image8.addEventListener('click', function () {
+  authorUpdate("Roy");
+});
+
+function authorUpdate (authorName) {
+  console.log(`Display only books whose author includes given names.`);
+  bookStorage = JSON.parse(bookStorage);
+  // Option1: Search by Title only
+  bookToDisplay = bookStorage.filter(el => (el.Author).includes(authorName));
+
+  // TO DO: Option2: Search in all attributes
+  // CODE FOR Option2
+
+  bookToDisplay = JSON.stringify(bookToDisplay);
+  bookStorage = JSON.stringify(bookStorage);
+  init();
+}
+
+/**
  * Reads 'books' from localStorage and returns an array of
  * all of the books found (parsed, not in string form). If
  * nothing is found in localStorage for 'books', an empty array

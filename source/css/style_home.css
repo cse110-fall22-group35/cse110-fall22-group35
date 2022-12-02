@@ -198,11 +198,13 @@ article .book_info h4 {
 .container-fluid > h3 {
   padding-right: 15px;
   padding-left: 15px;
-
   /* margin-right: auto;
     margin-left: 300px; */
   text-align: left;
 }
+/* .container-fluid > div {
+  size: 9px;
+} */
 
 .row {
   display: flex;
@@ -212,3 +214,4 @@ article .book_info h4 {
   margin-right: -15px;
   margin-left: -15px;
 }
+
