@@ -39,6 +39,7 @@ function init () {
   update_info();
   // getting and adding reviews to the page
   const reviews = getReviewsFromStorage();
+  update_rating(reviews);
   reviews.forEach(addCommentToDocument);
   setupDeleteButtons();
 
@@ -59,6 +60,9 @@ function init () {
           }
         }
         saveReviewsToStorage(newReviews);
+
+        // update the rating if a new comment is added
+        update_rating(reviews);
         window.location.reload();
       });
     }
@@ -86,25 +90,28 @@ function init () {
     const cYear = currentDate.getFullYear();
     const date = cMonth + '/' + cDay + '/' + cYear;
     reviewObject.date = date;
-    const reviewList = getReviewsFromStorage();
+    // const reviewList = getReviewsFromStorage();
 
     // find if the user has commented this book already
-    const index = findExistingUser(reviewList, reviewObject.name);
+    const index = findExistingUser(reviews, reviewObject.name);
     console.log(index);
     // if the user has not, add the new comment at the end of the list
     if (index == -1) {
-      reviewList.push(reviewObject);
+      reviews.push(reviewObject);
       addCommentToDocument(reviewObject);
-      saveReviewsToStorage(reviewList);
-      reviews = reviewList;
+      saveReviewsToStorage(reviews);
+      // reviews = reviewList;
       setupDeleteButtons();
+
+      // update the rating if a new comment is added
+      update_rating(reviews);
     }
     // if the user has, edits their previous comment
     else {
       if (confirm(reviewObject.name + ', do you want to overwrite your old comment?')) {
         alert('Overwriting the old comment by ' + reviewObject.name);
 
-        reviewList[index] = reviewObject;
+        reviews[index] = reviewObject;
 
         const comments = document.querySelectorAll('comment-card');
 
@@ -114,16 +121,33 @@ function init () {
         shadow_dom.querySelector('img').src = `../images/${reviewObject.rating}-star.svg`;
         shadow_dom.querySelector('span').innerHTML = reviewObject.rating;
         shadow_dom.querySelector('#comment').innerHTML = reviewObject.comment;
+
+        // update the rating if a new comment is added
+        update_rating(reviews);
       } else {
         alert('Keeping the old comment');
       }
     }
 
-    saveReviewsToStorage(reviewList);
+    saveReviewsToStorage(reviews);
 
     formEl.reset();
   }
   formEl.addEventListener('submit', formElSubmit);
+}
+
+/**
+   * Calculate the average rating of this book and display it at the page
+   * @param {array} reviewList A list of reviews of this book
+   */
+function update_rating (reviewList) {
+  let sum = 0;
+  for (let i = 0; i &lt; reviewList.length; i++) {
+    sum += Number(reviewList[i].rating);
+    console.log(reviewList[i]);
+    console.log(sum);
+  }
+  document.querySelector('#rating').innerHTML = 'Average Rating: ' + (sum / reviewList.length).toFixed(1);
 }
 
 /**
@@ -264,13 +288,13 @@ function findExistingUser (reviewList, name) {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BookCard.html">BookCard</a></li><li><a href="CommentCard.html">CommentCard</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addBooksToDocument">addBooksToDocument</a></li><li><a href="global.html#addBooksToDocumentList">addBooksToDocumentList</a></li><li><a href="global.html#addCommentToDocument">addCommentToDocument</a></li><li><a href="global.html#bookStorage">bookStorage</a></li><li><a href="global.html#filterBar">filterBar</a></li><li><a href="global.html#findExistingUser">findExistingUser</a></li><li><a href="global.html#getBooksFromStorage">getBooksFromStorage</a></li><li><a href="global.html#getReviewsFromStorage">getReviewsFromStorage</a></li><li><a href="global.html#getSuffix">getSuffix</a></li><li><a href="global.html#image1">image1</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#initFormHandler">initFormHandler</a></li><li><a href="global.html#saveBooksToStorage">saveBooksToStorage</a></li><li><a href="global.html#saveReviewsToStorage">saveReviewsToStorage</a></li><li><a href="global.html#searchBook">searchBook</a></li><li><a href="global.html#searchBtn">searchBtn</a></li><li><a href="global.html#sortBar">sortBar</a></li><li><a href="global.html#update_info">update_info</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BookCard.html">BookCard</a></li><li><a href="CommentCard.html">CommentCard</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addBooksToDocument">addBooksToDocument</a></li><li><a href="global.html#addBooksToDocumentList">addBooksToDocumentList</a></li><li><a href="global.html#addCommentToDocument">addCommentToDocument</a></li><li><a href="global.html#bookStorage">bookStorage</a></li><li><a href="global.html#filterBar">filterBar</a></li><li><a href="global.html#findExistingUser">findExistingUser</a></li><li><a href="global.html#getBooksFromStorage">getBooksFromStorage</a></li><li><a href="global.html#getReviewsFromStorage">getReviewsFromStorage</a></li><li><a href="global.html#getSuffix">getSuffix</a></li><li><a href="global.html#image1">image1</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#initFormHandler">initFormHandler</a></li><li><a href="global.html#saveBooksToStorage">saveBooksToStorage</a></li><li><a href="global.html#saveReviewsToStorage">saveReviewsToStorage</a></li><li><a href="global.html#searchBook">searchBook</a></li><li><a href="global.html#searchBtn">searchBtn</a></li><li><a href="global.html#sortBar">sortBar</a></li><li><a href="global.html#update_info">update_info</a></li><li><a href="global.html#update_rating">update_rating</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Fri Dec 02 2022 17:13:49 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Fri Dec 02 2022 17:58:42 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>
