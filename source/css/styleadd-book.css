@@ -36,17 +36,6 @@ h1 {
   color: rgb(237 237 237);
 }
 
-#search {
-  background-color: rgb(128 64 0 / 30%);
-}
-
-#user-profile {
-  float: right;
-  margin: 10px 10px 0 0;
-  color: rgb(237 237 237);
-  text-align: center;
-}
-
 .logo {
   display: inline-block;
   margin: 10px 0 0 10px;
@@ -108,14 +97,25 @@ input {
   color: rgb(237 237 237);
 }
 
+select {
+  background-color: rgb(128 64 0 / 30%);
+  color: rgb(237 237 237);
+}
+
 textarea {
   background-color: rgb(128 64 0 / 30%);
   color: rgb(237 237 237);
 }
 
 form input {
-  margin-bottom: 10px;
+  display: block;
   width: 300px;
+}
+
+form select {
+  display: block;
+  width: 300px;
+  margin-bottom: 30px;
 }
 
 #summary {

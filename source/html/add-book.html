@@ -35,17 +35,32 @@
       <label for="imgSrc">Link to cover:
         <input type="url" id="imgSrc" name="imgSrc" required><br><br>
       </label>
-      <label for="imgAlt">Alternative:
-        <input type="text" id="imgAlt" name="imgAlt" required><br><br>
-      </label>
       <label for="titleTxt">Title:
         <input type="text" id="titleTxt" name="titleTxt" required><br><br>
       </label>
       <label for="author">Author:
         <input type="text" id="author" name="author" required><br><br>
       </label>
-      <label for="bookType">Genre:
-        <input type="text" id="bookType" name="bookType" required><br><br>
+      <label for="genre">Genre:
+        <select id="genre" name="genre" required>
+          <option value="default">Select one...</option> 
+          <option value="adventure">Adventure</option>
+          <option value="academic">Academic</option>
+          <option value="biographies">Biographies</option>
+          <option value="business">Business</option>
+          <option value="children">Children</option>
+          <option value="entrance_exam">Entrance Exam</option>
+          <option value="fantasy">Fantasy</option>
+          <option value="health">Health</option>
+          <option value="horror">Horror</option>
+          <option value="literature">Literature</option>
+          <option value="regional">Regional</option>
+          <option value="romance">Romance</option>
+          <option value="science_fiction">Science Fiction</option>
+        </select>
+      </label>
+      <label for="price">Price:
+        <input type="number" id="price" name="summary" min="0" required><br><br>
       </label>
       <label for="summary">Summary:
         <input type="textarea" id="summary" name="summary" required><br><br>
