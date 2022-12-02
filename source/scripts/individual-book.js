@@ -62,7 +62,6 @@ function init () {
     const cYear = currentDate.getFullYear();
     const date = cMonth + '/' + cDay + '/' + cYear;
     reviewObject.date = date;
-    // const reviewList = getReviewsFromStorage();
 
     // find if the user has commented this book already
     const index = findExistingUser(reviews, reviewObject.name);
@@ -72,7 +71,6 @@ function init () {
       reviews.push(reviewObject);
       addCommentToDocument(reviewObject);
       saveReviewsToStorage(reviews);
-      // reviews = reviewList;
       setupDeleteButtons();
 
       // update the rating if a new comment is added
@@ -113,6 +111,12 @@ function init () {
    * @param {array} reviewList A list of reviews of this book
    */
  function update_rating (reviewList) {
+  // if the book has no comment
+  if (reviewList.length == 0) {
+    document.querySelector('#rating').innerHTML = "Average Rating: N/A";
+    return;
+  }
+
   let sum = 0;
   for (let i = 0; i < reviewList.length; i++) {
     sum += Number (reviewList[i].rating);
