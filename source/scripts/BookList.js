@@ -80,6 +80,7 @@ article .book_info h4{
     <span><b><h3>${data.Title}<h3></b></span>
     </div>
     </a>
+    <button class = "rm_btn" type = "button" onclick='this.parentElement.remove();'>Remove</button>
     `;
   }
 }
