@@ -10,7 +10,7 @@ function init () {
   // Add books information
   update_info();
   // getting and adding reviews to the page
-  let reviews = getReviewsFromStorage();
+  const reviews = getReviewsFromStorage();
   reviews.forEach(addCommentToDocument);
   setupDeleteButtons();
 
@@ -73,7 +73,7 @@ function init () {
     }
     // if the user has, edits their previous comment
     else {
-      if (confirm (reviewObject["name"] + ", do you want to overwrite your old comment?")) {
+      if (confirm(reviewObject.name + ', do you want to overwrite your old comment?')) {
         alert('Overwriting the old comment by ' + reviewObject.name);
 
         reviewList[index] = reviewObject;
@@ -87,7 +87,7 @@ function init () {
         shadow_dom.querySelector('span').innerHTML = reviewObject.rating;
         shadow_dom.querySelector('#comment').innerHTML = reviewObject.comment;
       } else {
-        alert ("Keeping the old comment");
+        alert('Keeping the old comment');
       }
     }
 
