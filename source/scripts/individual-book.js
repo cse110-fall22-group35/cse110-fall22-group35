@@ -67,8 +67,8 @@ function init () {
     if (index == -1) {
       reviewList.push(reviewObject);
       addCommentToDocument(reviewObject);
-      // saveReviewsToStorage(reviewList);
-      // reviews = reviewList;
+      saveReviewsToStorage(reviewList);
+      reviews = reviewList;
       setupDeleteButtons();
     }
     // if the user has, edits their previous comment
