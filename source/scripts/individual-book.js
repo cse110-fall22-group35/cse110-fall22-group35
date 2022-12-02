@@ -10,7 +10,8 @@ function init () {
   // Add books information
   update_info();
   // getting and adding reviews to the page
-  const reviews = getReviewsFromStorage();
+  let reviews = getReviewsFromStorage();
+  update_rating (reviews);
   reviews.forEach(addCommentToDocument);
   setupDeleteButtons();
 
@@ -31,6 +32,9 @@ function init () {
           }
         }
         saveReviewsToStorage(newReviews);
+
+        // update the rating if a new comment is added
+        update_rating (reviews);
         window.location.reload();
       });
     }
@@ -58,25 +62,28 @@ function init () {
     const cYear = currentDate.getFullYear();
     const date = cMonth + '/' + cDay + '/' + cYear;
     reviewObject.date = date;
-    const reviewList = getReviewsFromStorage();
+    // const reviewList = getReviewsFromStorage();
 
     // find if the user has commented this book already
-    const index = findExistingUser(reviewList, reviewObject.name);
+    const index = findExistingUser(reviews, reviewObject.name);
     console.log(index);
     // if the user has not, add the new comment at the end of the list
     if (index == -1) {
-      reviewList.push(reviewObject);
+      reviews.push(reviewObject);
       addCommentToDocument(reviewObject);
-      saveReviewsToStorage(reviewList);
-      reviews = reviewList;
+      saveReviewsToStorage(reviews);
+      // reviews = reviewList;
       setupDeleteButtons();
+
+      // update the rating if a new comment is added
+      update_rating (reviews);
     }
     // if the user has, edits their previous comment
     else {
       if (confirm(reviewObject.name + ', do you want to overwrite your old comment?')) {
         alert('Overwriting the old comment by ' + reviewObject.name);
 
-        reviewList[index] = reviewObject;
+        reviews[index] = reviewObject;
 
         const comments = document.querySelectorAll('comment-card');
 
@@ -86,16 +93,33 @@ function init () {
         shadow_dom.querySelector('img').src = `../images/${reviewObject.rating}-star.svg`;
         shadow_dom.querySelector('span').innerHTML = reviewObject.rating;
         shadow_dom.querySelector('#comment').innerHTML = reviewObject.comment;
+
+        // update the rating if a new comment is added
+        update_rating (reviews);
       } else {
         alert('Keeping the old comment');
       }
     }
 
-    saveReviewsToStorage(reviewList);
+    saveReviewsToStorage(reviews);
 
     formEl.reset();
   }
   formEl.addEventListener('submit', formElSubmit);
+}
+
+/**
+   * Calculate the average rating of this book and display it at the page
+   * @param {array} reviewList A list of reviews of this book
+   */
+ function update_rating (reviewList) {
+  let sum = 0;
+  for (let i = 0; i < reviewList.length; i++) {
+    sum += Number (reviewList[i].rating);
+    console.log (reviewList[i]);
+    console.log (sum);
+  }
+  document.querySelector('#rating').innerHTML = "Average Rating: " + (sum / reviewList.length).toFixed (1);
 }
 
 /**
