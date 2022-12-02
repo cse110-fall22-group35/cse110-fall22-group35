@@ -10,8 +10,8 @@ function init () {
   // Add books information
   update_info();
   // getting and adding reviews to the page
-  let reviews = getReviewsFromStorage();
-  update_rating (reviews);
+  const reviews = getReviewsFromStorage();
+  update_rating(reviews);
   reviews.forEach(addCommentToDocument);
   setupDeleteButtons();
 
@@ -34,7 +34,7 @@ function init () {
         saveReviewsToStorage(newReviews);
 
         // update the rating if a new comment is added
-        update_rating (reviews);
+        update_rating(reviews);
         window.location.reload();
       });
     }
@@ -74,7 +74,7 @@ function init () {
       setupDeleteButtons();
 
       // update the rating if a new comment is added
-      update_rating (reviews);
+      update_rating(reviews);
     }
     // if the user has, edits their previous comment
     else {
@@ -93,7 +93,7 @@ function init () {
         shadow_dom.querySelector('#comment').innerHTML = reviewObject.comment;
 
         // update the rating if a new comment is added
-        update_rating (reviews);
+        update_rating(reviews);
       } else {
         alert('Keeping the old comment');
       }
@@ -110,20 +110,20 @@ function init () {
    * Calculate the average rating of this book and display it at the page
    * @param {array} reviewList A list of reviews of this book
    */
- function update_rating (reviewList) {
+function update_rating (reviewList) {
   // if the book has no comment
   if (reviewList.length == 0) {
-    document.querySelector('#rating').innerHTML = "Average Rating: N/A";
+    document.querySelector('#rating').innerHTML = 'Average Rating: N/A';
     return;
   }
 
   let sum = 0;
   for (let i = 0; i < reviewList.length; i++) {
-    sum += Number (reviewList[i].rating);
-    console.log (reviewList[i]);
-    console.log (sum);
+    sum += Number(reviewList[i].rating);
+    console.log(reviewList[i]);
+    console.log(sum);
   }
-  document.querySelector('#rating').innerHTML = "Average Rating: " + (sum / reviewList.length).toFixed (1);
+  document.querySelector('#rating').innerHTML = 'Average Rating: ' + (sum / reviewList.length).toFixed(1);
 }
 
 /**
