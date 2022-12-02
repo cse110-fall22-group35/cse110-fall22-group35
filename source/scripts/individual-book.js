@@ -67,24 +67,28 @@ function init () {
     if (index == -1) {
       reviewList.push(reviewObject);
       addCommentToDocument(reviewObject);
-      saveReviewsToStorage(reviewList);
-      reviews = reviewList;
+      // saveReviewsToStorage(reviewList);
+      // reviews = reviewList;
       setupDeleteButtons();
     }
-    // if the user has, edits their previews comment
+    // if the user has, edits their previous comment
     else {
-      alert('Overwriting the old comment by ' + reviewObject.name);
+      if (confirm (reviewObject["name"] + ", do you want to overwrite your old comment?")) {
+        alert('Overwriting the old comment by ' + reviewObject.name);
 
-      reviewList[index] = reviewObject;
+        reviewList[index] = reviewObject;
 
-      const comments = document.querySelectorAll('comment-card');
+        const comments = document.querySelectorAll('comment-card');
 
-      const shadow_dom = comments[index].shadowRoot;
+        const shadow_dom = comments[index].shadowRoot;
 
-      shadow_dom.querySelector('#date').innerHTML = reviewObject.date;
-      shadow_dom.querySelector('img').src = `../images/${reviewObject.rating}-star.svg`;
-      shadow_dom.querySelector('span').innerHTML = reviewObject.rating;
-      shadow_dom.querySelector('#comment').innerHTML = reviewObject.comment;
+        shadow_dom.querySelector('#date').innerHTML = reviewObject.date;
+        shadow_dom.querySelector('img').src = `../images/${reviewObject.rating}-star.svg`;
+        shadow_dom.querySelector('span').innerHTML = reviewObject.rating;
+        shadow_dom.querySelector('#comment').innerHTML = reviewObject.comment;
+      } else {
+        alert ("Keeping the old comment");
+      }
     }
 
     saveReviewsToStorage(reviewList);
