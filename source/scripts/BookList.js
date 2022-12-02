@@ -68,17 +68,19 @@ article .book_info h4{
 
     // A6. Select the <article> we added to the Shadow DOM in the constructor
     const article = this.shadowRoot.querySelector('article');
+    const url = '../html/individual-book.html?q=' + `${data.Title}`;
+
     // A7. Set the contents of the <article> with the <article> template given in
     //           cardTemplate.html and the data passed in (You should only have one <article>,
     //           do not nest an <article> inside another <article>). You should use Template
     //           literals (tempalte strings) and element.innerHTML for this.
     article.innerHTML = `
+    <a href="${url}" id="profile">
     <div class="book_info">
-                  <a href=${data.profile} id="profile">
-                    <span><b><h3>${data.titleTxt}<h3></b></span>
-                  </a>
-                </div>
-                <button class = "rm_btn" type = "button" onclick='this.parentElement.remove();'>Remove</button>`;
+    <span><b><h3>${data.Title}<h3></b></span>
+    </div>
+    </a>
+    `;
   }
 }
 // A8. Define the Class as a customElement so that you can create
