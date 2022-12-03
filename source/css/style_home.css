@@ -19,7 +19,7 @@ body {
 /* Below are styles for header and navbar */
 h1 {
   color: rgb(237 237 237);
-  font-size: 50px;
+  font-size: 40px;
   letter-spacing: 2px;
 }
 
@@ -31,6 +31,8 @@ img,
 h1 {
   display: inline-block;
   color: rgb(237 237 237);
+  /* width: 30px;
+  height: 30px; */
 }
 
 #search {
@@ -127,7 +129,9 @@ nav {
 
 #books .book-container {
   display: grid;
-  grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
+  /* grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
+   */
+  grid-template-columns: auto auto auto auto;
   gap: 20px;
   box-sizing: border-box;
   width: 90%;
