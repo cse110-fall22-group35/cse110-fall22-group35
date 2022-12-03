@@ -1,3 +1,5 @@
+
+
 export const booksdb = [{
   imgSrc: '../images/books/ACA-1.jpg',
   // "imgAlt": "dummy profile picture",
@@ -158,3 +160,13 @@ export const booksdb = [{
 { imgSrc: '../images/books/ACA-14.jpg', Title: 'Life Mantras', Author: 'Subrata Roy', MRP: '200', Price: '158', Discount: '21', Available: '11', Publisher: 'Books', Edition: '1', Category: 'Academic & Professional', Description: null, Language: 'Hindi', page: '260', Rating: '3' },
 { imgSrc: '../images/books/ACA-15.jpg', Title: 'Life Mantras', Author: 'Subrata Roy', MRP: '200', Price: '160', Discount: '21', Available: '14', Publisher: 'Books', Edition: '1', Category: 'Academic & Professional', Description: "\"After having gone through the book, you will definitely and convincingly realise that to achieve\r\n\r\npeace, true happiness, contentment, satisfaction and also to attain continuous progress in life\r\n\r\nin terms of material gains, respect and love, you need not depend on anybody in this world. It\r\n\r\nall depends on you. It is all in your hands.\" Saharasri Subrata Roy Sahara\r\n\r\n\"Nobody does anything for anyone. All do for themselves either for more and more material gains\r\n\r\nor to save and escape from any kind of material losses or from mental-emotional dissatisfaction or for\r\n\r\ngetting more and more mental-emotional satisfaction. Therefore, no one sacrifices for anyone. When\r\n\r\nno one does anything for anyone, there is no justification in expecting any returns.\"\r\n\r\nThe author goes on to explain that to make life truly beautiful, one also needs to understand the basic\r\n\r\ntruths with which we are born or the basic instincts inherent in us all. So for a positive outcome one\r\n\r\nhas to learn the psychological or the emotional aspects of life, in other words, the realities of life or the\r\n\r\nentire philosophy of life. As you get immersed in the potent energy of these 'Life Mantras', you will\r\n\r\nslowly find a change, a sense of fulfillment, a self-motivation coming in you. You will thus be led to\r\n\r\nthe ultimate realization that the journey of life is indeed a truly blissful and an enlightening experience. \r\n\r\nAbout The Author\r\n\r\nSubrata Roy Sahara (born 1948) popularly known as 'Saharasri', is one of the most successful,\r\n\r\nbold, vociferous and talked-about figures of corporate India. When he laid the foundation of Sahara\r\n\r\nIndia Pariwar in 1978 with a capital of `2,000 (about $32) and three workers, who would have\r\n\r\nimagined his company's meteoric rise to a worth of `1,80,000 crore (about $27 billion) within\r\n\r\na span of thirty-seven years!\r\n\r\nA teacher, guide and a proud guardian to his over 1.2 million fellow workers, he ascribes his\r\n\r\nsuccess to his philosophy of 'Collective Materialism' which means continuous collective growth\r\n\r\nfor collective sharing and caring.\r\n\r\nRenowned institutions like Harvard School of Business, USA; the Indian Institutes of Technology;\r\n\r\nthe Indian Institutes of Management; and Banaras Hindu University have invited him to address\r\n\r\ntheir faculty and students, besides which, a host of awards have been bestowed on him that include\r\n\r\nthe 'Indian Business Icon of the Year' at the Powerbrands Hall of Fame Awards in London; the\r\n\r\nDoctor of Business (honoris causa) by the University of East London; and the highest honorary\r\n\r\ndegree, 'D. Litt.' by the Lalit Narayan Mithila University, Bihar for his contributions in various fields.", Language: 'English', page: '298', Rating: '3' }
 ];
+// window.addEventListener('DOMContentLoaded', init);
+
+// Starts the program, all function calls trace back here
+// if (localStorage.length === 0) {
+//   let bookStorage = JSON.stringify(booksdb);
+//   let bookToDisplay = bookStorage;
+//   localStorage.setItem('books', bookToDisplay);
+
+// }
+

@@ -23,12 +23,16 @@ window.addEventListener('DOMContentLoaded', init);
 // Starts the program, all function calls (except eventListeners for SORT/FILTER/SEARCH) trace back here
 function init () {
   // set books from database to localstorage
-  localStorage.setItem('books', bookToDisplay);
+  if (localStorage.length === 0) {
+    
+    localStorage.setItem('books', bookToDisplay);
+  }
   // Get the books from localStorage
   const books = getBooksFromStorage();
   // Add each book to the <main> element
   addBooksToDocument(books);
 }
+
 
 /**
  * FILTER FUNCTIONALITY

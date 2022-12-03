@@ -37,12 +37,15 @@ function getBooksFromStorage () {
  * saves that string to 'books' in localStorage
  * @param {Array<Object>} books An array of books
  */
-function saveBooksToStorage (books) {
+function saveBooksToStorage (booksAdded) {
   // EXPLORE - START (All explore numbers start with B)
   // B1. TODO - Complete the functionality as described in this function
   //            header. It is possible in only a single line, but should
   //            be no more than a few lines.
-  localStorage.setItem('books', JSON.stringify(books));
+  // localStorage.setItem('booksAdded', JSON.stringify(booksAdded));
+  var books = JSON.parse(localStorage.getItem("books"));
+  books.push(booksAdded);
+  localStorage.setItem("books", JSON.stringify(books));
 }
 
 /**
