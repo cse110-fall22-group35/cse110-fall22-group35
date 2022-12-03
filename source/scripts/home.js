@@ -34,6 +34,8 @@ function init (refreshFlag) {
   // Add each book to the <main> element
   addBooksToDocument(books);
 }
+
+//refreshBtn removes all the added books and sorted/filtered/authored by only loading the bookstorage data.
 const refreshBtn = document.querySelector('#refreshBtn');
 refreshBtn.addEventListener('click', (event) => {
   // load all the books from database to localstorage
