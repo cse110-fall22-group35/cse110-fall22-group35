@@ -117,7 +117,6 @@ class BookCard extends HTMLElement {
     article.innerHTML = `
     <a href="${url}" id="profile">
       <img src="${data.imgSrc}" id="profile-picture" alt="${data.imgAlt}">
-      <p>${data.profile}</p>
     </a>
     <div class="book_info">
       <span><b><h3>Title: ${data.Title}<h3></b></span>
