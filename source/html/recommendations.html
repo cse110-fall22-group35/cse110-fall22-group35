@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="../css/style-rec.css">
     <!-- Script -->
     <script src="../scripts/rec-book.js" type="module"></script>
-    <script src="../javascript/recommendations.js" type="module"></script>
     <link rel="icon" href="../images/temp_logo.jpg">
   </head>
   <body>
@@ -21,9 +20,9 @@
           <h1>Novelty</h1>
         </a>
     </header>
-    <nav>
+    <nav id = 'nav'>
         <ul>
-            <a href="./home.html" class="navlink"><li>Home</li></a>
+            <a href="./home.html" id = "home" class="navlink"><li>Home</li></a>
             <a href="./recommendations.html" class="navlink"><li>Recommendations</li></a>
             <a href="./add-book.html" class="navlink"><li>Add a book</li></a>
             <a href="./writing-tips.html" class="navlink"><li>Writing-tips</li></a>
@@ -38,6 +37,7 @@
 
     <!-- Genre Section... -->
     <h2>Genre:</h2>
+
     <!-- Filter Search Bar -->
     <input type="text" id="genrebar" onkeyup="searchFilter()" placeholder="Search for genres..">
 
@@ -57,6 +57,7 @@
       <li><a href="#">ROMANCE</a></li>
       <li><a href="#">SCIENCE FICTION</a></li>
     </ul>
+
     <br>
     <br>
 
@@ -89,7 +90,7 @@
 
     <!-- Ratings -->
     <h2> Minimum Rating:</h2>
-    <h2 id = "placeholder1"> 0 </h2>
+    <h2 id = "placeholder1"> 0 ✩</h2>
 
     <!-- Choose between stars -->
     <ul id="ratings">
@@ -125,14 +126,17 @@
 
     <br> 
     <br>
-
+    
     <!-- Submit button -->
     <button id="myBtn" type="submit">Search</button>
+
+    <br>
+    <br>
 
     <!-- List of book containers -->
     <div id = "home">        
         <div id = "books" class=" book section ">
-            <h2>Recommended Books</h2>
+            <h2>Recommended Books: </h2>
             <!-- Section where filtered books are displayed -->
             <section class="book-container">
             </section>

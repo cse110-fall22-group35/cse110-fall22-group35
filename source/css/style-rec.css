@@ -165,6 +165,26 @@ button {
   margin: 10px auto 0;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Below are styles for individual books */
+#books .book-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  box-sizing: border-box;
+  width: 90%;
+  grid-auto-rows: minmax(auto, max-content);
+  justify-content: space-between;
+  padding: 20px;
+  margin: 20px;
+  height: 3300px;
+}
+
 /* Below are styles for individual books */
 article {
   height: 20%;
@@ -191,7 +211,7 @@ article img {
 
 #books h2 {
   color: rgb(237 237 237);
-  font-size: 30px;
+  font-size: 45px;
   letter-spacing: 2px;
 }
 
@@ -212,9 +232,7 @@ article .book_info h5 {
 
 article .book_info i {
   color: rgb(243 181 25);
-  font-size: 12px;
-
-  /* height:3300px; */
+  font-size: 20px;
 }
 
 article .book_info h4 {
@@ -222,4 +240,20 @@ article .book_info h4 {
   color: #088120;
   font-size: 15px;
   font-weight: 700;
+}
+
+.container-fluid > h3 {
+  padding-right: 15px;
+  padding-left: 15px;
+
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 3;
+  justify-content: center;
+  margin-right: -15px;
+  margin-left: -15px;
 }
