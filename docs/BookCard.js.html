@@ -131,15 +131,7 @@ class BookCard extends HTMLElement {
    * let bookCard = document.createElement('book-card'); // Calls constructor()
    * bookCard.data = { foo: 'bar' } // Calls set data({ foo: 'bar' })
    *
-   * @param {Object} data - The data to pass into the &lt;book-card>, must be of the
-   *                        following format:
-   *                        {
-   *                          "imgSrc": "string",
-   *                          "imgAlt": "string",
-   *                          "titleTxt": "string",
-   *                          "author": "string",
-   *                          "bookType": "string"
-   *                        }
+   * @param {Object} data - The data to pass into the &lt;book-card>, must be of the in the first entry in the bookstorage.js
    */
   set data (data) {
     // If nothing was passed in, return

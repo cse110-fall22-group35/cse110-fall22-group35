@@ -104,14 +104,6 @@ class BookCard extends HTMLElement {
    * bookCard.data = { foo: 'bar' } // Calls set data({ foo: 'bar' })
    *
    * @param {Object} data - The data to pass into the <book-card>, must be of the
-   *                        following format:
-   *                        {
-   *                          "imgSrc": "string",
-   *                          "imgAlt": "string",
-   *                          "titleTxt": "string",
-   *                          "author": "string",
-   *                          "bookType": "string"
-   *                        }
    */
   set data (data) {
     // If nothing was passed in, return
