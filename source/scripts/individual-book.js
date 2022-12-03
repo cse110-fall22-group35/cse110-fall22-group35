@@ -164,7 +164,13 @@ function searchBook () {
 function update_info () {
   const current_book = searchBook();
   console.log(current_book);
-  document.querySelector('#top-title').innerHTML = current_book.Title + `, ${current_book.Edition}` + getSuffix(current_book.Edition) + ' Edition';
+  //dealing with inconsistency in how data is created
+  if (current_book.Edition){
+    document.querySelector('#top-title').innerHTML = current_book.Title + `, ${current_book.Edition}` + getSuffix(current_book.Edition) + ' Edition';
+  }
+  else{
+    document.querySelector('#top-title').innerHTML = current_book.Title;
+  }
   document.querySelector('#cover').src = current_book.imgSrc;
   document.querySelector('#cover').alt = current_book.imgAlt;
   document.querySelector('#author').innerHTML = 'Author: ' + current_book.Author;
