@@ -164,11 +164,10 @@ function searchBook () {
 function update_info () {
   const current_book = searchBook();
   console.log(current_book);
-  //dealing with inconsistency in how data is created 
-  if (current_book.Edition){
+  // dealing with inconsistency in how data is created
+  if (current_book.Edition) {
     document.querySelector('#top-title').innerHTML = current_book.Title + `, ${current_book.Edition}` + getSuffix(current_book.Edition) + ' Edition';
-  }
-  else{
+  } else {
     document.querySelector('#top-title').innerHTML = current_book.Title;
   }
   document.querySelector('#cover').src = current_book.imgSrc;
