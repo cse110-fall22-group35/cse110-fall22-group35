@@ -37,10 +37,10 @@ function init (refreshFlag) {
 const refreshBtn = document.querySelector('#refreshBtn');
 refreshBtn.addEventListener('click', (event) => {
   // load all the books from database to localstorage
-  let bookStorage = JSON.stringify(booksdb);
-  let bookToDisplay = bookStorage;
+  const bookStorage = JSON.stringify(booksdb);
+  const bookToDisplay = bookStorage;
   localStorage.setItem('books', bookToDisplay);
-  
+
   // Get the books from localStorage
   const books = getBooksFromStorage();
   // Add each book to the <main> element
@@ -299,8 +299,6 @@ image7.addEventListener('click', function () {
 image8.addEventListener('click', function () {
   authorUpdate('Roy');
 });
-
-
 
 /**
  * Reads 'books' from localStorage and returns an array of
