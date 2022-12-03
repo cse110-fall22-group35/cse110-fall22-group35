@@ -164,7 +164,7 @@ function searchBook () {
 function update_info () {
   const current_book = searchBook();
   console.log(current_book);
-  //dealing with inconsistency in how data is created
+  //dealing with inconsistency in how data is created 
   if (current_book.Edition){
     document.querySelector('#top-title').innerHTML = current_book.Title + `, ${current_book.Edition}` + getSuffix(current_book.Edition) + ' Edition';
   }
