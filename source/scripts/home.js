@@ -1,6 +1,6 @@
 // home.js
 
-//importing the variable of arrary from the bookstorage.js
+// importing the variable of arrary from the bookstorage.js
 import { booksdb } from '../scripts/bookstorage.js';
 
 /**
@@ -16,7 +16,7 @@ import { booksdb } from '../scripts/bookstorage.js';
  * 1. ALWAYS use @bookToDisplay to store books displayed on the homepage.
  * 2. SORT/FILTER/SEARCH functionalities SHOULD ONLY modifify @bookToDisplay.
  */
-//processing the books to be loaded into localstorage
+// processing the books to be loaded into localstorage
 let bookStorage = JSON.stringify(booksdb);
 let bookToDisplay = bookStorage;
 

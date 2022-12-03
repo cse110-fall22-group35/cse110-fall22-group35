@@ -1,4 +1,4 @@
-//A variable of an array of book to be loaded into the local storage
+// A variable of an array of book to be loaded into the local storage
 export const booksdb = [{
   imgSrc: '../images/books/ACA-1.jpg',
   // "imgAlt": "dummy profile picture",
