@@ -24,7 +24,6 @@ window.addEventListener('DOMContentLoaded', init);
 function init () {
   // set books from database to localstorage
   if (localStorage.length === 0) {
-    
     localStorage.setItem('books', bookToDisplay);
   }
   // Get the books from localStorage
@@ -32,7 +31,6 @@ function init () {
   // Add each book to the <main> element
   addBooksToDocument(books);
 }
-
 
 /**
  * FILTER FUNCTIONALITY

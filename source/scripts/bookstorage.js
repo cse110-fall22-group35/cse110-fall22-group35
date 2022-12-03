@@ -1,5 +1,4 @@
 
-
 export const booksdb = [{
   imgSrc: '../images/books/ACA-1.jpg',
   // "imgAlt": "dummy profile picture",
@@ -169,4 +168,3 @@ export const booksdb = [{
 //   localStorage.setItem('books', bookToDisplay);
 
 // }
-

@@ -43,9 +43,9 @@ function saveBooksToStorage (booksAdded) {
   //            header. It is possible in only a single line, but should
   //            be no more than a few lines.
   // localStorage.setItem('booksAdded', JSON.stringify(booksAdded));
-  var books = JSON.parse(localStorage.getItem("books"));
+  const books = JSON.parse(localStorage.getItem('books'));
   books.push(booksAdded);
-  localStorage.setItem("books", JSON.stringify(books));
+  localStorage.setItem('books', JSON.stringify(books));
 }
 
 /**
