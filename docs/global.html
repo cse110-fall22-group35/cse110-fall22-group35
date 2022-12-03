@@ -312,6 +312,72 @@ The list of filters are customazible, to add/drop/change a filter, first modify
 
         
             
+<h4 class="name" id="navBtn"><span class="type-signature">(constant) </span>navBtn<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    NavBar Reset
+
+Description:
+Resets the local storage when traversing through other sites, since we do not want to have the
+         users to continue to view recommended items on the home page.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="rec-book.js.html">rec-book.js</a>, <a href="rec-book.js.html#line84">line 84</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
 <h4 class="name" id="searchBtn"><span class="type-signature">(constant) </span>searchBtn<span class="type-signature"></span></h4>
 
 
@@ -725,7 +791,7 @@ to <main>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="rec-book.js.html">rec-book.js</a>, <a href="rec-book.js.html#line91">line 91</a>
+        <a href="rec-book.js.html">rec-book.js</a>, <a href="rec-book.js.html#line208">line 208</a>
     </li></ul></dd>
     
 
@@ -1615,7 +1681,7 @@ is returned.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="rec-book.js.html">rec-book.js</a>, <a href="rec-book.js.html#line72">line 72</a>
+        <a href="rec-book.js.html">rec-book.js</a>, <a href="rec-book.js.html#line189">line 189</a>
     </li></ul></dd>
     
 
@@ -2399,144 +2465,6 @@ saves that string to 'books' in localStorage
     
 
     
-    <h4 class="name" id="saveBooksToStorage"><span class="type-signature"></span>saveBooksToStorage<span class="signature">(books)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Takes in an array of books, converts it to a string, and then
-saves that string to 'books' in localStorage
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>books</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;Object></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">An array of books</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="rec-book.js.html">rec-book.js</a>, <a href="rec-book.js.html#line123">line 123</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
     <h4 class="name" id="saveReviewsToStorage"><span class="type-signature"></span>saveReviewsToStorage<span class="signature">(reviews)</span><span class="type-signature"></span></h4>
     
 
@@ -3008,13 +2936,13 @@ saves that string to the book's title in local storage
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BookCard.html">BookCard</a></li><li><a href="CommentCard.html">CommentCard</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addBooksToDocument">addBooksToDocument</a></li><li><a href="global.html#addBooksToDocumentList">addBooksToDocumentList</a></li><li><a href="global.html#addCommentToDocument">addCommentToDocument</a></li><li><a href="global.html#bookStorage">bookStorage</a></li><li><a href="global.html#filterBar">filterBar</a></li><li><a href="global.html#findExistingUser">findExistingUser</a></li><li><a href="global.html#getBooksFromStorage">getBooksFromStorage</a></li><li><a href="global.html#getReviewsFromStorage">getReviewsFromStorage</a></li><li><a href="global.html#getSuffix">getSuffix</a></li><li><a href="global.html#image1">image1</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#initFormHandler">initFormHandler</a></li><li><a href="global.html#saveBooksToStorage">saveBooksToStorage</a></li><li><a href="global.html#saveReviewsToStorage">saveReviewsToStorage</a></li><li><a href="global.html#searchBook">searchBook</a></li><li><a href="global.html#searchBtn">searchBtn</a></li><li><a href="global.html#sortBar">sortBar</a></li><li><a href="global.html#update_info">update_info</a></li><li><a href="global.html#update_rating">update_rating</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BookCard.html">BookCard</a></li><li><a href="CommentCard.html">CommentCard</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addBooksToDocument">addBooksToDocument</a></li><li><a href="global.html#addBooksToDocumentList">addBooksToDocumentList</a></li><li><a href="global.html#addCommentToDocument">addCommentToDocument</a></li><li><a href="global.html#bookStorage">bookStorage</a></li><li><a href="global.html#filterBar">filterBar</a></li><li><a href="global.html#findExistingUser">findExistingUser</a></li><li><a href="global.html#getBooksFromStorage">getBooksFromStorage</a></li><li><a href="global.html#getReviewsFromStorage">getReviewsFromStorage</a></li><li><a href="global.html#getSuffix">getSuffix</a></li><li><a href="global.html#image1">image1</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#initFormHandler">initFormHandler</a></li><li><a href="global.html#navBtn">navBtn</a></li><li><a href="global.html#saveBooksToStorage">saveBooksToStorage</a></li><li><a href="global.html#saveReviewsToStorage">saveReviewsToStorage</a></li><li><a href="global.html#searchBook">searchBook</a></li><li><a href="global.html#searchBtn">searchBtn</a></li><li><a href="global.html#sortBar">sortBar</a></li><li><a href="global.html#update_info">update_info</a></li><li><a href="global.html#update_rating">update_rating</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Sat Dec 03 2022 05:59:55 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Sat Dec 03 2022 14:20:34 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>

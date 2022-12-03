@@ -26,16 +26,24 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>// rec-book.js
+            <pre class="prettyprint source linenums"><code>// recommend-book.js
+
+// importing books from bookstorage.js
+import { booksdb } from '../scripts/bookstorage.js';
+
+let bookStorage = JSON.stringify(booksdb);
+let bookToDisplay = bookStorage;
 
 // Run the init() function when the page has loaded
 window.addEventListener('DOMContentLoaded', init);
 
-// Starts the program, all function calls trace back here
+// variables that will be used in the "Recommend Feature"
 let genre = '';
 let ratings = '';
 let price = '';
 let author = '';
+
+// Starts the program, all function calls trace back here
 function init () {
   const items = document.querySelectorAll('#genre li');
   // Changes values of certain genres that do not fit in the given cards
@@ -43,38 +51,42 @@ function init () {
     items[i].onclick = function () {
       if (this.innerText == 'CHILDREN') {
         document.getElementById('genrebar').value = 'CHILDREN AND TEENS';
-        genre = 'CHILDREN AND TEENS';
+        genre = 'Children and Teens';
       } else if (this.innerText == 'LITERATURE') {
         document.getElementById('genrebar').value = 'LITERATURE AND FICTION';
-        genre = 'LITERATURE AND FICTION';
+        genre = 'Literature and Fiction';
       } else if (this.innerText == 'BIOGRAPHIES') {
         document.getElementById('genrebar').value = 'BIOGRAPHIES AND AUTO BIOGRAPHIES';
-        genre = 'BIOGRAPHIES AND AUTO BIOGRAPHIES';
+        genre = 'Biographies and Auto Biographies';
       } else if (this.innerText == 'ACADEMIC') {
         document.getElementById('genrebar').value = 'ACADEMIC AND PROFESSIONAL';
-        genre = 'ACADEMIC AND PROFESSIONAL';
+        genre = 'Academic and Professional';
       } else if (this.innerText == 'REGIONAL') {
         document.getElementById('genrebar').value = 'REGIONAL BOOKS';
-        genre = 'REGIONAL BOOKS';
+        genre = 'Regional Books';
       } else if (this.innerText == 'BUSINESS') {
         document.getElementById('genrebar').value = 'BUSINESS AND MANAGEMENT';
-        genre = 'BUSINESS AND MANAGEMENT';
+        genre = 'Business and Management';
       } else if (this.innerText == 'HEALTH') {
         document.getElementById('genrebar').value = 'HEALTH AND COOKING';
-        genre = 'HEALTH AND BOOKING';
+        genre = 'Health and Cooking';
       } else {
         document.getElementById('genrebar').value = this.innerText;
         genre = this.innerText;
       }
     };
   }
+
+  // assigns rating value chosen by user to variable ratings...
   const rate = document.querySelectorAll('#ratings li');
   for (var i = 0; i &lt; rate.length; i++) {
     rate[i].onclick = function () {
-      document.getElementById('placeholder1').innerText = this.innerText;
+      document.getElementById('placeholder1').innerText = this.innerText + ' ✩';
       ratings = this.innerText;
     };
   }
+
+  // assigns price value chosen by user to variable price...
   const prices = document.querySelectorAll('#price li');
   for (var i = 0; i &lt; prices.length; i++) {
     prices[i].onclick = function () {
@@ -82,13 +94,118 @@ function init () {
       price = this.innerText;
     };
   }
+
   // Get the books from localStorage
   const books = getBooksFromStorage();
   // Add each book to the &lt;main> element
   addBooksToDocument(books);
-  // Add the event listeners to the form elements
-  // initFormHandler();
 }
+
+/**
+ * NavBar Reset
+ *
+ * Description:
+ * Resets the local storage when traversing through other sites, since we do not want to have the
+ *          users to continue to view recommended items on the home page.
+ *
+ */
+const navBtn = document.getElementById('nav');
+navBtn.addEventListener('click', function () {
+  const bookStorage = JSON.stringify(booksdb);
+  const bookToDisplay = bookStorage;
+  localStorage.setItem('books', bookToDisplay);
+
+  const books = getBooksFromStorage();
+  addBooksToDocument(books);
+});
+
+/**
+ * Recommend Feature
+ *
+ * Description:
+ * Displays books that fall into categories chosen in the forms given on the recommendations page:
+ *      1. 'All': display all books in storage;
+ *      2. 'Entrance Exam': display only books with genre 'Entrance Exam';
+ *      3. 'fiction':  display ......                     'Literature and Fiction';
+ *      4. 'academic': display ......                     'Academic and Professional';
+ *      5. 'biograph': display ......                     'Biographies and Auto Biographies';
+ *      6. 'business': display ......                     'Business and Management';
+ *
+ * NOTE:
+ * 1. Takes three mandatory items to filter/recommend (author is optional and will display all books with that author if inputted)
+ * 1. Executes when search button is clicked on
+ *
+ */
+document.getElementById('myBtn').addEventListener('click', function () {
+  bookStorage = JSON.parse(bookStorage);
+
+  author = document.getElementById('author').value.toUpperCase();
+
+  // Use genre choice from filter search bar
+  switch (genre) {
+    case 'ENTRANCE EXAM':
+      bookToDisplay = bookStorage.filter(function (el) {
+        if (author != '') {
+          return (el.Category === 'Entrance Exam' &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price &lt;= price) || (el.Author.toUpperCase() == author);
+        }
+        return el.Category === 'Entrance Exam' &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price &lt;= price;
+      });
+      break;
+    case 'Children and Teens':
+      bookToDisplay = bookStorage.filter(function (el) {
+        if (author != '') {
+          return (el.Category === genre &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price &lt;= price) || (el.Author.toUpperCase() == author);
+        }
+        return el.Category === genre &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price &lt;= price;
+      });
+      break;
+    case 'Literature and Fiction':
+      bookToDisplay = bookStorage.filter(function (el) {
+        if (author != '') {
+          return (el.Category === genre &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price &lt;= price) || (el.Author.toUpperCase() == author);
+        }
+        return el.Category === genre &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price &lt;= price;
+      });
+      break;
+    case 'Academic and Professional':
+      bookToDisplay = bookStorage.filter(function (el) {
+        if (author != '') {
+          return (el.Category === genre &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price &lt;= price) || (el.Author.toUpperCase() == author);
+        }
+        return el.Category === genre &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price &lt;= price;
+      });
+      break;
+    case 'Biographies and Auto Biographies':
+      bookToDisplay = bookStorage.filter(function (el) {
+        if (author != '') {
+          return (el.Category === genre &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price &lt;= price) || (el.Author.toUpperCase() == author);
+        }
+        return el.Category === genre &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price &lt;= price;
+      });
+      break;
+    case 'Business and Management':
+      bookToDisplay = bookStorage.filter(function (el) {
+        if (author != '') {
+          return (el.Category === genre &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price &lt;= price) || (el.Author.toUpperCase() == author);
+        }
+        return el.Category === genre &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price >= price;
+      });
+      break;
+    case 'Health and Cooking':
+      bookToDisplay = bookStorage.filter(function (el) {
+        if (author != '') {
+          return (el.Category === genre &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price &lt;= price) || (el.Author.toUpperCase() == author);
+        }
+        return el.Category === genre &amp;&amp; el.Rating >= ratings &amp;&amp; el.Price &lt;= price;
+      });
+      break;
+  }
+
+  bookStorage = JSON.stringify(bookStorage);
+  bookToDisplay = JSON.stringify(bookToDisplay);
+  localStorage.setItem('books', bookToDisplay);
+  init();
+});
 
 /**
  * Reads 'books' from localStorage and returns an array of
@@ -118,42 +235,21 @@ function getBooksFromStorage () {
  */
 function addBooksToDocument (books) {
   if (!books) return;
-
+  // A10. TODO - Get a reference to the &lt;main> element
   const sectionEl = document.querySelector('section');
+  sectionEl.innerHTML = '';
+  // console.log(mainEl);
+  // A11. TODO - Loop through each of the books in the passed in array,
+  //            create a &lt;book-card> element for each one, and populate
+  //            each &lt;book-card> with that book data using element.data = ...
+  //            Append each element to &lt;main>
+  books.forEach(createBookCard);
 
-  // Event listener to search for filtered books
-  document.getElementById('myBtn').addEventListener('click', function () {
-    // Select element of autohr
-    author = document.getElementById('author').value.toUpperCase();
-    // Loop through each of the books in the passed in array...
-    books.forEach(createBookCard);
-    // Function to create a book card for filtered items
-    function createBookCard (item) {
-      if (item.Category != null &amp;&amp; item.Author != null &amp;&amp; genre != '') {
-        if (((item.Category.toUpperCase() == genre) &amp;&amp; (item.Price &lt;= price)) || item.Author.toUpperCase().includes(author)) {
-          // Create a book-card element
-          const element = document.createElement('book-card');
-          // Populate &lt;book-card> with book data
-          element.data = item;
-          // Append each element to &lt;section>
-          sectionEl.append(element);
-        }
-      }
-    }
-  });
-}
-
-/**
- * Takes in an array of books, converts it to a string, and then
- * saves that string to 'books' in localStorage
- * @param {Array&lt;Object>} books An array of books
- */
-function saveBooksToStorage (books) {
-  // EXPLORE - START (All explore numbers start with B)
-  // B1. TODO - Complete the functionality as described in this function
-  //            header. It is possible in only a single line, but should
-  //            be no more than a few lines.
-  localStorage.setItem('books', JSON.stringify(books));
+  function createBookCard (item) {
+    const element = document.createElement('book-card');
+    element.data = item;
+    sectionEl.append(element);
+  }
 }
 </code></pre>
         </article>
@@ -165,13 +261,13 @@ function saveBooksToStorage (books) {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BookCard.html">BookCard</a></li><li><a href="CommentCard.html">CommentCard</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addBooksToDocument">addBooksToDocument</a></li><li><a href="global.html#addBooksToDocumentList">addBooksToDocumentList</a></li><li><a href="global.html#addCommentToDocument">addCommentToDocument</a></li><li><a href="global.html#bookStorage">bookStorage</a></li><li><a href="global.html#filterBar">filterBar</a></li><li><a href="global.html#findExistingUser">findExistingUser</a></li><li><a href="global.html#getBooksFromStorage">getBooksFromStorage</a></li><li><a href="global.html#getReviewsFromStorage">getReviewsFromStorage</a></li><li><a href="global.html#getSuffix">getSuffix</a></li><li><a href="global.html#image1">image1</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#initFormHandler">initFormHandler</a></li><li><a href="global.html#saveBooksToStorage">saveBooksToStorage</a></li><li><a href="global.html#saveReviewsToStorage">saveReviewsToStorage</a></li><li><a href="global.html#searchBook">searchBook</a></li><li><a href="global.html#searchBtn">searchBtn</a></li><li><a href="global.html#sortBar">sortBar</a></li><li><a href="global.html#update_info">update_info</a></li><li><a href="global.html#update_rating">update_rating</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BookCard.html">BookCard</a></li><li><a href="CommentCard.html">CommentCard</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addBooksToDocument">addBooksToDocument</a></li><li><a href="global.html#addBooksToDocumentList">addBooksToDocumentList</a></li><li><a href="global.html#addCommentToDocument">addCommentToDocument</a></li><li><a href="global.html#bookStorage">bookStorage</a></li><li><a href="global.html#filterBar">filterBar</a></li><li><a href="global.html#findExistingUser">findExistingUser</a></li><li><a href="global.html#getBooksFromStorage">getBooksFromStorage</a></li><li><a href="global.html#getReviewsFromStorage">getReviewsFromStorage</a></li><li><a href="global.html#getSuffix">getSuffix</a></li><li><a href="global.html#image1">image1</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#initFormHandler">initFormHandler</a></li><li><a href="global.html#navBtn">navBtn</a></li><li><a href="global.html#saveBooksToStorage">saveBooksToStorage</a></li><li><a href="global.html#saveReviewsToStorage">saveReviewsToStorage</a></li><li><a href="global.html#searchBook">searchBook</a></li><li><a href="global.html#searchBtn">searchBtn</a></li><li><a href="global.html#sortBar">sortBar</a></li><li><a href="global.html#update_info">update_info</a></li><li><a href="global.html#update_rating">update_rating</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Sat Dec 03 2022 05:59:55 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Sat Dec 03 2022 14:20:34 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>

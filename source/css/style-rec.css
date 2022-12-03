@@ -170,7 +170,6 @@ button {
   padding: 0;
 }
 
-
 /* Below are styles for individual books */
 #books .book-container {
   display: grid;
@@ -245,7 +244,6 @@ article .book_info h4 {
 .container-fluid > h3 {
   padding-right: 15px;
   padding-left: 15px;
-
   text-align: left;
 }
 
