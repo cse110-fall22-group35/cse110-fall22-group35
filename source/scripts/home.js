@@ -24,9 +24,9 @@ let bookToDisplay = bookStorage;
 window.addEventListener('DOMContentLoaded', init);
 
 // Starts the program, all function calls (except eventListeners for SORT/FILTER/SEARCH) trace back here
-function init () {
+function init (refreshFlag) {
   // load all the books from database to localstorage
-  if (localStorage.length === 0) {
+  if (localStorage.length === 0 || refreshFlag == true) {
     localStorage.setItem('books', bookToDisplay);
   }
   // Get the books from localStorage
@@ -34,7 +34,18 @@ function init () {
   // Add each book to the <main> element
   addBooksToDocument(books);
 }
-
+const refreshBtn = document.querySelector('#refreshBtn');
+refreshBtn.addEventListener('click', (event) => {
+  // load all the books from database to localstorage
+  let bookStorage = JSON.stringify(booksdb);
+  let bookToDisplay = bookStorage;
+  localStorage.setItem('books', bookToDisplay);
+  
+  // Get the books from localStorage
+  const books = getBooksFromStorage();
+  // Add each book to the <main> element
+  addBooksToDocument(books);
+});
 /**
  * FILTER FUNCTIONALITY
  *
@@ -114,6 +125,7 @@ filterBar.addEventListener('change', (event) => {
     }
     bookStorage = JSON.stringify(bookStorage);
     bookToDisplay = JSON.stringify(bookToDisplay);
+    localStorage.setItem('books', bookToDisplay);
     init();
   });
 });
@@ -181,6 +193,7 @@ sortBar.addEventListener('change', (event) => {
         break;
     }
     bookToDisplay = JSON.stringify(bookToDisplay);
+    localStorage.setItem('books', bookToDisplay);
     init();
   });
 });
@@ -217,6 +230,7 @@ searchBtn.addEventListener('click', function () {
 
   bookToDisplay = JSON.stringify(bookToDisplay);
   bookStorage = JSON.stringify(bookStorage);
+  localStorage.setItem('books', bookToDisplay);
   init();
 });
 
@@ -245,6 +259,22 @@ const image6 = document.querySelector('#authorimg6');
 const image7 = document.querySelector('#authorimg7');
 const image8 = document.querySelector('#authorimg8');
 
+function authorUpdate (authorName) {
+  console.log('Display only books whose author includes given names.');
+  bookStorage = JSON.parse(bookStorage);
+  // Option1: Search by Title only
+  bookToDisplay = bookStorage.filter(el => (el.Author).includes(authorName));
+
+  // TO DO: Option2: Search in all attributes
+  // CODE FOR Option2
+
+  bookToDisplay = JSON.stringify(bookToDisplay);
+  bookStorage = JSON.stringify(bookStorage);
+
+  localStorage.setItem('books', bookToDisplay);
+  init();
+}
+
 image1.addEventListener('click', function () {
   authorUpdate('Durjoy');
 });
@@ -270,19 +300,7 @@ image8.addEventListener('click', function () {
   authorUpdate('Roy');
 });
 
-function authorUpdate (authorName) {
-  console.log('Display only books whose author includes given names.');
-  bookStorage = JSON.parse(bookStorage);
-  // Option1: Search by Title only
-  bookToDisplay = bookStorage.filter(el => (el.Author).includes(authorName));
 
-  // TO DO: Option2: Search in all attributes
-  // CODE FOR Option2
-
-  bookToDisplay = JSON.stringify(bookToDisplay);
-  bookStorage = JSON.stringify(bookStorage);
-  init();
-}
 
 /**
  * Reads 'books' from localStorage and returns an array of
