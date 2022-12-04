@@ -46,7 +46,7 @@ h1 {
 }
 
 #searchbox {
-  width: 225px;
+  width: 300px;
   margin-left: 6%;
   margin-right: 6%;
   display: flex;
@@ -133,8 +133,8 @@ nav {
 
   /* grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
    */
-  grid-template-columns: auto auto auto auto;
-  gap: 20px;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 30px;
   box-sizing: border-box;
   width: 90%;
   grid-auto-rows: minmax(auto, max-content);

@@ -39,7 +39,7 @@ class BookCard extends HTMLElement {
   article{
       height: auto;
       width: 30px;
-      min-width: 210px;
+      min-width: 190px;
       min-height: 460px;
       padding: 10px 10px;
       border: 5px solid #cce7d0;
