@@ -2,7 +2,7 @@
 
 https://github.com/cse110-fall22-group35/cse110-fall22-group35/blob/main/admin/team.md
 
-A webstie named Novelty built to review books online, recommend books, and add books reviewed.  
+A website named Novelty built to review books online, recommend books, and add books reviewed.  
 
 Team name: The Code Compliers  
 Developers:  
