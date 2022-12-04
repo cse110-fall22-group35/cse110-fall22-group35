@@ -277,4 +277,6 @@ function libUpdate (title){
   console.log(afteraction.length);
   const bookRemain = JSON.stringify(afteraction);
   localStorage.setItem('books', bookRemain);
+  alert("Successfully removed");
+  window.location.href = "./home.html"
 }
