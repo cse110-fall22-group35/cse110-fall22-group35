@@ -1,4 +1,4 @@
-# cse110-fall22-group35
+# cse110-fall22-group35-project Novelty
 
 
 A website named Novelty built to review books online, recommend books, and add books reviewed.  
