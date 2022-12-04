@@ -122,7 +122,11 @@ function addBooksToDocumentList (books) {
   //            each <book-card> with that book data using element.data = ...
   //            Append each element to <main>
   // console.log(typeof books);
-  books.forEach(createBookList);
+  books.reverse();
+  for (let i = 0; i < 11; i++) {
+    createBookList(books[i]);
+  }
+  // books.forEach(createBookList);
 
   function createBookList (item) {
     // console.log("checking type of item: ");
@@ -131,8 +135,4 @@ function addBooksToDocumentList (books) {
     element.data = item;
     sectionEl.append(element);
   }
-}
-
-function removeBookFromStorage () {
-  console.log('find');
 }
