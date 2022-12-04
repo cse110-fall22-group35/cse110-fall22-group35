@@ -257,7 +257,6 @@ describe('Basic user flow for Website', () => {
   });
 });
 
-
 /**
  * Testing with many comments
  */
@@ -298,7 +297,7 @@ describe('Large Data', () => {
       const ithname = `name ${i}`;
       const ithcomment = `comment ${i}`;
       await page.$eval('input[name=name]', (el, value) => el.value = value, ithname);
-      await page.click(`input[value="${Math.floor (Math.random() * 5)}"]`);
+      await page.click(`input[value="${Math.floor(Math.random() * 5)}"]`);
       await page.$eval('textarea[name=comment]', (el, value) => el.value = value, ithcomment);
       await page.click('button[type="submit"]');
     }
@@ -311,9 +310,9 @@ describe('Large Data', () => {
     await page.goto('http://127.0.0.1:8444/source/html/individual-book.html?q=The%20Indian%20Economy%20:%20For%20UPSC%20And%20State%20Civil%20Services%20Preliminary%20And%20Main%20Examinations');
 
     // check reviews are all in local storage
-    let all_comment = await page.evaluate(() => localStorage.getItem("The Indian Economy : For UPSC And State Civil Services Preliminary And Main Examinations"));
-    expect (all_comment.length).toBe (1000);
-    
+    const all_comment = await page.evaluate(() => localStorage.getItem('The Indian Economy : For UPSC And State Civil Services Preliminary And Main Examinations'));
+    expect(all_comment.length).toBe(1000);
+
     // list of all reviews that are currently on the page
     const reviews = await page.$$('comment-card');
 
