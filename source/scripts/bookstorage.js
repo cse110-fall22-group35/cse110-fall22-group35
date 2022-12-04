@@ -1,34 +1,23 @@
 // A variable of an array of book to be loaded into the local storage
-export const booksdb = [{
-  imgSrc: '../images/books/ACA-1.jpg',
-  // "imgAlt": "dummy profile picture",
-  Author: 'Dummy',
-  Title: 'Dummy_Testing_Reference',
-  Category: 'Text_Entered',
-  Price: 'Text_Entered',
-  Edition: 'Text_Entered',
-  Publisher: 'Text_Entered',
-  Language: 'Text_Entered',
-  Description: '',
-  Rating: '3'
-  // Description can be used for Summary.
-},
-// {
-//     "imgSrc": "https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png",
-//     "imgAlt": "profile picture",
-//     "profile": "Book123",
-//     "titleTxt": "title123",
-//     "author": "author123",
-//     "bookType": "type123"
-// },
-// {
-//     "imgSrc": "https://www.kindpng.com/picc/m/1-16098_man-silhouette-png-free-download-silhouette-man-standing.png",
-//     "imgAlt": "profile picture",
-//     "profile": "Book123",
-//     "titleTxt": "title123",
-//     "author": "author123",
-//     "bookType": "type123"
-// },
+export const booksdb = [
+  //following this format: !!!
+  
+  /*
+                  {
+                    imgSrc: '../images/books/ACA-1.jpg',
+                    // "imgAlt": "dummy profile picture",
+                    Author: 'Dummy',
+                    Title: 'Dummy_Testing_Reference',
+                    Category: 'Text_Entered',
+                    Price: 'Text_Entered',
+                    Edition: 'Text_Entered',
+                    Publisher: 'Text_Entered',
+                    Language: 'Text_Entered',
+                    Description: '',
+                    Rating: '3'
+                    // Description can be used for Summary.
+                  },
+  */
 
 // Citations: database and image raw info supplied Strand Book Store and Anisha from SourceCode and Projects (source/database/bookdb.sql)
 // bookstorage.js, etc. for conversion into javascript files and loading into localstorage by teammember
