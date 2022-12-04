@@ -267,7 +267,7 @@ function removeBook () {
     libUpdate(bookTitle);
   });
 }
-function libUpdate (title){
+function libUpdate (title) {
   console.log('clear the book with title');
   let libraryBook = localStorage.getItem('books');
   console.log(title);
