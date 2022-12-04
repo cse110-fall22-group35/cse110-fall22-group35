@@ -10,6 +10,57 @@ body {
   background-attachment: fixed;
 }
 
+/* citation for buttons' css: https://getcssscan.com/css-buttons-examples */
+
+button {
+  background-color: transparent;
+  border: 1px solid #266DB6;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Avenir Next LT W01 Bold",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 4px;
+  padding: 1px 3px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover,
+button:active {
+  outline: 0;
+}
+
+button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:before {
+  background-color: turquoise;
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+button:hover:before {
+  background-color: blueviolet;
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 16px 32px;
+  }
+}
+
 html,
 body {
   margin: 0;
@@ -20,7 +71,7 @@ body {
 h1 {
   color: rgb(237 237 237);
   font-size: 40px;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
 header {
@@ -81,10 +132,22 @@ a:hover {
 }
 
 .navlink {
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* color:#088120;
+  background-image: -webkit-linear-gradient(top, #fff 0%, #f8f8f8 100%);
+  background-image:      -o-linear-gradient(top, #fff 0%, #f8f8f8 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f8f8f8));
+  background-image:         linear-gradient(to bottom, #fff 0%, #f8f8f8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075); */
+
 }
 
 li {

@@ -18,7 +18,7 @@ body {
 
 h1 {
   color: rgb(237 237 237);
-  font-size: 50px;
+  font-size: 40px;
   letter-spacing: 2px;
 }
 
@@ -136,4 +136,52 @@ main {
   max-width: 660px;
   row-gap: 10px;
   width: 100%;
+}
+button {
+  background-color: transparent;
+  border: 1px solid #266DB6;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Avenir Next LT W01 Bold",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 4px;
+  padding: 1px 3px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover,
+button:active {
+  outline: 0;
+}
+
+button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:before {
+  background-color: lightgreen;
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+button:hover:before {
+  background-color: purple;
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 16px 32px;
+  }
 }
