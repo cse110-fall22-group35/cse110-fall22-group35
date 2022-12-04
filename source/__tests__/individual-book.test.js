@@ -44,11 +44,11 @@ describe('Basic user flow for Website', () => {
     // variable we will be testing
     let working = true;
 
-    //tests to make sure the average rating functionality works
+    // tests to make sure the average rating functionality works
     const overallRate = await page.$('#rating');
     const overallRateJS = await overallRate.getProperty('innerText');
     const oRateText = await overallRateJS.jsonValue();
-    if (oRateText != "Average Rating: 2.0"){
+    if (oRateText != 'Average Rating: 2.0') {
       working = false;
     }
     // list of all reviews that are currently on the page
@@ -151,11 +151,11 @@ describe('Basic user flow for Website', () => {
     // list of all reviews that are currently on the page
     const reviews = await page.$$('comment-card');
 
-    //tests to make sure the average rating functionality works
+    // tests to make sure the average rating functionality works
     const overallRate = await page.$('#rating');
     const overallRateJS = await overallRate.getProperty('innerText');
     const oRateText = await overallRateJS.jsonValue();
-    if (oRateText != "Average Rating: 2.2"){
+    if (oRateText != 'Average Rating: 2.2') {
       working = false;
     }
 
@@ -182,7 +182,7 @@ describe('Basic user flow for Website', () => {
       // ensures that for each comment, their values are appropriate
       if (nameText != `name ${i}` || rateText != `${i}` || commentText != `comment ${i}`) {
         // handles the special case of the first comment
-        if (i === 0 && commentText === 'new comment' && rateText === '1') {console.log("here");} else {
+        if (i === 0 && commentText === 'new comment' && rateText === '1') { console.log('here'); } else {
           working = false;
         }
       }
@@ -212,11 +212,11 @@ describe('Basic user flow for Website', () => {
     // list of all reviews that are currently on the page
     reviews = await page.$$('comment-card');
 
-    //tests to make sure the average rating functionality works
+    // tests to make sure the average rating functionality works
     const overallRate = await page.$('#rating');
     const overallRateJS = await overallRate.getProperty('innerText');
     const oRateText = await overallRateJS.jsonValue();
-    if (oRateText != "Average Rating: 2.5"){
+    if (oRateText != 'Average Rating: 2.5') {
       working = false;
     }
 
@@ -285,8 +285,8 @@ describe('Basic user flow for Website', () => {
      * Then proceeds to check each field of each review, sets boolean (working) to false if any are not correct
      * Expects working to be true at the end on the test.
     */
-   jest.setTimeout(60000)
-   it('Add a series of reviews', async () => {
+  jest.setTimeout(60000);
+  it('Add a series of reviews', async () => {
     console.log('Adding reviews');
 
     // adds 100 reviews. with name = name #, rating = #, comment = comment # for each numbered review
@@ -303,8 +303,8 @@ describe('Basic user flow for Website', () => {
     await page.reload();
 
     // check reviews are all in local storage
-    //const all_comment = await page.evaluate(() => localStorage.getItem('The Indian Economy : For UPSC And State Civil Services Preliminary And Main Examinations'));
-    //expect(all_comment.length).toBe(1000);
+    // const all_comment = await page.evaluate(() => localStorage.getItem('The Indian Economy : For UPSC And State Civil Services Preliminary And Main Examinations'));
+    // expect(all_comment.length).toBe(1000);
 
     // list of all reviews that are currently on the page
     const reviews = await page.$$('comment-card');
@@ -334,7 +334,6 @@ describe('Basic user flow for Website', () => {
     }
     expect(working).toBe(true);
   });
-
 
   /** Testing Deleting all reviews again
      *
