@@ -123,7 +123,7 @@ function addBooksToDocumentList (books) {
   //            Append each element to <main>
   // console.log(typeof books);
   books.reverse();
-  for(let i = 0; i< 12; i++){
+  for(let i = 0; i< 11; i++){
     createBookList(books[i])
   }
   //books.forEach(createBookList);
