@@ -77,7 +77,7 @@ function init () {
 
       // update the rating if a new comment is added
       updateRating(reviews);
-    } else {  // if the user has, edits their previous comment
+    } else { // if the user has, edits their previous comment
       if (confirm(reviewObject.name + ', do you want to overwrite your old comment?')) {
         alert('Overwriting the old comment by ' + reviewObject.name);
 
