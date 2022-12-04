@@ -59,7 +59,6 @@ h1 {
       #ff1361 67%,
       #fff800 100%
     );
-  background-clip: border-box;
   background-size: 200% auto;
   color: #fff;
   text-fill-color: transparent;
