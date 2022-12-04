@@ -273,10 +273,10 @@ function libUpdate (title) {
   console.log(title);
   libraryBook = JSON.parse(libraryBook);
   console.log(libraryBook.length)
-  let afteraction = libraryBook.filter(el => (el.Title).includes(title));
+  let afteraction = libraryBook.filter(el => !((el.Title).includes(title)));
   console.log(afteraction.length)
   let bookRemain = JSON.stringify(afteraction);
-  localStorage.setItem('books', bookRemain);
+  //localStorage.setItem('books', bookRemain);
 }
 
 
