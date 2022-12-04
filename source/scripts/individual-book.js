@@ -87,10 +87,10 @@ function init () {
 
         const shadowDom = comments[index].shadowRoot;
 
-        shadowDom.querySelector('#date').innerHTML = reviewObject.date;
+        shadowDom.querySelector('.date').innerHTML = reviewObject.date;
         shadowDom.querySelector('img').src = `../images/${reviewObject.rating}-star.svg`;
         shadowDom.querySelector('span').innerHTML = reviewObject.rating;
-        shadowDom.querySelector('#comment').innerHTML = reviewObject.comment;
+        shadowDom.querySelector('.comment').innerHTML = reviewObject.comment;
 
         // update the rating if a new comment is added
         updateRating(reviews);
