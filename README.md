@@ -1,6 +1,5 @@
 # cse110-fall22-group35
 
-https://github.com/cse110-fall22-group35/cse110-fall22-group35/blob/main/admin/team.md
 
 A website named Novelty built to review books online, recommend books, and add books reviewed.  
 
@@ -14,6 +13,9 @@ Chia-Han Chen - Dev
 Qiyun Li - Designer  
 Nathan Enrici - Dev  
 Alexander Yang - Dev  
+
+https://github.com/cse110-fall22-group35/cse110-fall22-group35/blob/main/admin/team.md
+
 
 
 
