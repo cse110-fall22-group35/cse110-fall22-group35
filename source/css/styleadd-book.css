@@ -137,12 +137,13 @@ main {
   row-gap: 10px;
   width: 100%;
 }
+
 button {
   background-color: transparent;
-  border: 1px solid #266DB6;
+  border: 1px solid #266db6;
   box-sizing: border-box;
   color: white;
-  font-family: "Avenir Next LT W01 Bold",sans-serif;
+  font-family: "Avenir Next LT W01 Bold", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 4px;
@@ -150,7 +151,7 @@ button {
   position: relative;
   text-decoration: none;
   user-select: none;
-  -webkit-user-select: none;
+  user-select: none;
   touch-action: manipulation;
 }
 
@@ -164,7 +165,7 @@ button:hover {
   cursor: pointer;
 }
 
-button:before {
+button::before {
   background-color: lightgreen;
   content: "";
   height: calc(100% + 3px);
@@ -176,7 +177,7 @@ button:before {
   z-index: -1;
 }
 
-button:hover:before {
+button:hover::before {
   background-color: purple;
 }
 
