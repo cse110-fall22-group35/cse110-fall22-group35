@@ -26,7 +26,9 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
+            <pre class="prettyprint source linenums"><code>/* global HTMLElement, customElements */
+
+/**
  * Class for a comment
  * @extends HTMLElement
  */
@@ -38,7 +40,7 @@ class CommentCard extends HTMLElement {
     super(); // Inheret everything from HTMLElement
 
     // Attach the shadow DOM to this Web Component (leave the mode open)
-    const shadow_dom = this.attachShadow({ mode: 'open' });
+    const shadowDom = this.attachShadow({ mode: 'open' });
     // Create an &lt;article> element - This will hold our markup once our data is set
     const article = document.createElement('article');
     // Create a style element - This will hold all of the styles for the Web Component
@@ -57,12 +59,12 @@ class CommentCard extends HTMLElement {
       border-style: double;
     }
 
-    #name {
+    .name {
       color: rgb(237 237 237);
       font-size: 30px;
     }
 
-    #date {
+    .date {
       color: rgb(237 237 237);
     }
 
@@ -75,36 +77,36 @@ class CommentCard extends HTMLElement {
       color: rgb(237 237 237);
     }
 
-    #comment {
+    .comment {
       color: rgb(237 237 237);
       font-size: 20px;
       border-radius: 0.2cm;
       border-color: rgb(237 237 237);
     }
 
-    #delete {
+    .delete {
       color: rgb(237 237 237);
       font-size: 15px;
       background-color: rgb(0 0 0 / 0%);
       border: 0px;
     }
 
-    #del {
+    .del {
       text-align: right;
     }
     `;
     // Append the &lt;style> and &lt;article> elements to the Shadow DOM
-    shadow_dom.appendChild(article);
-    shadow_dom.appendChild(style);
+    shadowDom.appendChild(article);
+    shadowDom.appendChild(style);
   }
 
   /**
    * Called when the .data property is set on this element.
    *
    * For Example:
-   * let CommentCard = document.createElement('recipe-card'); // Calls constructor()
+   * let CommentCard = document.createElement('comment-card'); // Calls constructor()
    *
-   * @param {Object} data - The data to pass into the &lt;recipe-card>, must be of the
+   * @param {Object} data - The data to pass into the &lt;comment-card>, must be of the
    *                        following format:
    *                        {
    *                          "name": "string",
@@ -116,7 +118,7 @@ class CommentCard extends HTMLElement {
     // If nothing was passed in, return
     if (!data) return;
     // Select the &lt;article> we added to the Shadow DOM in the constructor
-    const shadow_dom_article = this.shadowRoot.querySelector('article');
+    const shadowDomArticle = this.shadowRoot.querySelector('article');
     // Set the contents of the &lt;article> with the &lt;article> template given in
     // cardTemplate.html and the data passed in (You should only have one &lt;article>,
     // do not nest an &lt;article> inside another &lt;article>). You should use Template
@@ -128,24 +130,24 @@ class CommentCard extends HTMLElement {
       date
     } = data;
 
-    shadow_dom_article.innerHTML =
+    shadowDomArticle.innerHTML =
     `
-    &lt;p id="name">
+    &lt;p class="name">
       ${name}
     &lt;/p>
     &lt;hr>
-    &lt;p id="date">
+    &lt;p class="date">
       ${date}
     &lt;/p>
-    &lt;div id="rating">
+    &lt;div class="rating">
       &lt;img src="../images/${rating}-star.svg" alt="${rating} stars">
       &lt;span>${rating}&lt;/span>
     &lt;/div>
-    &lt;p id="comment">
+    &lt;p class="comment">
       ${comment}
     &lt;/p>
-    &lt;div id="del">
-      &lt;button id="delete" type="button">
+    &lt;div class="del">
+      &lt;button class="delete" type="button">
       Delete Comment
       &lt;/button>
     &lt;/div>
@@ -166,13 +168,13 @@ customElements.define('comment-card', CommentCard);
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BookCard.html">BookCard</a></li><li><a href="CommentCard.html">CommentCard</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addBooksToDocument">addBooksToDocument</a></li><li><a href="global.html#addBooksToDocumentList">addBooksToDocumentList</a></li><li><a href="global.html#addCommentToDocument">addCommentToDocument</a></li><li><a href="global.html#bookStorage">bookStorage</a></li><li><a href="global.html#filterBar">filterBar</a></li><li><a href="global.html#findExistingUser">findExistingUser</a></li><li><a href="global.html#getBooksFromStorage">getBooksFromStorage</a></li><li><a href="global.html#getReviewsFromStorage">getReviewsFromStorage</a></li><li><a href="global.html#getSuffix">getSuffix</a></li><li><a href="global.html#image1">image1</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#initFormHandler">initFormHandler</a></li><li><a href="global.html#navBtn">navBtn</a></li><li><a href="global.html#saveBooksToStorage">saveBooksToStorage</a></li><li><a href="global.html#saveReviewsToStorage">saveReviewsToStorage</a></li><li><a href="global.html#searchBook">searchBook</a></li><li><a href="global.html#searchBtn">searchBtn</a></li><li><a href="global.html#sortBar">sortBar</a></li><li><a href="global.html#updateRating">updateRating</a></li><li><a href="global.html#update_info">update_info</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BookCard.html">BookCard</a></li><li><a href="CommentCard.html">CommentCard</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addBooksToDocument">addBooksToDocument</a></li><li><a href="global.html#addBooksToDocumentList">addBooksToDocumentList</a></li><li><a href="global.html#addCommentToDocument">addCommentToDocument</a></li><li><a href="global.html#bookStorage">bookStorage</a></li><li><a href="global.html#filterBar">filterBar</a></li><li><a href="global.html#findExistingUser">findExistingUser</a></li><li><a href="global.html#getBooksFromStorage">getBooksFromStorage</a></li><li><a href="global.html#getReviewsFromStorage">getReviewsFromStorage</a></li><li><a href="global.html#getSuffix">getSuffix</a></li><li><a href="global.html#image1">image1</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#initFormHandler">initFormHandler</a></li><li><a href="global.html#navBtn">navBtn</a></li><li><a href="global.html#saveBooksToStorage">saveBooksToStorage</a></li><li><a href="global.html#saveReviewsToStorage">saveReviewsToStorage</a></li><li><a href="global.html#searchBook">searchBook</a></li><li><a href="global.html#searchBtn">searchBtn</a></li><li><a href="global.html#sortBar">sortBar</a></li><li><a href="global.html#updateInfo">updateInfo</a></li><li><a href="global.html#updateRating">updateRating</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Sun Dec 04 2022 00:24:51 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Sun Dec 04 2022 00:40:36 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>

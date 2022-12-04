@@ -1,3 +1,5 @@
+/* global HTMLElement, customElements */
+
 /**
  * Class for a comment
  * @extends HTMLElement
@@ -10,7 +12,7 @@ class CommentCard extends HTMLElement {
     super(); // Inheret everything from HTMLElement
 
     // Attach the shadow DOM to this Web Component (leave the mode open)
-    const shadow_dom = this.attachShadow({ mode: 'open' });
+    const shadowDom = this.attachShadow({ mode: 'open' });
     // Create an <article> element - This will hold our markup once our data is set
     const article = document.createElement('article');
     // Create a style element - This will hold all of the styles for the Web Component
@@ -66,8 +68,8 @@ class CommentCard extends HTMLElement {
     }
     `;
     // Append the <style> and <article> elements to the Shadow DOM
-    shadow_dom.appendChild(article);
-    shadow_dom.appendChild(style);
+    shadowDom.appendChild(article);
+    shadowDom.appendChild(style);
   }
 
   /**
@@ -88,7 +90,7 @@ class CommentCard extends HTMLElement {
     // If nothing was passed in, return
     if (!data) return;
     // Select the <article> we added to the Shadow DOM in the constructor
-    const shadow_dom_article = this.shadowRoot.querySelector('article');
+    const shadowDomArticle = this.shadowRoot.querySelector('article');
     // Set the contents of the <article> with the <article> template given in
     // cardTemplate.html and the data passed in (You should only have one <article>,
     // do not nest an <article> inside another <article>). You should use Template
@@ -100,7 +102,7 @@ class CommentCard extends HTMLElement {
       date
     } = data;
 
-    shadow_dom_article.innerHTML =
+    shadowDomArticle.innerHTML =
     `
     <p class="name">
       ${name}
