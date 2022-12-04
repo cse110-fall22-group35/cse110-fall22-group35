@@ -267,14 +267,14 @@ function removeBook () {
     libUpdate(bookTitle);
   });
 }
-function libUpdate (title) {
+function libUpdate (title){
   console.log('clear the book with title');
   let libraryBook = localStorage.getItem('books');
   console.log(title);
   libraryBook = JSON.parse(libraryBook);
   console.log(libraryBook.length);
-  const afteraction = libraryBook.filter(el => !((el.Title).includes(title)));
+  const afteraction = libraryBook.filter(el => !(el.Title).includes(title));
   console.log(afteraction.length);
   const bookRemain = JSON.stringify(afteraction);
-  // localStorage.setItem('books', bookRemain);
+  localStorage.setItem('books', bookRemain);
 }
