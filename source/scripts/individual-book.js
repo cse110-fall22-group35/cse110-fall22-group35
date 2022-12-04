@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', init);
  */
 function init () {
   // Add books information
-  update_info();
+  updateInfo();
   // getting and adding reviews to the page
   const reviews = getReviewsFromStorage();
   updateRating(reviews);
@@ -161,7 +161,7 @@ function searchBook () {
 /**
 * Adds the book's information to the page.
 */
-function update_info () {
+function updateInfo () {
   const currentBook = searchBook();
   console.log(currentBook);
   // dealing with inconsistency in how data is created
