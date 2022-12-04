@@ -318,7 +318,7 @@ function getBooksFromStorage () {
   }
 
   const books = JSON.parse(localStorage.getItem('books'));
-  books.reverse()
+  books.reverse();
   return books;
 }
 
