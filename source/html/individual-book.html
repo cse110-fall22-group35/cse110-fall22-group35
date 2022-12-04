@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Individual Book</title>
+    <meta charset="UTF-8">
     <link rel="icon" href="../images/temp_logo.jpg">
     
     <!-- Book Card Custom Element -->
@@ -15,7 +16,7 @@
   <body>
     <header>
         <a href="./home.html" class="logo">
-            <img  src="../images/temp_logo.jpg" width="75" height="75">
+            <img  src="../images/temp_logo.jpg" width="75" height="75" alt="Novelty">
             
         </a>
         <a href="./home.html" class="logo">
@@ -24,10 +25,10 @@
     </header>
     <nav>
         <ul>
-            <a href="./home.html" class="navlink"><li>Home</li></a>
-            <a href="./recommendations.html" class="navlink"><li>Recommendations</li></a>
-            <a href="./add-book.html" class="navlink"><li>Add a book</li></a>
-            <a href="./writing-tips.html" class="navlink"><li>Writing-tips</li></a>
+            <li><a href="./home.html" class="navlink">Home</a></li>
+            <li><a href="./recommendations.html" class="navlink">Recommendations</a></li>
+            <li><a href="./add-book.html" class="navlink">Add a book</a></li>
+            <li><a href="./writing-tips.html" class="navlink">Writing-tips</a></li>
         </ul>
     </nav>
 
@@ -35,7 +36,7 @@
 
     <div class = "book-info">
         <div id = "left-column">
-            <img id = "cover" alt="Book Cover">
+            <img id = "cover" src="../images/temp_logo.jpg" alt="Book Cover">
         </div>
 
         <div id = "right-column">
@@ -78,9 +79,9 @@
         <form>
             <fieldset>
                 <legend> Profile </legend>
-                <label for = "name">
+                <label for = "user_name">
                     Name: 
-                    <input type = "text" name = "name" autocomplete="name" required>
+                    <input id="user_name" type = "text" name = "name" autocomplete="name" required>
                     <br> <br>
                 </label>
             </fieldset>
@@ -107,9 +108,9 @@
                 </label>
                 <br> <br>
 
-                <label for = "comment">
+                <label for = "user_comment">
                     Comment:
-                    <textarea name = "comment" cols = "38" rows = "5" required></textarea>
+                    <textarea id="user_comment" name = "comment" cols = "38" rows = "5" required></textarea>
                     <br> <br>
                 </label>
             </fieldset>
