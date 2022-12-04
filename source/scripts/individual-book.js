@@ -1,6 +1,8 @@
+/* global formData, localStorage, alert, confirm */
+
 // Getting book's title
 const index = window.location.href.indexOf('=');
-const book_title = decodeURI(window.location.href.substring(index + 1));
+const bookTitle = decodeURI(window.location.href.substring(index + 1));
 
 window.addEventListener('DOMContentLoaded', init);
 /**
@@ -11,7 +13,7 @@ function init () {
   update_info();
   // getting and adding reviews to the page
   const reviews = getReviewsFromStorage();
-  update_rating(reviews);
+  updateRating(reviews);
   reviews.forEach(addCommentToDocument);
   setupDeleteButtons();
 
@@ -27,14 +29,14 @@ function init () {
         // deletes and saves a new array without this element in it
         const newReviews = [];
         for (let i = 0; i < reviews.length; i++) {
-          if (i != iterator) {
+          if (i !== iterator) {
             newReviews.push(reviews[i]);
           }
         }
         saveReviewsToStorage(newReviews);
 
         // update the rating if a new comment is added
-        update_rating(reviews);
+        updateRating(reviews);
         window.location.reload();
       });
     }
@@ -67,17 +69,15 @@ function init () {
     const index = findExistingUser(reviews, reviewObject.name);
     console.log(index);
     // if the user has not, add the new comment at the end of the list
-    if (index == -1) {
+    if (index === -1) {
       reviews.push(reviewObject);
       addCommentToDocument(reviewObject);
       saveReviewsToStorage(reviews);
       setupDeleteButtons();
 
       // update the rating if a new comment is added
-      update_rating(reviews);
-    }
-    // if the user has, edits their previous comment
-    else {
+      updateRating(reviews);
+    } else { // if the user has, edits their previous comment
       if (confirm(reviewObject.name + ', do you want to overwrite your old comment?')) {
         alert('Overwriting the old comment by ' + reviewObject.name);
 
@@ -85,15 +85,15 @@ function init () {
 
         const comments = document.querySelectorAll('comment-card');
 
-        const shadow_dom = comments[index].shadowRoot;
+        const shadowDom = comments[index].shadowRoot;
 
-        shadow_dom.querySelector('#date').innerHTML = reviewObject.date;
-        shadow_dom.querySelector('img').src = `../images/${reviewObject.rating}-star.svg`;
-        shadow_dom.querySelector('span').innerHTML = reviewObject.rating;
-        shadow_dom.querySelector('#comment').innerHTML = reviewObject.comment;
+        shadowDom.querySelector('#date').innerHTML = reviewObject.date;
+        shadowDom.querySelector('img').src = `../images/${reviewObject.rating}-star.svg`;
+        shadowDom.querySelector('span').innerHTML = reviewObject.rating;
+        shadowDom.querySelector('#comment').innerHTML = reviewObject.comment;
 
         // update the rating if a new comment is added
-        update_rating(reviews);
+        updateRating(reviews);
       } else {
         alert('Keeping the old comment');
       }
@@ -110,9 +110,9 @@ function init () {
    * Calculate the average rating of this book and display it at the page
    * @param {array} reviewList A list of reviews of this book
    */
-function update_rating (reviewList) {
+function updateRating (reviewList) {
   // if the book has no comment
-  if (reviewList.length == 0) {
+  if (reviewList.length === 0) {
     document.querySelector('#rating').innerHTML = 'Average Rating: N/A';
     return;
   }
@@ -152,7 +152,7 @@ function getBooksFromStorage () {
 function searchBook () {
   const books = getBooksFromStorage();
   for (let i = 0; i < books.length; i++) {
-    if (books[i].Title == book_title) {
+    if (books[i].Title === bookTitle) {
       return books[i];
     }
   }
@@ -162,20 +162,20 @@ function searchBook () {
 * Adds the book's information to the page.
 */
 function update_info () {
-  const current_book = searchBook();
-  console.log(current_book);
+  const currentBook = searchBook();
+  console.log(currentBook);
   // dealing with inconsistency in how data is created
-  if (current_book.Edition) {
-    document.querySelector('#top-title').innerHTML = current_book.Title + `, ${current_book.Edition}` + getSuffix(current_book.Edition) + ' Edition';
+  if (currentBook.Edition) {
+    document.querySelector('#top-title').innerHTML = currentBook.Title + `, ${currentBook.Edition}` + getSuffix(currentBook.Edition) + ' Edition';
   } else {
-    document.querySelector('#top-title').innerHTML = current_book.Title;
+    document.querySelector('#top-title').innerHTML = currentBook.Title;
   }
-  document.querySelector('#cover').src = current_book.imgSrc;
-  document.querySelector('#cover').alt = current_book.imgAlt;
-  document.querySelector('#author').innerHTML = 'Author: ' + current_book.Author;
-  document.querySelector('#genre').innerHTML = 'Genre: ' + current_book.Category;
-  document.querySelector('#price').innerHTML = 'Price: $' + current_book.Price;
-  document.querySelector('#summary').innerHTML = current_book.Description;
+  document.querySelector('#cover').src = currentBook.imgSrc;
+  document.querySelector('#cover').alt = currentBook.imgAlt;
+  document.querySelector('#author').innerHTML = 'Author: ' + currentBook.Author;
+  document.querySelector('#genre').innerHTML = 'Genre: ' + currentBook.Category;
+  document.querySelector('#price').innerHTML = 'Price: $' + currentBook.Price;
+  document.querySelector('#summary').innerHTML = currentBook.Description;
 }
 
 /**
@@ -187,11 +187,11 @@ function update_info () {
  */
 function getReviewsFromStorage () {
   // fails to access if it does not exist, just returns an empty array
-  if (!localStorage.getItem(book_title)) {
+  if (!localStorage.getItem(bookTitle)) {
     return [];
   }
 
-  const books = JSON.parse(localStorage.getItem(book_title));
+  const books = JSON.parse(localStorage.getItem(bookTitle));
   return books;
 }
 
@@ -201,7 +201,7 @@ function getReviewsFromStorage () {
  * @param {Array<Object>} reviews An array of reviews
  */
 function saveReviewsToStorage (reviews) {
-  localStorage.setItem(book_title, JSON.stringify(reviews));
+  localStorage.setItem(bookTitle, JSON.stringify(reviews));
 }
 
 /**
@@ -233,13 +233,9 @@ function getSuffix (Edition) {
   // all others ending in 1 are st
   if (Edition % 10 === 1) {
     return 'st';
-  }
-  // all others ending in 2 are nd
-  else if (Edition % 10 === 2) {
+  } else if (Edition % 10 === 2) {
     return 'nd';
-  }
-  // all others ending in 3 are rd
-  else if (Edition % 10 === 2) {
+  } else if (Edition % 10 === 2) {
     return 'rd';
   }
   return 'th';
@@ -253,7 +249,7 @@ function getSuffix (Edition) {
  */
 function findExistingUser (reviewList, name) {
   for (let i = 0; i < reviewList.length; i++) {
-    if (reviewList[i].name == name) {
+    if (reviewList[i].name === name) {
       return i;
     }
   }
