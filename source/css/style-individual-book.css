@@ -46,23 +46,24 @@ h1 {
 
 .logo {
   text-transform: uppercase;
-  background-image:
-    linear-gradient(
-      -225deg,
-      #231557 0%,
-      #44107a 29%,
-      #ff1361 67%,
-      #fff800 100%
-    );
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
   text-fill-color: transparent;
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-  font-size: 90px;
+      font-size: 90px;
 }
 
 @keyframes textclip {

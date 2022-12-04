@@ -77,15 +77,6 @@ qil016@ucsd.edu
 **Personal GitHub Repo:**
 https://github.com/Qiyun506/MySpace
 
-### Runyu Tian - Planner
-**Picture: (Optional)**
-
-**Summary:**
-
-**Contact Info:**
-
-**Personal GitHub Repo:**
-
 
 ### Nathan Enrici - Dev
 **Picture: (Optional)**
@@ -100,16 +91,6 @@ nenrici@ucsd.edu
 
 **Personal GitHub Repo:**
 https://github.com/nathanenrici/
-
-
-### Yuzeng Li - Dev
-**Picture: (Optional)**
-
-**Summary:**
-
-**Contact Info:**
-
-**Personal GitHub Repo:**
 
 
 ### Alexander Yang - Dev
