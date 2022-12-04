@@ -29,12 +29,12 @@ class CommentCard extends HTMLElement {
       border-style: double;
     }
 
-    #name {
+    .name {
       color: rgb(237 237 237);
       font-size: 30px;
     }
 
-    #date {
+    .date {
       color: rgb(237 237 237);
     }
 
@@ -47,21 +47,21 @@ class CommentCard extends HTMLElement {
       color: rgb(237 237 237);
     }
 
-    #comment {
+    .comment {
       color: rgb(237 237 237);
       font-size: 20px;
       border-radius: 0.2cm;
       border-color: rgb(237 237 237);
     }
 
-    #delete {
+    .delete {
       color: rgb(237 237 237);
       font-size: 15px;
       background-color: rgb(0 0 0 / 0%);
       border: 0px;
     }
 
-    #del {
+    .del {
       text-align: right;
     }
     `;
@@ -74,9 +74,9 @@ class CommentCard extends HTMLElement {
    * Called when the .data property is set on this element.
    *
    * For Example:
-   * let CommentCard = document.createElement('recipe-card'); // Calls constructor()
+   * let CommentCard = document.createElement('comment-card'); // Calls constructor()
    *
-   * @param {Object} data - The data to pass into the <recipe-card>, must be of the
+   * @param {Object} data - The data to pass into the <comment-card>, must be of the
    *                        following format:
    *                        {
    *                          "name": "string",
@@ -102,22 +102,22 @@ class CommentCard extends HTMLElement {
 
     shadow_dom_article.innerHTML =
     `
-    <p id="name">
+    <p class="name">
       ${name}
     </p>
     <hr>
-    <p id="date">
+    <p class="date">
       ${date}
     </p>
-    <div id="rating">
+    <div class="rating">
       <img src="../images/${rating}-star.svg" alt="${rating} stars">
       <span>${rating}</span>
     </div>
-    <p id="comment">
+    <p class="comment">
       ${comment}
     </p>
-    <div id="del">
-      <button id="delete" type="button">
+    <div class="del">
+      <button class="delete" type="button">
       Delete Comment
       </button>
     </div>
