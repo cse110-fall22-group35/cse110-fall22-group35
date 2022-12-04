@@ -1,4 +1,4 @@
-/* global formData, localStorage, alert, confirm */
+/* global FormData, localStorage, alert, confirm */
 
 // Getting book's title
 const index = window.location.href.indexOf('=');
