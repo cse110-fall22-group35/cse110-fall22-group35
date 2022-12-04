@@ -151,7 +151,6 @@ button {
   position: relative;
   text-decoration: none;
   user-select: none;
-  user-select: none;
   touch-action: manipulation;
 }
 
