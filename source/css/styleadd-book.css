@@ -112,11 +112,17 @@ form > h3 {
 
 form {
   margin: 15px;
+  background-color: antiquewhite;
+  border-radius: 13%;
+  display: block;
+  text-align: center;
+  font-size: 2.5ex;
 }
 
 input {
   background-color: rgb(128 64 0 / 30%);
   color: rgb(237 237 237);
+  text-align: center;
 }
 
 select {
@@ -132,12 +138,14 @@ textarea {
 form input {
   display: block;
   width: 300px;
+
 }
 
 form select {
   display: block;
   width: 300px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 #summary {
@@ -164,7 +172,7 @@ button {
   background-color: transparent;
   border: 1px solid #266db6;
   box-sizing: border-box;
-  color: white;
+  color: black;
   font-family: "Avenir Next LT W01 Bold", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -174,6 +182,7 @@ button {
   text-decoration: none;
   user-select: none;
   touch-action: manipulation;
+  
 }
 
 button:hover,
@@ -217,4 +226,6 @@ button:hover::before {
   border-color: white;
   color:aliceblue
 }
-
+addPart{
+  text-align: center;
+}
