@@ -119,14 +119,14 @@ h1 {
 h2 {
   display: inline-block;
   font-size: 20px;
-  margin: 10px 30px 0 10px;
+  margin: 10px 30px 20px 10px;
   color: #fff;
 }
 
 #rate {
   display: inline-block;
   font-size: 20px;
-  margin: 50px 30px 0px 10px;
+  margin: 50px 30px 20px 10px;
   color: #fff;
 }
 
@@ -156,23 +156,24 @@ h2 {
   margin-right: 50px;
   margin-left: 20px;
   padding-left: 5px;
-  margin-bottom: 2  0px;
+  margin-bottom: 20px;
   width: 150px;
   line-height: 1px;
-  background-color: #f6f6f6;
+  background-color: gray;
 }
 
 #genre li a {
   text-decoration: none;
-  color: black;
+  color: whtie;
   display: block;
   font-size: 13px;
+  font-weight: bold;
 }
 
 #genre li:hover {
   text-decoration: none;
-  color: #000;
-  background-color: rgb(112 87 5);
+  color: white;
+  background-color: purple;
 }
 
 #genre li a:hover {
@@ -182,18 +183,31 @@ h2 {
 }
 
 #ratings li a {
-  background-color: #f6f6f6;
+  background-color: gray;
   padding: 10px;
   font-size: 15px;
-  color: black;
+  color: white;
+  font-weight: bold;
 }
 
+#ratings li a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: purple;
+}
 
 #price li a {
-  background-color: #f6f6f6;
+  background-color: gray;
   padding: 10px;
   font-size: 15px;
-  color: black;
+  color: white;
+  font-weight: bold;
+}
+
+#price li a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: purple;
 }
 
 button {
