@@ -236,15 +236,17 @@ nav {
   padding: 0;
 }
 
+#books {
+  display: grid;
+  width: 100%;
+}
 #books .book-container {
   display: grid;
-
   /* grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
    */
-  grid-template-columns: auto auto auto auto auto auto;
+  
   gap: 30px;
-  box-sizing: border-box;
-  width: 90%;
+  grid-template-columns: auto auto auto auto;
   grid-auto-rows: minmax(auto, max-content);
   justify-content: space-between;
   padding: 20px;
