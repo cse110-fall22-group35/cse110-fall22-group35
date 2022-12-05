@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Add a Book</title>
-    <link rel="icon" href="../images/icon.png">
+    <link rel="icon" href="../images/temp_logo.jpg">
      <!-- the scripts of added book list -->
      <!-- Book List Custom Element -->
     <script src="../scripts/BookList.js" type="module"></script>
@@ -14,8 +14,11 @@
   <body>
     <header>
         <a href="./home.html" class="logoImg">
-            <img  src="../images/logo.png" height="75">
+            <img  src="../images/temp_logo.jpg" width="75" height="75">
             
+        </a>
+        <a href="./home.html" class="logo">
+          <h1>Novelty</h1>
         </a>
     </header>
     <nav>
@@ -26,32 +29,19 @@
             <a href="./writing-tips.html" class="navlink"><li>Writing-tips</li></a>
         </ul>
     </nav>
-    <!-- stylelint-disable  -->
-    <addPart style = "width: 40%;float:left;  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
-  ">
-  <!-- stylelint-enable -->
-    <h1>ADD A BOOK</h1>
+    <addPart style = "width: 75%;float:left;">
+    <h1>Add a Book</h1>
     <form id="new-book">
-      <label for="imgSrc"><h3> Link to cover:</h3>
+      <label for="imgSrc">Link to cover:
         <input type="url" id="imgSrc" name="imgSrc" required><br><br>
       </label>
-      <label for="Title"><h3>Title:</h3>
+      <label for="Title">Title:
         <input type="text" id="titleTxt" name="Title" required><br><br>
       </label>
-      <label for="Author"><h3>Author:</h3>
+      <label for="Author">Author:
         <input type="text" id="author" name="Author" required><br><br>
       </label>
-      <label for="genre"><h3>Genre:</h3>
+      <label for="genre">Genre:
         <select id="genre" name="Category" required>
           <option value="default">Select one...</option> 
           <option value="adventure">Adventure</option>
@@ -69,21 +59,19 @@
           <option value="science_fiction">Science Fiction</option>
         </select>
       </label>
-      <label for="Price"><H3>Price:</H3>
+      <label for="Price">Price:
         <input type="number" id="price" name="Price" min="0" required><br><br>
       </label>
-      <label for="Description"><H3>Summary:</H3>
+      <label for="Description">Summary:
         <input type="textarea" id="summary" name="Description" required><br><br>
       </label>
-      <label for="Rating"><H3>Rating (0-5):</H3>
+      <label for="Rating">Rating (0-5):
         <input type="textarea" id="Rating" name="Rating" required><br><br>
       </label>
       <button type="submit">Add Book</button>
     </form>
     </addPart>
-
-    
-    <div id = 'added' style = "background-color:whitesmoke; height:100vh; width: 35%;float:right;">
+    <div id = 'added' style = "background-color:whitesmoke; height:100vh; width: 25%;float:right;">
       <div id = "books" class=" section -p1">
         <h2>Recently Added books</h2>
         <section class="book-container">
