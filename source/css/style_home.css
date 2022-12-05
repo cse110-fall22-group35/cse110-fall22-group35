@@ -51,7 +51,7 @@ button::before {
 }
 
 button:hover::before {
-  background-color: blueviolet;
+  background-color: #402F1D;
 }
 
 @media (min-width: 768px) {
@@ -88,17 +88,26 @@ h1 {
 
 #search {
   background-color: rgb(128 64 0 / 30%);
-  display: flex;
+  display: inline;
+  margin-left: 10px;
 }
 
 #searchlabel {
-  float: left;
+  text-align: right;
+  clear: both;
+  margin-left: 10px;
 }
 
 #searchbox {
-  width: 300px;
-  margin-left: 6%;
-  margin-right: 6%;
+  width: 280px;
+  padding-left: 15px;
+  display: inline-flex;
+}
+
+#searchBtn {
+  margin-left: 20px;
+  width: 200px;
+  padding-right:20px;
   display: flex;
 }
 
@@ -171,10 +180,11 @@ a:hover {
 }
 
 .navlink {
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+
 
   /* color:#088120;
   background-image: -webkit-linear-gradient(top, #fff 0%, #f8f8f8 100%);
@@ -191,10 +201,10 @@ a:hover {
 
 li {
   display: inline-block;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #menu {

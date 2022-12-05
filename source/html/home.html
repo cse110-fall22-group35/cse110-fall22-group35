@@ -24,17 +24,15 @@
     </header>
     <nav>
         <ul>
-            <li>
-                <label id="searchlabel">Search:</label>
-                <div id="searchbox">
-                    <div>
-                        <form role="search" method="POST" action="individual-book.html">
-                            <input type="text" id='search-input' class="form-control" name="keyword" style="width:280px;margin:20px 10% 20px 10%; font-size: 20px;" placeholder="Search for a Book Title">
-                        </form>
-                    </div>
-                </div>
-            </li>
-            <button type="button" id="searchBtn">search</button>
+            <label for="search-input" id="searchlabel" class="navlink"><li>Search:</li></label>
+            <div id="searchbox">   
+
+                <form role="search" method="POST" action="individual-book.html">
+                    <span><input type="text" id='search-input' class="form-control" name="keyword" placeholder="Search for a Book Title"></span>
+                </form> 
+           
+                <button type="button" id="searchBtn">search</button>
+            </div>
             <!-- <li> > </li> -->
             <a href="./home.html" class="navlink"><li> Home</li></a>
             <a href="./recommendations.html" class="navlink"><li>Recommendations</li></a>
