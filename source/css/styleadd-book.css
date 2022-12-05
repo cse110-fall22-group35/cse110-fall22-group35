@@ -15,13 +15,11 @@ body {
   background-attachment: fixed;
   text-align: center;
   color:azure;
-<<<<<<< HEAD
+  padding-left: 10px;
   padding-right: 10px;
-=======
   border-left-style: solid;
   border-radius: 0.3cm;
   border-width: 0.1cm;
->>>>>>> 280f1f89fa239b98584a0bd7f5b4a24bb82f6245
 }
 html,
 body {
@@ -154,7 +152,7 @@ form select {
 }
 
 #summary {
-  width: 500px;
+  width: 130%;
   height: 100px;
 }
 
