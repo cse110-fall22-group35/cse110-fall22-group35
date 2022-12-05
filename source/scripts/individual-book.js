@@ -80,6 +80,7 @@ function init () {
       updateRating(reviews);
     } else { // if the user has, edits their previous comment
       if (confirm(reviewObject.name + ', do you want to overwrite your old comment?')) {
+        console.log (index);
         alert('Overwriting the old comment by ' + reviewObject.name);
 
         reviews[index] = reviewObject;
@@ -88,10 +89,10 @@ function init () {
 
         const shadowDom = comments[index].shadowRoot;
 
-        shadowDom.querySelector('#date').innerHTML = reviewObject.date;
+        shadowDom.querySelector('.date').innerHTML = reviewObject.date;
         shadowDom.querySelector('img').src = `../images/${reviewObject.rating}-star.svg`;
         shadowDom.querySelector('span').innerHTML = reviewObject.rating;
-        shadowDom.querySelector('#comment').innerHTML = reviewObject.comment;
+        shadowDom.querySelector('.comment').innerHTML = reviewObject.comment;
 
         // update the rating if a new comment is added
         updateRating(reviews);
