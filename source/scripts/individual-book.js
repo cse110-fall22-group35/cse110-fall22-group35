@@ -126,8 +126,8 @@ function updateRating (reviewList) {
     console.log(sum);
   }
   document.querySelector('#rating').innerHTML = 'Average Rating: ' + (sum / reviewList.length).toFixed(1);
-  //adds new rating to local storage
-  let books = getBooksFromStorage();
+  // adds new rating to local storage
+  const books = getBooksFromStorage();
   for (let i = 0; i < books.length; i++) {
     if (books[i].Title === bookTitle) {
       books[i].Rating = (sum / reviewList.length).toFixed(1);
