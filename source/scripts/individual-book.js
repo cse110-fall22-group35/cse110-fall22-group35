@@ -80,7 +80,7 @@ function init () {
       updateRating(reviews);
     } else { // if the user has, edits their previous comment
       if (confirm(reviewObject.name + ', do you want to overwrite your old comment?')) {
-        console.log (index);
+        console.log(index);
         alert('Overwriting the old comment by ' + reviewObject.name);
 
         reviews[index] = reviewObject;
