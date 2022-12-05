@@ -9,6 +9,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
 #added{
   background-image: url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
   background-size: cover;
@@ -121,6 +122,7 @@ form > h3 {
 
 form {
   margin: 15px;
+  padding: 0.15cm;
 }
 
 input {
