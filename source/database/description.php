@@ -1,3 +1,6 @@
+<!-- Codes for remote database; NOT IN USE -->
+<!-- References: code-projects.org -->
+
 <?php
 session_start();
 if(!isset($_SESSION['user']))

@@ -1,3 +1,6 @@
+<!-- Codes for remote database; NOT IN USE -->
+<!-- References: code-projects.org -->
+
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">

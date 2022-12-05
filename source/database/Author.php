@@ -1,4 +1,5 @@
-<!-- Sources: code-projects.org -->
+<!-- References: code-projects.org -->
+<!-- Codes for remote database; NOT IN USE -->
 
 <!DOCTYPE html>
 <html lang="en">
