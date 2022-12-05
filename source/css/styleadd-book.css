@@ -9,6 +9,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
 #added{
   background-image: url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
   background-size: cover;
@@ -26,7 +27,7 @@ body {
 
 h1 {
   color: rgb(237 237 237);
-  font-size: 40px;
+  font-size: 50px;
   letter-spacing: 2px;
 }
 
@@ -214,4 +215,7 @@ button:hover::before {
   button {
     padding: 16px 32px;
   }
+}
+label{
+  padding-top: 3cm;
 }
