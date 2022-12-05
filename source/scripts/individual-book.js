@@ -3,6 +3,7 @@
 // Getting book's title
 const index = window.location.href.indexOf('=');
 const bookTitle = decodeURI(window.location.href.substring(index + 1));
+document.title = bookTitle;
 
 window.addEventListener('DOMContentLoaded', init);
 /**
