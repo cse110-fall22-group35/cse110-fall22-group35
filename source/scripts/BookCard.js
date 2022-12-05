@@ -123,7 +123,7 @@ class BookCard extends HTMLElement {
       <h4>Author: ${data.Author}</h4>
       <h5>Genre: ${data.Category}</h5>
       <h5></h5>
-      <h5>Price: ${data.Price}$</h5>
+      <h5>Price: $${data.Price}</h5>
       <h5>Rating: ${data.Rating}✩ </h5>
       <div class= "star"></div>
     </div>
