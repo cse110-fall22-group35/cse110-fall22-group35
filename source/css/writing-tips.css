@@ -12,8 +12,10 @@ body {
 
 html,
 body {
-  margin: 0;
-  height: 100%;
+	margin: 0;
+	height: 100%;
+
+	/* color: #274dff; */
 }
 
 h1 {
@@ -70,6 +72,12 @@ h1 {
     background-position: 200% center;
   }
 }
+
+p {
+  display: grid;
+	font-family: "Henny Penny", cursive;
+}
+
 /* stylelint-enable */
 a {
   text-decoration: none;
