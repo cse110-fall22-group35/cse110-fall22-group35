@@ -363,5 +363,3 @@ function saveBooksToStorage (books) {
   //            be no more than a few lines.
   localStorage.setItem('books', JSON.stringify(books));
 }
-
-
