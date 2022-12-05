@@ -1,3 +1,5 @@
+<!-- Codes for remote database; NOT IN USE -->
+<!-- References: code-projects.org -->
 <?php 
 define('DB_HOST', 'localhost'); 
 define('DB_NAME', 'u385439067_store'); 

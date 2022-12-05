@@ -1,3 +1,5 @@
+/*!Codes for remote database; NOT IN USE */;
+
 
 -- phpMyAdmin SQL Dump
 -- version 3.5.2.2
