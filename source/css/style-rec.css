@@ -173,12 +173,12 @@ h2 {
 #genre li:hover {
   text-decoration: none;
   color: white;
-  background-color: purple;
+  background-color: #402F1D;
 }
 
 #genre li a:hover {
   text-decoration: none;
-  color: #000;
+  color: White;
   background-color: rgb(112 87 5);
 }
 
@@ -193,7 +193,7 @@ h2 {
 #ratings li a:hover {
   text-decoration: none;
   color: white;
-  background-color: purple;
+  background-color: #402F1D;
 }
 
 #price li a {
@@ -207,7 +207,7 @@ h2 {
 #price li a:hover {
   text-decoration: none;
   color: white;
-  background-color: purple;
+  background-color: #402F1D;
 }
 
 button {
@@ -355,7 +355,7 @@ button::before {
 }
 
 button:hover::before {
-  background-color: purple;
+  background-color: #402F1D;
 }
 
 @media (min-width: 768px) {
