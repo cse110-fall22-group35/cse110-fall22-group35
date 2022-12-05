@@ -120,12 +120,14 @@ form > h3 {
 }
 
 form {
-  margin: 15px;
+  margin: 30px;
+  text-align: center;
 }
 
 input {
   background-color: rgb(128 64 0 / 30%);
   color: rgb(237 237 237);
+  
 }
 
 select {
@@ -136,15 +138,16 @@ select {
 textarea {
   background-color: rgb(128 64 0 / 30%);
   color: rgb(237 237 237);
+  
 }
 
 form input {
-  display: block;
+
   width: 300px;
+  
 }
 
 form select {
-  display: block;
   width: 300px;
   margin-bottom: 30px;
 }
@@ -218,4 +221,7 @@ button:hover::before {
 }
 label{
   padding-top: 3cm;
+}
+addPart{
+  text-align: center;
 }
