@@ -40,7 +40,7 @@ button:hover {
 }
 
 button::before {
-  background-color: turquoise;
+  background-color: gray;
   content: "";
   height: calc(100% + 3px);
   position: absolute;
