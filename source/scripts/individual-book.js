@@ -3,13 +3,13 @@
 // Getting book's title
 const index = window.location.href.indexOf('=');
 const bookTitle = decodeURI(window.location.href.substring(index + 1));
+document.title = bookTitle;
 
 window.addEventListener('DOMContentLoaded', init);
 /**
  * All function calls trace back to here, controls the individual-book page's functionality
  */
 function init () {
-  removeBook();
   // Add books information
   updateInfo();
   // getting and adding reviews to the page
@@ -17,6 +17,7 @@ function init () {
   updateRating(reviews);
   reviews.forEach(addCommentToDocument);
   setupDeleteButtons();
+
   /**
    * Adds functionality to the delete buttons for every comment on the page
    */
@@ -79,6 +80,7 @@ function init () {
       updateRating(reviews);
     } else { // if the user has, edits their previous comment
       if (confirm(reviewObject.name + ', do you want to overwrite your old comment?')) {
+        console.log(index);
         alert('Overwriting the old comment by ' + reviewObject.name);
 
         reviews[index] = reviewObject;
@@ -254,29 +256,4 @@ function findExistingUser (reviewList, name) {
     }
   }
   return -1;
-}
-
-/**
- * remove the bookfrom local storage and back to the homepage
- */
-
-function removeBook () {
-  const btn = document.getElementById('delete');
-  btn.addEventListener('click', (event) => {
-    console.log('del clicked.');
-    libUpdate(bookTitle);
-  });
-}
-function libUpdate (title) {
-  console.log('clear the book with title');
-  let libraryBook = localStorage.getItem('books');
-  console.log(title);
-  libraryBook = JSON.parse(libraryBook);
-  console.log(libraryBook.length);
-  const afteraction = libraryBook.filter(el => !(el.Title).includes(title));
-  console.log(afteraction.length);
-  const bookRemain = JSON.stringify(afteraction);
-  localStorage.setItem('books', bookRemain);
-  alert('Successfully removed');
-  window.location.href = './home.html';
 }
