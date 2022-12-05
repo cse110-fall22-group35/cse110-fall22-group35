@@ -21,7 +21,7 @@ class BookCard extends HTMLElement {
     box-sizing: border-box;
     padding: 50;
     margin: 0;
-    
+
   }
 
   #profile{
@@ -55,7 +55,7 @@ class BookCard extends HTMLElement {
       
   }
   article img{
-      height: 8%;
+      height: 250px;
       width: 100%;
       border-radius: 20px;
       
