@@ -1,4 +1,4 @@
-# cse110-fall22-group35-project Novelty
+# cse110-fall22-grp35-project Novelty
 
 
 A website named Novelty built to review books online, recommend books, and add books reviewed.  
@@ -14,7 +14,7 @@ Qiyun Li - Designer
 Nathan Enrici - Dev  
 Alexander Yang - Dev  
 
-https://github.com/cse110-fall22-group35/cse110-fall22-group35/blob/main/admin/team.md
+https://github.com/cse110-fall22-group35/cse110-fall22-group35/blob/dev/admin/team.md
 
 
 
