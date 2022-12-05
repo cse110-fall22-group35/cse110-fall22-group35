@@ -117,6 +117,7 @@ form {
   display: block;
   text-align: center;
   font-size: 2.5ex;
+  
 }
 
 input {
@@ -136,13 +137,12 @@ textarea {
 }
 
 form input {
-  display: block;
+  
   width: 300px;
 
 }
 
 form select {
-  display: block;
   width: 300px;
   margin-bottom: 30px;
   text-align: center;
