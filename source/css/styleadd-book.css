@@ -15,6 +15,9 @@ body {
   background-attachment: fixed;
   text-align: center;
   color:azure;
+  border-left-style: solid;
+  border-radius: 0.3cm;
+  border-width: 0.1cm;
 }
 html,
 body {
