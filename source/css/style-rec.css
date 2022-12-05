@@ -118,7 +118,21 @@ h1 {
 
 h2 {
   display: inline-block;
-  font-size: 15px;
+  font-size: 20px;
+  margin: 10px 30px 20px 10px;
+  color: #fff;
+}
+
+#rate {
+  display: inline-block;
+  font-size: 20px;
+  margin: 50px 30px 20px 10px;
+  color: #fff;
+}
+
+#placeholder1 {
+  display: inline-block;
+  font-size: 20px;
   margin: 10px 30px 0 10px;
   color: #fff;
 }
@@ -132,7 +146,7 @@ h2 {
   font-size: 13px;
   padding: 6px 20px;
   border: 1px solid #ddd;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 }
 
 #genre li {
@@ -142,22 +156,24 @@ h2 {
   margin-right: 50px;
   margin-left: 20px;
   padding-left: 5px;
+  margin-bottom: 20px;
   width: 150px;
   line-height: 1px;
-  background-color: #f6f6f6;
+  background-color: gray;
 }
 
 #genre li a {
   text-decoration: none;
-  color: black;
+  color: whtie;
   display: block;
   font-size: 13px;
+  font-weight: bold;
 }
 
 #genre li:hover {
   text-decoration: none;
-  color: #000;
-  background-color: rgb(112 87 5);
+  color: white;
+  background-color: purple;
 }
 
 #genre li a:hover {
@@ -167,17 +183,31 @@ h2 {
 }
 
 #ratings li a {
-  background-color: #f6f6f6;
+  background-color: gray;
   padding: 10px;
-  font-size: 12px;
-  color: black;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+#ratings li a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: purple;
 }
 
 #price li a {
-  background-color: #f6f6f6;
+  background-color: gray;
   padding: 10px;
-  font-size: 12px;
-  color: black;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+#price li a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: purple;
 }
 
 button {
@@ -278,6 +308,14 @@ article .book_info h4 {
   margin-left: -15px;
 }
 
+/* Search Button */
+button {
+  margin-top: 10px;
+  margin-left: 30px;
+  padding: 5px;
+}
+
+
 button {
   background-color: transparent;
   border: 1px solid #266db6;
@@ -305,7 +343,7 @@ button:hover {
 }
 
 button::before {
-  background-color: lightgreen;
+  background-color: gray;
   content: "";
   height: calc(100% + 3px);
   position: absolute;

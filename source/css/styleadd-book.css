@@ -15,7 +15,13 @@ body {
   background-attachment: fixed;
   text-align: center;
   color:azure;
+<<<<<<< HEAD
   padding-right: 10px;
+=======
+  border-left-style: solid;
+  border-radius: 0.3cm;
+  border-width: 0.1cm;
+>>>>>>> 280f1f89fa239b98584a0bd7f5b4a24bb82f6245
 }
 html,
 body {
@@ -194,7 +200,7 @@ button:hover {
 }
 
 button::before {
-  background-color: lightgreen;
+  background-color: gray;
   content: "";
   height: calc(100% + 3px);
   position: absolute;
