@@ -29,16 +29,16 @@
     <addPart style = "width: 65%;float:left;">
     <h1>Add a Book</h1>
     <form id="new-book">
-      <label for="imgSrc">Link to cover:
+      <label for="imgSrc">Link to cover: <br>
         <input type="url" id="imgSrc" name="imgSrc" required><br><br>
       </label>
-      <label for="Title">Title:
+      <label for="Title">Title: <br>
         <input type="text" id="titleTxt" name="Title" required><br><br>
       </label>
-      <label for="Author">Author:
+      <label for="Author">Author: <br>
         <input type="text" id="author" name="Author" required><br><br>
       </label>
-      <label for="genre">Genre:
+      <label for="genre">Genre: <br>
         <select id="genre" name="Category" required>
           <option value="default">Select one...</option> 
           <option value="adventure">Adventure</option>
@@ -54,15 +54,15 @@
           <option value="regional">Regional</option>
           <option value="romance">Romance</option>
           <option value="science_fiction">Science Fiction</option>
-        </select>
+        </select><br><br>
       </label>
-      <label for="Price">Price:
+      <label for="Price">Price:<br>
         <input type="number" id="price" name="Price" min="0" required><br><br>
       </label>
-      <label for="Description">Summary:
+      <label for="Description">Summary:<br>
         <input type="textarea" id="summary" name="Description" required><br><br>
       </label>
-      <label for="Rating">Rating (0-5):
+      <label for="Rating">Rating (0-5):<br>
         <input type="textarea" id="Rating" name="Rating" required><br><br>
       </label>
       <button type="submit">Add Book</button>
