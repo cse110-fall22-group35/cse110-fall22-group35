@@ -9,9 +9,9 @@ window.addEventListener('DOMContentLoaded', init);
 /**
  * All function calls trace back to here, controls the individual-book page's functionality
  */
-function init () {
+function init(){
   // when click delete button
-  removeBook();
+ removeBook();
   // Add books information
   updateInfo();
   // getting and adding reviews to the page
