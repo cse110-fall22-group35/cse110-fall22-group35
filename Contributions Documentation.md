@@ -1,4 +1,4 @@
-List of contributions in short:
+List of contributions in short:  
 Nicholas Tran - testing, recommendations  
 Sarah Thomson - front end
 Averi(Zhizhen) Yu - database, sort by authors, front end  
