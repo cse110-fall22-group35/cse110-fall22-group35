@@ -159,7 +159,7 @@ h2 {
   margin-bottom: 20px;
   width: 150px;
   line-height: 1px;
-  background-color: gray;
+  background-color: lightslategray;
 }
 
 #genre li a {
@@ -183,7 +183,7 @@ h2 {
 }
 
 #ratings li a {
-  background-color: gray;
+  background-color: lightslategray;
   padding: 10px;
   font-size: 15px;
   color: white;
@@ -197,7 +197,7 @@ h2 {
 }
 
 #price li a {
-  background-color: gray;
+  background-color: lightslategray;
   padding: 10px;
   font-size: 15px;
   color: white;
@@ -343,7 +343,7 @@ button:hover {
 }
 
 button::before {
-  background-color: gray;
+  background-color: lightslategray;
   content: "";
   height: calc(100% + 3px);
   position: absolute;

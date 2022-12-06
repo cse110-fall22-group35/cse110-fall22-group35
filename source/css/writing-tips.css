@@ -45,8 +45,9 @@ h1 {
   text-align: center;
 }
 
+/* showcase efforts on the animation effect since logo was changed */
 /* stylelint-disable */
-.logo {
+h1 {
   background-image: linear-gradient(
     -225deg,
     #231557 0%,
@@ -64,17 +65,14 @@ h1 {
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-  font-size: 55px; 
+  font-size: 37px; 
+  padding: 10px;
 }
 
 @keyframes textclip {
   to {
     background-position: 200% center;
   }
-}
-
-p {
-
 }
 
 /* stylelint-enable */
@@ -107,6 +105,7 @@ nav {
   border-top: 2px solid #000;
   background-color: rgb(128 64 0 / 30%);
   color: rgb(237 237 237);
+  margin:0%;
 }
 
 #tips1 {
@@ -153,4 +152,7 @@ nav {
   padding-top: 20px;
   padding-bottom: 20px;
   color: rgb(237 237 237);
+}
+p {
+  font-size: 22px;
 }
