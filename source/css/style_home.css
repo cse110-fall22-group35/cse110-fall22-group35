@@ -90,6 +90,10 @@ h1 {
   height: 30px; */
 }
 
+h4 {
+  padding-bottom: 5px;
+}
+
 #search {
   background-color: rgb(128 64 0 / 30%);
   display: inline;
