@@ -10,8 +10,8 @@ window.addEventListener('DOMContentLoaded', init);
  * All function calls trace back to here, controls the individual-book page's functionality
  */
 function init () {
-  //when click delete button
-  removeBook()
+  // when click delete button
+  removeBook();
   // Add books information
   updateInfo();
   // getting and adding reviews to the page
@@ -272,23 +272,23 @@ function findExistingUser (reviewList, name) {
  * remove the bookfrom local storage and back to the homepage
  */
 
- function removeBook(){
-  const btn = document.getElementById("delete");
-  btn.addEventListener('click',(event)=>{
+function removeBook () {
+  const btn = document.getElementById('delete');
+  btn.addEventListener('click', (event) => {
     console.log('del clicked.');
     libUpdate(bookTitle);
-  })
+  });
 }
-function libUpdate (title){
+function libUpdate (title) {
   console.log('clear the book with title');
   let libraryBook = localStorage.getItem('books');
   console.log(title);
   libraryBook = JSON.parse(libraryBook);
-  console.log(libraryBook.length)
+  console.log(libraryBook.length);
   const afteraction = libraryBook.filter(el => !(el.Title).includes(title));
-  console.log(afteraction.length)
-  let bookRemain = JSON.stringify(afteraction);
+  console.log(afteraction.length);
+  const bookRemain = JSON.stringify(afteraction);
   localStorage.setItem('books', bookRemain);
-  alert("Successfully removed");
-  window.location.href = "./home.html";
+  alert('Successfully removed');
+  window.location.href = './home.html';
 }
