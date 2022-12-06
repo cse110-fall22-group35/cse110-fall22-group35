@@ -1,6 +1,6 @@
 List of contributions in short:  
 Nicholas Tran - testing, recommendations  
-Sarah Thomson - front end
+Sarah Thomson - front end  
 Averi(Zhizhen) Yu - database, sort by authors, front end  
 Bochen Ji (Sam Ji) - sort, filter, search features  
 Chia-Han Chen - individual books, front end  
