@@ -56,8 +56,12 @@ button:hover::before {
 
 @media (min-width: 768px) {
   button {
-    padding: 16px 32px;
+    padding: 5px 10px;
   }
+}
+
+h4 {
+  margin-bottom: 5px;
 }
 
 html,
@@ -89,18 +93,15 @@ h1 {
 #search {
   background-color: rgb(128 64 0 / 30%);
   display: inline;
-  margin-left: 10px;
 }
 
 #searchlabel {
   text-align: right;
   clear: both;
-  margin-left: 10px;
 }
 
 #searchbox {
   width: 280px;
-  padding-left: 15px;
   display: inline-flex;
 }
 
