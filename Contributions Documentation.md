@@ -8,5 +8,5 @@ Qiyun Li - remove books, front end
 Nathan Enrici - add a book feature, CI  
 Alexander Yang - writing-tips  
   
-feel free to copy paste your daily stand-ups as contribution documentations down here  
+feel free to edit above and copy/paste your daily stand-ups as contribution documentations down here  
 <!-- feel free to copy paste your daily stand-ups as contribution documentations down here  -->
