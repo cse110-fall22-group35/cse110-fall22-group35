@@ -29,6 +29,9 @@ function init (refreshFlag) {
   if (localStorage.length === 0 || refreshFlag == true) {
     localStorage.setItem('books', bookToDisplay);
   }
+  // if (localStorage.length === 0) {
+  //   localStorage.setItem('books', bookToDisplay);
+  // }
   // Get the books from localStorage
   const books = getBooksFromStorage();
   // Add each book to the <main> element
