@@ -42,7 +42,7 @@ https://github.com/sarahtthomson
 **Contact Info:** zhy008@ucsd.edu Discord: Eggy stars (AY)#7756
 
 **Personal GitHub Repo:** https://github.com/averi-u
-
+**Archive of Contributions:** https://github.com/cse110-fall22-group35/cse110-fall22-group35/blob/dev/admin/Documentations/Archive%20of%20Daily%20Stand-ups.md
 
 ### Bochen Ji, (prefer Sam Ji) - Dev
 **Picture: (Optional)**

@@ -1,7 +1,7 @@
 # cse110-fall22-grp35-project Novelty
 
 
-A website named Novelty built to review books online, recommend books, and add books reviewed. 
+A website named Novelty built to review books online, recommend books, and add books reviewed.   
 Demo video: https://www.youtube.com/watch?v=GBPPk2qb23M 
 
 Team name: The Code Compliers  
