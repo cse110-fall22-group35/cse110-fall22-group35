@@ -1,4 +1,5 @@
-# cse110-fall22-grp35-project Novelty
+# cse110-fall22-grp35
+# Project Novelty
 
 
 A website named Novelty built to review books online, recommend books, and add books reviewed.   
