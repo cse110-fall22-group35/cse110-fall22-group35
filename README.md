@@ -10,7 +10,7 @@ Sarah Thomson - Team Lead
 Averi (Zhizhen) Yu - Team Lead  
 Bochen Ji (Sam Ji) - Dev  
 Chia-Han Chen - Dev  
-Qiyun Li - Designer  
+Qiyun Li - Designer & Dev  
 Nathan Enrici - Dev  
 Alexander Yang - Dev  
 
