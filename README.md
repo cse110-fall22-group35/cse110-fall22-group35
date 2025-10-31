@@ -1,7 +1,7 @@
 # cse110-fall22-grp35-project Novelty
 
 
-A website named Novelty built to review books online, recommend books, and add books reviewed.   
+A website named "Novelty" built to review books online, recommend books, and add books reviewed.   
 Demo video link: https://www.youtube.com/watch?v=GBPPk2qb23M   
 
 
@@ -60,7 +60,7 @@ Key goals included:
 ---
 
 ## 👥 Team & Collaboration
-- Developed in a **team of 6–8 students** under Agile sprints  
+- Developed in a **team of 8 students** under Agile sprints  
 - Used **Git branching strategy** (feature / dev / main)  
 - Conducted **code reviews** and **pair programming** sessions  
 - Managed tasks using **GitHub Projects + Issues**
@@ -84,7 +84,7 @@ Key goals included:
 ---
 
 ## 🎥 Demo Video
-[![Demo Video](https://img.youtube.com/vi/GBPPk2qb23M/0.jpg)](https://www.youtube.com/watch?v=GBPPk2qb23M)
+[![Watch the Demo](https://img.youtube.com/vi/GBPPk2qb23M/maxresdefault.jpg)](https://www.youtube.com/watch?v=GBPPk2qb23M)
 
 ---
 
