@@ -86,18 +86,12 @@ a:hover {
 }
 
 .navlink {
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 12px;
 }
 
 li {
   display: inline-block;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 12px;
 }
 
 nav {
@@ -110,49 +104,35 @@ nav {
 
 #tips1 {
   display: inline-block;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 12px;
   color: rgb(237 237 237);
 }
 
 #tips2 {
   display: inline-block;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 12px;
   color: rgb(237 237 237);
 }
 
 #tips3 {
   /* display: inline-block; */
 
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 12px;
   color: rgb(237 237 237);
 }
 
 #tips4 {
   display: inline-block;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 12px;
   color: rgb(237 237 237);
 }
 
 #tips5 {
   /* display: inline-block; */
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 12px;
   color: rgb(237 237 237);
 }
+
 p {
   font-size: 22px;
 }

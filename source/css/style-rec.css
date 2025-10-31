@@ -87,18 +87,12 @@ a:hover {
 }
 
 .navlink {
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 12px;
 }
 
 li {
   display: inline-block;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 12px;
 }
 
 nav {
@@ -178,7 +172,7 @@ h2 {
 
 #genre li a:hover {
   text-decoration: none;
-  color: White;
+  color: white;
   background-color: rgb(112 87 5);
 }
 
@@ -358,7 +352,7 @@ button:hover::before {
   background-color: #402F1D;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   button {
     padding: 16px 32px;
   }

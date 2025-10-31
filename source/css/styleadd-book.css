@@ -74,18 +74,12 @@ a:hover {
 }
 
 .navlink {
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 12px;
 }
 
 li {
   display: inline-block;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 12px;
 }
 
 nav {
@@ -158,12 +152,11 @@ button {
 }
 
 main {
-  column-gap: 10px;
+  gap: 10px;
   display: flex;
   flex-wrap: wrap;
   height: auto;
   max-width: 660px;
-  row-gap: 10px;
   width: 100%;
 }
 
@@ -210,11 +203,12 @@ button:hover::before {
   background-color: purple;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   button {
     padding: 16px 32px;
   }
 }
+
 #added{
   text-align: center;
   background-image: url("https://www.photos-public-domain.com/wp-content/uploads/2018/08/wood-grain-texture.jpg");
@@ -225,6 +219,7 @@ button:hover::before {
   border-color: white;
   color:aliceblue
 }
-addPart{
+
+addpart{
   text-align: center;
 }

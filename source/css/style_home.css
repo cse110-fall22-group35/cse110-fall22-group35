@@ -21,7 +21,7 @@ button {
   font-size: 13px;
   font-weight: 700;
   line-height: 4px;
-  padding: 2px 2px;
+  padding: 2px;
   position: relative;
   text-decoration: none;
   user-select: none;
@@ -54,7 +54,7 @@ button:hover::before {
   background-color: #402F1D;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   button {
     padding: 8px 12px;
   }
@@ -185,10 +185,7 @@ a:hover {
 }
 
 .navlink {
-  padding-left: 4%;
-  padding-right: 1%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 1% 10px 4%;
 
 
   /* color:#088120;
@@ -206,10 +203,7 @@ a:hover {
 
 li {
   display: inline-block;
-  margin-left: 12px;
-  margin-right: 12px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 12px;
 }
 
 #menu {
@@ -249,8 +243,10 @@ nav {
   display: grid;
   width: 100%;
 }
+
 #books .book-container {
   display: grid;
+
   /* grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
    */
   
