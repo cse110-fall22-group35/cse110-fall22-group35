@@ -84,7 +84,7 @@ Key goals included:
 ---
 
 ## 🎥 Demo Video
-[![Watch the Demo](https://img.youtube.com/vi/GBPPk2qb23M/maxresdefault.jpg)](https://www.youtube.com/watch?v=GBPPk2qb23M)
+[![Demo Video](https://img.youtube.com/vi/GBPPk2qb23M/0.jpg)](https://www.youtube.com/watch?v=GBPPk2qb23M)
 
 ---
 
