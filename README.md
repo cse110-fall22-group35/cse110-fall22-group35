@@ -44,7 +44,7 @@ Key goals included:
 | **Frontend** | HTML · CSS · JavaScript · Bootstrap |
 | **Backend** | Node.js · Express |
 | **Database** | Firebase / Firestore |
-| **Development Tools** | Git · GitHub · VS Code · npm |
+| **Development Tools** | Git · Docker + Nginx · VS Code · npm |
 | **Testing** | Jest · Cypress · Manual QA |
 | **Deployment** | GitHub Pages / Firebase Hosting |
 
